@@ -116,13 +116,29 @@
 
 <p>O que faz o <a href="http://facebook.github.io/react">React</a> diferente inicialmente é que ele não se trata de um MVW <em>framework</em>: não há <em>views</em>, <em>controllers</em> e similares.</p>
 
-<p>Mas a chave dos ganhos de performance estão relacionados com o fato de o React evitar acessar o DOM, o que ocasionaria <em>repaints</em> e <em>reflows</em>. A biblioteca obtem informações do DOM através de uma abstração da <em>DOMTree</em>: a <em>ComponentTree</em>. Após uma série de processamentos, esta abastração pode ser consultada e atestar se é necessária alguma intervenção no DOM.</p>
+<p>A chave dos ganhos de performance estão relacionados com o fato de o React evitar acessar o DOM, o que ocasionaria <em>repaints</em> e <em>reflows</em>. A biblioteca obtem informações do DOM através de uma abstração da <em>DOMTree</em>: a <em>ComponentTree</em>. Após uma série de processamentos, esta abastração pode ser consultada e atestar se é necessária alguma intervenção no DOM.</p>
 
 <p>O projeto <a href="https://github.com/swannodette/om">Om</a>, uma interface em ClojureScript para React também foi apresentado. Om alcança peformances mais interessantes ainda devido as características de imutabilidade das linguagens funcionais.</p>
 
 <hr>
 
 <p>A palestra tem um nível técnico de tirar o fôlego. É necessário muito estudo para dominar o uso e entender o funcionamento interno de cada uma das ferramentas apresentadas.</p>
+
+              <h2 id="Taking-Promises-Seriously-James-MacAulay">
+                <a name="Taking-Promises-Seriously-James-MacAulay" href="#Taking-Promises-Seriously-James-MacAulay"></a>Taking Promises Seriously - James MacAulay
+              </h2>
+            
+<p><em>Promisses</em> surgiram de diferentes bibliotecas e propostas de especificações. O padrão mais aceito é o Promises/A+ e já há uma especificação rascunho no ES6: <code>function Promise() { [native code] }</code>. Antes das <em>promisses</em>, o único jeito era usar <em>callbacks</em> aninhadas.</p>
+
+<p>O uso de <em>promisses</em> é baseado na função <code>.then</code>: <em>promisses</em> que seguem a especificação irão retornar um valor transformado em uma chamada de <code>.then</code>. Desta forma, é possível aninhar chamadas de tal maneira que sua ordem afete o resultado final. É importante notar que o <code>Deferred</code> retornado nas chamadas assíncronas da jQuery não segue esta premissa.</p>
+
+<p>Um uso interessante da API de <em>promisses</em>, é utilizar a função <code>race</code> para definir um tempo limite de espera para que um valor fique &quot;pronto&quot;.</p>
+
+<p>É essencial que biblitoecas e <em>frameworks</em> passem cada vez mais a aceitar valores de <em>promisses</em>. Para ajudar com esta tarefa, bibliotecas como <a href="http://github.com/jamesmacaulat/kozu">kozu</a> permite tornar qualquer função passível de ser utilizada com promisses. Assim podem usar underscore com coleções cujos valores sejam <em>promisses</em>, o que é muito interessante.</p>
+
+<hr>
+
+<p>A palestra é cheia de boas sacadas em diversas bibliotecas e o conteúdo foi apresentado de maneira muito clara. Além disto, dominar <em>promisses</em> é essencial para todo desenvolvedor que queira evitar o <code>callback hell</code> e explorar outras características poderosas.</p>
 
 <hr>
 

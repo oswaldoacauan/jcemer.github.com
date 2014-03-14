@@ -60,13 +60,29 @@
 
 &lt;p&gt;O que faz o &lt;a href=&quot;http://facebook.github.io/react&quot;&gt;React&lt;/a&gt; diferente inicialmente é que ele não se trata de um MVW &lt;em&gt;framework&lt;/em&gt;: não há &lt;em&gt;views&lt;/em&gt;, &lt;em&gt;controllers&lt;/em&gt; e similares.&lt;/p&gt;
 
-&lt;p&gt;Mas a chave dos ganhos de performance estão relacionados com o fato de o React evitar acessar o DOM, o que ocasionaria &lt;em&gt;repaints&lt;/em&gt; e &lt;em&gt;reflows&lt;/em&gt;. A biblioteca obtem informações do DOM através de uma abstração da &lt;em&gt;DOMTree&lt;/em&gt;: a &lt;em&gt;ComponentTree&lt;/em&gt;. Após uma série de processamentos, esta abastração pode ser consultada e atestar se é necessária alguma intervenção no DOM.&lt;/p&gt;
+&lt;p&gt;A chave dos ganhos de performance estão relacionados com o fato de o React evitar acessar o DOM, o que ocasionaria &lt;em&gt;repaints&lt;/em&gt; e &lt;em&gt;reflows&lt;/em&gt;. A biblioteca obtem informações do DOM através de uma abstração da &lt;em&gt;DOMTree&lt;/em&gt;: a &lt;em&gt;ComponentTree&lt;/em&gt;. Após uma série de processamentos, esta abastração pode ser consultada e atestar se é necessária alguma intervenção no DOM.&lt;/p&gt;
 
 &lt;p&gt;O projeto &lt;a href=&quot;https://github.com/swannodette/om&quot;&gt;Om&lt;/a&gt;, uma interface em ClojureScript para React também foi apresentado. Om alcança peformances mais interessantes ainda devido as características de imutabilidade das linguagens funcionais.&lt;/p&gt;
 
 &lt;hr&gt;
 
 &lt;p&gt;A palestra tem um nível técnico de tirar o fôlego. É necessário muito estudo para dominar o uso e entender o funcionamento interno de cada uma das ferramentas apresentadas.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Taking-Promises-Seriously-James-MacAulay&quot;&gt;
+                &lt;a name=&quot;Taking-Promises-Seriously-James-MacAulay&quot; href=&quot;#Taking-Promises-Seriously-James-MacAulay&quot;&gt;&lt;/a&gt;Taking Promises Seriously - James MacAulay
+              &lt;/h2&gt;
+            
+&lt;p&gt;&lt;em&gt;Promisses&lt;/em&gt; surgiram de diferentes bibliotecas e propostas de especificações. O padrão mais aceito é o Promises/A+ e já há uma especificação rascunho no ES6: &lt;code&gt;function Promise() { [native code] }&lt;/code&gt;. Antes das &lt;em&gt;promisses&lt;/em&gt;, o único jeito era usar &lt;em&gt;callbacks&lt;/em&gt; aninhadas.&lt;/p&gt;
+
+&lt;p&gt;O uso de &lt;em&gt;promisses&lt;/em&gt; é baseado na função &lt;code&gt;.then&lt;/code&gt;: &lt;em&gt;promisses&lt;/em&gt; que seguem a especificação irão retornar um valor transformado em uma chamada de &lt;code&gt;.then&lt;/code&gt;. Desta forma, é possível aninhar chamadas de tal maneira que sua ordem afete o resultado final. É importante notar que o &lt;code&gt;Deferred&lt;/code&gt; retornado nas chamadas assíncronas da jQuery não segue esta premissa.&lt;/p&gt;
+
+&lt;p&gt;Um uso interessante da API de &lt;em&gt;promisses&lt;/em&gt;, é utilizar a função &lt;code&gt;race&lt;/code&gt; para definir um tempo limite de espera para que um valor fique &amp;quot;pronto&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;É essencial que biblitoecas e &lt;em&gt;frameworks&lt;/em&gt; passem cada vez mais a aceitar valores de &lt;em&gt;promisses&lt;/em&gt;. Para ajudar com esta tarefa, bibliotecas como &lt;a href=&quot;http://github.com/jamesmacaulat/kozu&quot;&gt;kozu&lt;/a&gt; permite tornar qualquer função passível de ser utilizada com promisses. Assim podem usar underscore com coleções cujos valores sejam &lt;em&gt;promisses&lt;/em&gt;, o que é muito interessante.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;A palestra é cheia de boas sacadas em diversas bibliotecas e o conteúdo foi apresentado de maneira muito clara. Além disto, dominar &lt;em&gt;promisses&lt;/em&gt; é essencial para todo desenvolvedor que queira evitar o &lt;code&gt;callback hell&lt;/code&gt; e explorar outras características poderosas.&lt;/p&gt;
 
 &lt;hr&gt;
 
