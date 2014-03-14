@@ -84,6 +84,29 @@
 
 &lt;p&gt;A palestra é cheia de boas sacadas em diversas bibliotecas e o conteúdo foi apresentado de maneira muito clara. Além disto, dominar &lt;em&gt;promisses&lt;/em&gt; é essencial para todo desenvolvedor que queira evitar o &lt;code&gt;callback hell&lt;/code&gt; e explorar outras características poderosas.&lt;/p&gt;
 
+              &lt;h2 id=&quot;Functional-JavaScript-Federico-Silva&quot;&gt;
+                &lt;a name=&quot;Functional-JavaScript-Federico-Silva&quot; href=&quot;#Functional-JavaScript-Federico-Silva&quot;&gt;&lt;/a&gt;Functional JavaScript - Federico Silva
+              &lt;/h2&gt;
+            
+&lt;p&gt;Uma linguagem é baseada em expressões primitivas, meios de combinação e de abstração. Com a definição de linguagem é que Federico inicia sua palestra.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;JavaScript possibilita diferentes paradigmas mas não força o uso de algum.
+- Jeremy Ashkenas&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Em JavaScript, funções são cidadões de primeira classe, o que significa que funções são equivalentes a qualquer outro tipo de valor da linguagem, podendo ser atribuídas a variáveis, por exemplo. Ainda, em JavaScript, as funções são de alta ordem: uma chamada de função pode receber funções e retornar outras.&lt;/p&gt;
+
+&lt;p&gt;Linguagens unicamente funcionais são bastante calcadas em imutabilidade. Pela caracterísica orientação a objetos do JavaScript, que tendem a manter estado e portanto são mutáveis, devemos tomar atenção.&lt;/p&gt;
+
+&lt;p&gt;A sequência da palestra mostra uma série de conceitos e práticas de programação funcional. Muitos dos exemplos são escritos em &lt;a href=&quot;http://underscorejs.org&quot;&gt;Underscore&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A conclusão é que, por programação funcional ser orientado ao processamento de dados, esta pode facilitar a vida do programador em muitos casos.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Este é um assunto do qual sou muito fã. Mesmo não tendo uma base funcional perfeita no JavaScript (sem &lt;a href=&quot;http://en.wikipedia.org/wiki/Tail_call&quot;&gt;Tail call optimization&lt;/a&gt;, por exemplo) bibliotecas como Underscore podem fazer valer a pena programar de maneira funcional. Um livro ótimo para quem quiser se aprofundar no assunto é o Functional JavaScript do Michael Fogus.&lt;/p&gt;
+
 &lt;hr&gt;
 
 &lt;p&gt;&lt;em&gt;Esta postagem ainda será atualizada.&lt;/em&gt;&lt;/p&gt;
