@@ -105,7 +105,7 @@
 
 &lt;hr&gt;
 
-&lt;p&gt;Este é um assunto do qual sou muito fã. Mesmo não tendo uma base funcional perfeita no JavaScript (sem &lt;a href=&quot;http://en.wikipedia.org/wiki/Tail_call&quot;&gt;Tail call optimization&lt;/a&gt;, por exemplo) bibliotecas como Underscore podem fazer valer a pena programar de maneira funcional. Um livro ótimo para quem quiser se aprofundar no assunto é o Functional JavaScript do Michael Fogus.&lt;/p&gt;
+&lt;p&gt;Este é um assunto do qual sou muito fã. Mesmo sem uma base funcional perfeita no JavaScript, (sem &lt;a href=&quot;http://en.wikipedia.org/wiki/Tail_call&quot;&gt;Tail call optimization&lt;/a&gt;, por exemplo) bibliotecas como Underscore podem fazer valer a pena programar no paradgima funcional. Um livro ótimo para quem quiser se aprofundar no assunto é o Functional JavaScript do Michael Fogus.&lt;/p&gt;
 
 &lt;hr&gt;
 
