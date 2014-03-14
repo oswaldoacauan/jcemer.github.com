@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Hipermídia as Avessas: Responsive Design ~ Jean Carlo Emer
+  </title>
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://feeds.feedburner.com/jeancarloemer" rel="alternate" type="application/rss+xml">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jean Carlo Emer"/>
+  <meta property="og:url" content="http://jcemer.com/hipermidia-as-avessas-responsive-design.html">
+  <meta property="og:title" content="Hipermídia as Avessas: Responsive Design ~ Jean Carlo Emer">
+  <meta property="og:description" content="Responsive Design, no contexto de hipermídias, é a entrega de uma experiência ótima de leitura e navegação independente de dispositivo sem que para isto seja preciso criar duas mídias totalmente distintas.
+">
+  <meta property="og:image" content="http://jcemer.com/assets/images/badge.jpg">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700|Raleway:300,700,800|Droid+Sans+Mono:400" rel="stylesheet" type="text/css">
+  <link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css">
+
+  <link rel="canonical" href="http://jcemer.com/hipermidia-as-avessas-responsive-design.html">
+
+  <script>
+    window._gaq = [
+      ['_setAccount', 'UA-37078527-1']
+    , ['_trackPageview']
+    ]
+  </script>
+</head>
+<body>
+  <div class="lobby">
+    <div class="wrapper">
+      <nav id="menu">
+        <ul>
+          
+            <li><a href="/sobre.html">Sobre</a></li>
+          
+            <li><a href="/talks.html">Talks</a></li>
+          
+            <li><a href="http://twitter.com/jcemer">Twitter</a></li>
+          
+            <li><a href="http://github.com/jcemer">GitHub</a></li>
+          
+        </ul>
+        <a href="#menu" id="menu-toggle">menu</a>
+      </nav>
+      <a href="/" class="brand" title="Página inicial">Jean Carlo Emer</a>
+    </div>
+  </div>
+
+  <header class="header">
+  <div class="wrapper">
+    <h1 class="header-title">
+      <a href="/hipermidia-as-avessas-responsive-design.html">Hipermídia as Avessas: Responsive Design</a>
+    </h1>
+    <time class="header-date">
+      <span class="header-date-year">2013</span>
+      <span class="header-date-month">Setembro</span>
+    </time>
+  </div>
+</header>
+
+<div class="main">
+  <div class="wrapper">
+    <p><a href="http://alistapart.com/article/responsive-web-design">Responsive Design</a>, no contexto de hipermídias, é a entrega de uma experiência ótima de leitura e navegação independente de dispositivo sem que para isto seja preciso criar duas mídias totalmente distintas.</p>
+
+<hr>
+
+<p>Antes de mais nada, saiba que este texto é a continuação de <a href="/hipermidia-as-avessas.html">Hipermídias as avessas</a>. Lá são apresentados alguns <a href="/hipermidia-as-avessas.html#Desafios-da-web-plural">desafios</a> que, a partir daqui, aprenderemos a enfrentar.</p>
+
+<hr>
+
+              <h2 id="Tamanho-de-fonte">
+                <a name="Tamanho-de-fonte" href="#Tamanho-de-fonte"></a>Tamanho de fonte
+              </h2>
+            
+<p>O tamanho da fonte - <code>font-size</code> - é determinante para se garantir uma boa legibilidade. Seu tamanho básico, utilizado caso você não defina, geralmente é <strong>16px</strong>.</p>
+
+<p>Apesar de sempre considerarmos o tamanho de 16px, não existe especificação: <strong>cada navegador pode definir o mais adequado e permitir que o usuário configure</strong>.</p>
+
+<p>Explore isto em seu projeto utilizando as medidas: <code>xx-small</code>, <code>x-small</code>, <code>small</code>, <code> medium</code>, <code> large</code>, <code>x-large</code> e <code>xx-large</code>.</p>
+<div class="highlight"><pre><code class="css language-css" data-lang="css"><a name="line-1"></a><span class="nt">p</span> <span class="p">{</span>
+<a name="line-2"></a>  <span class="k">font-size</span><span class="o">:</span> <span class="k">large</span><span class="p">;</span>
+<a name="line-3"></a><span class="p">}</span>
+</code></pre></div>
+              <h3 id="Tamanho-relativo">
+                <a name="Tamanho-relativo" href="#Tamanho-relativo"></a>Tamanho relativo
+              </h3>
+            
+<p>Uma maneira de flexibilizar ainda mais as variações de tamanho de fonte do seu projeto é utilizando medidas relativas. Com ela, é possível basear os tamanhos em elementos anscestrais ou outras propriedades. <strong>Note: o tamanho do <code>&lt;body&gt;</code>, que é nossa primeira base, será definido pelo dispositivo ou usuário</strong>. Esta é a justificativa para uso de <strong>em</strong> e <strong>rem</strong> em projetos.</p>
+
+<p>A medida <strong>em</strong> é relativa ao tamanho da fonte definido ou herdado no elemento pai.</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><a name="line-1"></a><span class="nt">&lt;body&gt;</span>
+<a name="line-2"></a>  Foo
+<a name="line-3"></a>  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;font-size: 0.5em&quot;</span><span class="nt">&gt;</span>
+<a name="line-4"></a>    bar <span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">&quot;font-size: 2em&quot;</span><span class="nt">&gt;</span>fizz<span class="nt">&lt;/span&gt;</span>
+<a name="line-5"></a>  <span class="nt">&lt;/div&gt;</span>
+<a name="line-6"></a><span class="nt">&lt;/body&gt;</span>
+</code></pre></div>
+<p>Supondo um tamanho básico de 16px, a palavra <em>bar</em> será renderizada com tamanho de 8px. O <em>fizz</em>, por sua vez, terá o dobro do tamanho de <em>bar</em>: 16px.</p>
+
+<p>A medida <strong>em</strong>, apesar de bastante útil, dificulta (a série de cálculos pode ser penosa) e até mesmo inviabiliza a modularização do seu projeto. A evolução natural é a medida <strong>rem</strong> que é definida diretamente com base no <code>&lt;body&gt;</code>.</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><a name="line-1"></a><span class="nt">&lt;body&gt;</span>
+<a name="line-2"></a>  Foo
+<a name="line-3"></a>  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;font-size: 0.5rem&quot;</span><span class="nt">&gt;</span>
+<a name="line-4"></a>    bar <span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">&quot;font-size: 2rem&quot;</span><span class="nt">&gt;</span>fizz<span class="nt">&lt;/span&gt;</span>
+<a name="line-5"></a>  <span class="nt">&lt;/div&gt;</span>
+<a name="line-6"></a><span class="nt">&lt;/body&gt;</span>
+</code></pre></div>
+<p>Novamente supondo um tamanho básico de 16px, a palavra <em>bar</em> será renderizada com tamanho de 8px e <em>fizz</em> com tamanho de 32px. Veja, a definição de <em>fizz</em> não afetou o <em>bar</em>. A única restrição para não se abandonar completamente <strong>em</strong> é que o suporte de <strong>rem</strong> é restrito ao IE9+.</p>
+
+<p>Defina também a altura de linha - <code>line-height</code> - utilizando uma medida relativa para garantir flexibilidade.</p>
+<div class="highlight"><pre><code class="css language-css" data-lang="css"><a name="line-1"></a><span class="nt">p</span> <span class="p">{</span>
+<a name="line-2"></a>  <span class="k">line-height</span><span class="o">:</span> <span class="m">1.5em</span><span class="p">;</span>
+<a name="line-3"></a><span class="p">}</span>
+</code></pre></div>
+              <h2 id="Conteúdo-fluído">
+                <a name="Conteúdo-fluído" href="#Conteúdo-fluído"></a>Conteúdo fluído
+              </h2>
+            
+<p>Websites com uma grade de conteúdo fluída não são nenhuma novidade e fazem bastante sentido quando estamos falando em diferentes resoluções de dispositivos. A técnica por si só é simples, basta definir as dimensões dos elementos em porcentagem. As imagens também podem ser fluídas, basta aplicar a regra abaixo.</p>
+<div class="highlight"><pre><code class="css language-css" data-lang="css"><a name="line-1"></a><span class="nt">img</span> <span class="p">{</span>
+<a name="line-2"></a>    <span class="k">max-width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+<a name="line-3"></a><span class="p">}</span>
+</code></pre></div>
+<p>Aplicar a técnica em conteúdos <em>embutidos</em> é mais complicado pois eles não mantem proporcionalmente a altura. Em especial, para vídeos, vale a pena conferir o <a href="http://fitvidsjs.com">FitVids.JS</a>.</p>
+
+              <h2 id="Media-Queries">
+                <a name="Media-Queries" href="#Media-Queries"></a>Media Queries
+              </h2>
+            
+<p>Chegamos então ao Santo Gral do design responsivo. As <em>media queries</em> nada mais são que um meio que nos permite aplicar regras de estilo específicas com base em aspectos do meu dispositivo.</p>
+
+<p>A manifestação mais rudimentar delas, que surgiram ainda em 1994 e tiveram sua primeira especificação em 2002, foi a de definir uma folha de estilos específica para impressão do documento. O resultado do código a seguir fica como exercício. Dica: tente imprimir este blog.</p>
+<div class="highlight"><pre><code class="css language-css" data-lang="css"><a name="line-1"></a><span class="k">@media</span> <span class="nt">print</span> <span class="p">{</span>
+<a name="line-2"></a>  <span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">]</span><span class="nd">:after</span> <span class="p">{</span>
+<a name="line-3"></a>    <span class="k">content</span><span class="o">:</span> <span class="s2">&quot; (&quot;</span> <span class="n">attr</span><span class="p">(</span><span class="n">href</span><span class="p">)</span> <span class="s2">&quot;)&quot;</span><span class="p">;</span>
+<a name="line-4"></a>  <span class="p">}</span>
+<a name="line-5"></a><span class="p">}</span>
+</code></pre></div>
+<p>As <em>media queries</em> <a href="http://www.w3.org/TR/css3-mediaqueries">evoluíram muito</a>, atualmente a <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries#Pseudo-BNF_(for_those_of_you_that_like_that_kind_of_thing)">gramática</a> de sua definição é bastante extensa. Vale destacar aspectos como: <code>min-width</code>, <code>max-width</code>, <code>min-height</code>, <code>max-height</code>, <code>min-device-aspect-ratio</code>, <code>max-device-aspect-ratio</code>, <code>min-resolution</code>, <code>max-resolution</code>, que podem ser utilizados para condicionar a aplicação das regras.</p>
+
+<p>Vamos para um exemplo: com este, para resoluções de viewport com largura de até no máximo 800px, teremos parágrafos em <em>Comic Sans MS</em> de cor vermelha. <a href="http://jsbin.com/ulaYuyO/3">Faça o teste</a>.</p>
+<div class="highlight"><pre><code class="css language-css" data-lang="css"><a name="line-1"></a><span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">800px</span><span class="o">)</span> <span class="p">{</span>
+<a name="line-2"></a>  <span class="nt">p</span> <span class="p">{</span>
+<a name="line-3"></a>    <span class="k">font</span><span class="o">:</span> <span class="m">2em</span> <span class="s2">&quot;Comic Sans MS&quot;</span><span class="o">,</span> <span class="k">cursive</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+<a name="line-4"></a>    <span class="k">color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span>
+<a name="line-5"></a>  <span class="p">}</span>
+<a name="line-6"></a><span class="p">}</span>
+</code></pre></div>
+<p>Agora, se você abrir este mesmo exemplo em seu <em>smartphone</em> (digamos que ele tenha resolução com largura inferior a 800px) a regra não será aplicada. Isto se deve ao fato de que a configuração de largura da sua <a href="/hipermidia-as-avessas.html#Mobile-Viewport">viewport ser 980px por padrão</a>. Você precisa disto:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><a name="line-1"></a><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>Definir a <code>meta tag viewport</code> com largura igual a <code>device-width</code> permite a criação de <em>breakpoints</em> e potencializa o design responsivo para mobile, <a href="http://mediaqueri.es">confere aqui</a>. Ah, o exemplo, vai lá, <a href="http://jsbin.com/ulaYuyO/4">testa outra vez</a>.</p>
+
+              <h3 id="Breakpoints">
+                <a name="Breakpoints" href="#Breakpoints"></a>Breakpoints
+              </h3>
+            
+<p>Este é um ponto bastante importante, talvez o mais. Fazendo uma rápida busca você encontrará uma série de folhas de estilo com <em>breakpoints</em> definidos para atender as resoluções dos principais dispositivos móveis. E o problema é exatamente este: <strong>principais</strong> dispositivos.</p>
+
+<p>Existem milhares de dezenas de dispositivos com uma infinidade incalculável de resoluções (ainda mais se falarmos do universo Android) e a cada semana aparelhos são lançados. Você já perdeu essa briga há muito tempo. Ou melhor, você nunca deveria ter lutado por ela.</p>
+
+<p>Os <em>breakpoints</em> do seu projeto <strong>não devem ser baseados em nenhuma receita</strong>, apenas no seu próprio conteúdo. O conteúdo é o rei. A partir da resolução em que: a leitura do texto se torna difícil, o menu quebra, as fotos dos produtos ficam pequenas demais; você define um <em>breakpoint</em> e ajusta.</p>
+
+<p>Se o designer que não sabe HTML e CSS ficar confuso, diga a ele que já passa da hora de ele aprender. E não, saber de editor de fotos não é o bastante para <em>fazer web</em>.</p>
+
+              <h2 id="Gestos-e-interação">
+                <a name="Gestos-e-interação" href="#Gestos-e-interação"></a>Gestos e interação
+              </h2>
+            
+<p>Os dispositivos mobile que temos em mãos atualmente são fantásticos. Por nossa sorte, todos estes dispositivos se adaptam aos periféricos disponíveis. E mais, já desenvolvi muitos websites no passado que funcionam perfeitamente em mobile.</p>
+
+<p>Soluções como o <a href="https://github.com/ftlabs/fastclick">fastclick</a> são péssimas para a experiência do usuário. Em primeira análise, porque o usuário já está acostumado a esperar para que seu clique tenha efeito naquele dispositivo. Mais que isto, este tempo não existe por acaso: o dispositivo fica a espera de uma ação que possa ser complementar.</p>
+
+<p>Em suma, tome muito cuidado ao implementar novas formas de interação através de gestos e, sobretudo, não reescreva comportamentos padrões. Mais uma vez, lembre-se que novos navegadores e dispositivos surgem toda a semana e você não pode se dar o luxo de correr atrás e testar em cada um deles seu <a href="http://shouldiuseacarousel.com">carrossel</a>.</p>
+
+<hr>
+
+              <h2 id="Desafio-das-imagens">
+                <a name="Desafio-das-imagens" href="#Desafio-das-imagens"></a>Desafio das imagens
+              </h2>
+            
+<p>O próximo desafio é escolher uma imagem que tenha uma boa nitidez em diferentes dispositivos sem exagerar no tamanho.</p>
+
+<p>Saiba que o <a href="http://httparchive.org">HTTP Archive</a> registra que 63% daquilo que compõe seu website são imagens. Os <em>scripts</em>, sempre parte do assunto de otimizações, representam apenas 17%. Fica evidente que as imagens merecem uma atenção especial, <a href="/hipermidia-as-avessas-imagens.html">vamos a ela</a>.</p>
+
+<hr>
+
+<p><strong>Edição em 12/2013:</strong> Detalhamento sobre o funcionamento e utilidade de fontes com tamanhos relativos.</p>
+
+
+    <aside class="post-meta">
+      <time class="date">21/09/2013</time>
+      <span class="author">por <a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></span>
+      <span class="tags">
+        <strong>Tags:</strong>
+        <ul>
+          
+          <li>HTML5</li>
+          
+          <li>mobile</li>
+          
+        </ul>
+      </span>
+    </aside>
+
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <p class="wrapper">
+      <span class="brand">Jean Carlo Emer</span>
+      <span class="credits">Layout por <a href="http://curestudio.com.br" class="cure" target="_blank">Cure</a></span>
+    </p>
+  </footer>
+  <script src="/assets/scripts/main.js"></script>
+</body>
+</html>

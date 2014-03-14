@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Criando bons construtores em JavaScript ~ Jean Carlo Emer
+  </title>
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://feeds.feedburner.com/jeancarloemer" rel="alternate" type="application/rss+xml">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jean Carlo Emer"/>
+  <meta property="og:url" content="http://jcemer.com/construtores-em-javascript.html">
+  <meta property="og:title" content="Criando bons construtores em JavaScript ~ Jean Carlo Emer">
+  <meta property="og:description" content="Como tirar proveito do modelo de Orientação a Objetos do JavaScript e criar construtores que não tenham efeitos colaterais e utilizem o prototype.">
+  <meta property="og:image" content="http://jcemer.com/assets/images/badge.jpg">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700|Raleway:300,700,800|Droid+Sans+Mono:400" rel="stylesheet" type="text/css">
+  <link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css">
+
+  <link rel="canonical" href="http://jcemer.com/construtores-em-javascript.html">
+
+  <script>
+    window._gaq = [
+      ['_setAccount', 'UA-37078527-1']
+    , ['_trackPageview']
+    ]
+  </script>
+</head>
+<body>
+  <div class="lobby">
+    <div class="wrapper">
+      <nav id="menu">
+        <ul>
+          
+            <li><a href="/sobre.html">Sobre</a></li>
+          
+            <li><a href="/talks.html">Talks</a></li>
+          
+            <li><a href="http://twitter.com/jcemer">Twitter</a></li>
+          
+            <li><a href="http://github.com/jcemer">GitHub</a></li>
+          
+        </ul>
+        <a href="#menu" id="menu-toggle">menu</a>
+      </nav>
+      <a href="/" class="brand" title="Página inicial">Jean Carlo Emer</a>
+    </div>
+  </div>
+
+  <header class="header">
+  <div class="wrapper">
+    <h1 class="header-title">
+      <a href="/construtores-em-javascript.html">Criando bons construtores em JavaScript</a>
+    </h1>
+    <time class="header-date">
+      <span class="header-date-year">2013</span>
+      <span class="header-date-month">Outubro</span>
+    </time>
+  </div>
+</header>
+
+<div class="main">
+  <div class="wrapper">
+    <p>Este texto não se trata de uma introdução a Orientação a Objetos, para isto, <a href="https://developer.mozilla.org/pt-PT/docs/Javascript_orientado_a_objetos">este artigo da MDN serve melhor</a>.</p>
+
+<p>Tive o prazer de <a href="https://speakerdeck.com/jcemer/o-fantastico-mundo-do-javascript">palestrar sobre os paradigmas do JavaScript</a> no <a href="http://braziljs.com.br">BrazilJS</a> deste ano, este texto é um complemento com alguns <em>insights</em> sobre Orientação a Objetos e em especial: construtores.</p>
+
+              <h2 id="Inspiração">
+                <a name="Inspiração" href="#Inspiração"></a>Inspiração
+              </h2>
+            
+<p>Costumo sempre ficar de olhos abertos para sugar ao máximo o que diferentes linguagens e suas comunidades tem a oferecer.</p>
+
+<p>Aprendi Ruby há alguns anos atrás. Na época, o que mais me chamou atenção era que quase tudo pode se comportar como um objeto, assim como no JavaScript. Fique tranquilo, minha intenção aqui não é fazer com que você aprenda Ruby, só usarei a linguagem por alguns parágrafos para defender um ponto.</p>
+
+<p>Nossa inspiração será uma versão simplificada da principal classe responsável pelos <em>models</em> no <a href="http://rubyonrails.org">Ruby on Rails</a>.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><a name="line-1"></a><span class="k">class</span> <span class="nc">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<a name="line-2"></a>  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">attributes</span><span class="p">)</span>
+<a name="line-3"></a>    <span class="n">assign_attributes</span><span class="p">(</span><span class="n">attributes</span><span class="p">)</span>
+<a name="line-4"></a>  <span class="k">end</span>
+<a name="line-5"></a><span class="k">end</span>
+</code></pre></div>
+<p>Considerando um <em>model</em> <code>User</code>, posso executar <code>User.new(name: &#39;Jean&#39;)</code> para instanciar um objeto. Neste caso, o método <code>initialize</code> acima é chamado e <code>name</code> é armazenado no objeto que acabei de criar.</p>
+
+<p><strong>O ponto chave: nenhum efeito colateral é ou deve ser desencadeado com a simples instanciação de um objeto</strong>. Esta execução, por exemplo, não salva este usuário no banco de dados ou o persiste de qualquer outra maneira que não seja como atributo do objeto recem criado.</p>
+
+<hr>
+
+<p>Adicionalmente, nossa classe possui o método <code>create</code>. Este método pode ser chamado ao invés do <code>new</code>, que é o construtor padrão.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><a name="line-1"></a><span class="k">class</span> <span class="nc">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<a name="line-2"></a>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">create</span><span class="p">(</span><span class="n">attributes</span><span class="p">)</span>
+<a name="line-3"></a>    <span class="n">object</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="n">attributes</span><span class="p">)</span>
+<a name="line-4"></a>    <span class="n">object</span><span class="o">.</span><span class="n">save</span>
+<a name="line-5"></a>    <span class="n">object</span>
+<a name="line-6"></a>  <span class="k">end</span>
+<a name="line-7"></a><span class="k">end</span>
+</code></pre></div>
+<p>Como você deve suspeitar, <code>User.create(name: &#39;Jean&#39;)</code> instancia um objeto e o salva no banco de dados. Sim, agora temos efeito colateral, mas isto é claro pois tenho um método específico que possui este comportamento documentado.</p>
+
+              <h2 id="Construtores-ideais">
+                <a name="Construtores-ideais" href="#Construtores-ideais"></a>Construtores ideais
+              </h2>
+            
+<p>O construtor ideal é aquele que não adiciona <em>listeners</em> de eventos ou elementos no DOM e muito menos dispara um <code>alert</code>. E é óbvio que isto não é tão simples e a maioria dos códigos não seguem esta regra.</p>
+
+              <h3 id="Modelo">
+                <a name="Modelo" href="#Modelo"></a>Modelo
+              </h3>
+            
+<p>Vamos portar nossa <a href="#Inspira%C3%A7%C3%A3o">inspiração</a> para JavaScript na forma de uma das aplicações mais comuns (e detestadas) de vermos em websites: um carrossel.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="kd">function</span> <span class="nx">Carousel</span><span class="p">(</span><span class="nx">container</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-2"></a>  <span class="k">this</span><span class="p">.</span><span class="nx">container</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">container</span><span class="p">);</span>
+<a name="line-3"></a><span class="p">}</span>
+<a name="line-4"></a>
+<a name="line-5"></a><span class="nx">Carousel</span><span class="p">.</span><span class="nx">create</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">container</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-6"></a>  <span class="kd">var</span> <span class="nx">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="k">this</span><span class="p">(</span><span class="nx">container</span><span class="p">);</span>
+<a name="line-7"></a>  <span class="nx">instance</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+<a name="line-8"></a>  <span class="k">return</span> <span class="nx">instance</span><span class="p">;</span>
+<a name="line-9"></a><span class="p">};</span>
+<a name="line-10"></a>
+<a name="line-11"></a><span class="nx">Carousel</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">init</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<a name="line-12"></a>  <span class="k">this</span><span class="p">.</span><span class="nx">addEventListeners</span><span class="p">();</span>
+<a name="line-13"></a>  <span class="k">this</span><span class="p">.</span><span class="nx">startAutomaticTransition</span><span class="p">();</span>
+<a name="line-14"></a><span class="p">};</span>
+</code></pre></div>
+<p>Note, a única função do construtor é armazenar o <em>container</em> utilizado como base para o carrosel. O método de instância <code>init</code> é que irá disparar o comportamento. Um exemplo de uso.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="kd">var</span> <span class="nx">productsCarousel</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Carousel</span><span class="p">(</span><span class="s1">&#39;[data-carousel=&quot;products&quot;]&#39;</span><span class="p">);</span>
+<a name="line-2"></a><span class="nx">productsCarousel</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+</code></pre></div>
+<p>Temos outra forma de uso com o mesmo resultado. Repare que desta vez não usamos o operador <code>new</code>.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="nx">Carousel</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="s1">&#39;[data-carousel=&quot;products&quot;]&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p>Lembre-se sempre de tirar o máximo proveito da linguagem e definir seus métodos no <code>prototype</code>. Desta maneira, uma única função será criada e compartilhada por todas as instâncias do seu construtor.</p>
+
+              <h3 id="Vantagens">
+                <a name="Vantagens" href="#Vantagens"></a>Vantagens
+              </h3>
+            
+<p>A principal vantagem é poder <strong>instanciar um objeto sem precisar se preocupar com efeitos colaterais</strong>, este é o ganho.</p>
+
+<p>Sem dúvidas, herança em navegadores modernos deve ser apoiada em <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Classical_inheritance_with_Object.create">Object.create</a>. Mas para uma técnica compatível com todos os navegadores, o construtor a ser herdado deve ser instanciado no <em>prototype</em> do sub construtor. A maneira mais comum de se fazer isto é <a href="https://github.com/jashkenas/backbone/blob/f6fa0cb87e26bb3d1b7f47144fd720d1ab48e88f/backbone.js#L1552-L1556">criando um construtor temporário para que o construtor herdado não seja executado</a>. Com construtores sem efeito colateral, esta etapa não é necessária.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="kd">function</span> <span class="nx">CarouselWithLasers</span><span class="p">(</span><span class="nx">container</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-2"></a>  <span class="nx">Carousel</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">container</span><span class="p">);</span>
+<a name="line-3"></a><span class="p">}</span>
+<a name="line-4"></a><span class="nx">CarouselWithLasers</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Carousel</span><span class="p">();</span>
+<a name="line-5"></a><span class="nx">CarouselWithLasers</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">CarouselWithLasers</span><span class="p">;</span>
+</code></pre></div>
+<p>Viabilizar os testes é outra grande vantagem em não ter comportamento definido no construtor. Desta forma, fica possível aplicar <a href="http://sinonjs.org/docs/#stubs">stubs</a> no método <code>init</code> para poder testar e ser feliz.</p>
+
+<hr>
+
+<p>Na biblioteca <a href="http://backbonejs.org">Backbone</a>, que é um dos <em>cases</em> mais fantásticos de herança em JavaScript que conheço, todos os construtores quando não extendidos podem ser instanciados sem efeitos colaterais. Isto vale para <code>new Backbone.Model()</code>, <code>new Backbone.View()</code>, <code>new Backbone.History()</code>. Pode experimentar, faça estas chamadas no <em>console</em> do seu navegador quando estiver acessando o endereço <a href="http://backbonejs.org">http://backbonejs.org</a></p>
+
+<p>Um último detalhe é que, para as views do Backbone, a documentação incentiva o uso da propriedade <code>events</code>, que associa <em>listeners</em> na instanciação do objeto. Tem também o método <code>this.listenTo</code> geralmente usado no <code>initialize</code>, outro que é chamado na instanciação. Não digo que não devam ser utilizados, apenas aconselho que fique atento.</p>
+
+<hr>
+
+<p><strong>Edição 1:</strong> Chamar de <code>create</code> o método do construtor evita confusões e deixa mais clara qual a sua real função.</p>
+
+<p><strong>Edição 2:</strong> Incentivo ao uso do <code>prototype</code> como essência da definição de um bom construtor.</p>
+
+
+    <aside class="post-meta">
+      <time class="date">03/10/2013</time>
+      <span class="author">por <a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></span>
+      <span class="tags">
+        <strong>Tags:</strong>
+        <ul>
+          
+          <li>JavaScript</li>
+          
+        </ul>
+      </span>
+    </aside>
+
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <p class="wrapper">
+      <span class="brand">Jean Carlo Emer</span>
+      <span class="credits">Layout por <a href="http://curestudio.com.br" class="cure" target="_blank">Cure</a></span>
+    </p>
+  </footer>
+  <script src="/assets/scripts/main.js"></script>
+</body>
+</html>

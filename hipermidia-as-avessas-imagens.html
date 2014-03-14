@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Hipermídia as Avessas: Imagens ~ Jean Carlo Emer
+  </title>
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://feeds.feedburner.com/jeancarloemer" rel="alternate" type="application/rss+xml">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jean Carlo Emer"/>
+  <meta property="og:url" content="http://jcemer.com/hipermidia-as-avessas-imagens.html">
+  <meta property="og:title" content="Hipermídia as Avessas: Imagens ~ Jean Carlo Emer">
+  <meta property="og:description" content="O que denominamos Hipermídia as avessas e aprendemos sobre design responsivo nos obriga a dar uma atenção especial às imagens. Temos algumas propostas para lidar com elas.
+">
+  <meta property="og:image" content="http://jcemer.com/assets/images/badge.jpg">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700|Raleway:300,700,800|Droid+Sans+Mono:400" rel="stylesheet" type="text/css">
+  <link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css">
+
+  <link rel="canonical" href="http://jcemer.com/hipermidia-as-avessas-imagens.html">
+
+  <script>
+    window._gaq = [
+      ['_setAccount', 'UA-37078527-1']
+    , ['_trackPageview']
+    ]
+  </script>
+</head>
+<body>
+  <div class="lobby">
+    <div class="wrapper">
+      <nav id="menu">
+        <ul>
+          
+            <li><a href="/sobre.html">Sobre</a></li>
+          
+            <li><a href="/talks.html">Talks</a></li>
+          
+            <li><a href="http://twitter.com/jcemer">Twitter</a></li>
+          
+            <li><a href="http://github.com/jcemer">GitHub</a></li>
+          
+        </ul>
+        <a href="#menu" id="menu-toggle">menu</a>
+      </nav>
+      <a href="/" class="brand" title="Página inicial">Jean Carlo Emer</a>
+    </div>
+  </div>
+
+  <header class="header">
+  <div class="wrapper">
+    <h1 class="header-title">
+      <a href="/hipermidia-as-avessas-imagens.html">Hipermídia as Avessas: Imagens</a>
+    </h1>
+    <time class="header-date">
+      <span class="header-date-year">2013</span>
+      <span class="header-date-month">Setembro</span>
+    </time>
+  </div>
+</header>
+
+<div class="main">
+  <div class="wrapper">
+    <p>O que denominamos <a href="/hipermidia-as-avessas.html">Hipermídia as avessas</a> e aprendemos sobre <a href="/hipermidia-as-avessas-responsive-design.html">design responsivo</a> nos obriga a dar uma atenção especial às imagens. Temos algumas propostas para lidar com elas.</p>
+
+              <h2 id="Formatos-de-imagens">
+                <a name="Formatos-de-imagens" href="#Formatos-de-imagens"></a>Formatos de imagens
+              </h2>
+            
+<p>É bastante importante saber identificar e compreender os diferentes formatos de imagens:</p>
+
+<ul>
+<li><p><strong>Bitmaps</strong>: são imagens que possuem resolução específica e definem a cor de cada um dos seus <em>pixels</em>. Os formatos mais comuns na internet são <a href="http://en.wikipedia.org/wiki/Portable_Network_Graphics">png</a>, <a href="http://en.wikipedia.org/wiki/JPEG">jpeg</a> e <a href="https://developers.google.com/speed/webp">webp</a> (confere este último).</p></li>
+<li><p><strong>Vetores</strong>: não pertencem a uma resolução específica, definem formas através de linhas e pontos. Os principais são <a href="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">svg</a> e as próprias fontes.</p></li>
+</ul>
+
+<p>Como você já deve ter notado, o problema são as imagens <em>bitmap</em>. Imagens vetoriais podem ser apresentadas em qualquer resolução sem perda de nitidez. As imagens em formato bitmap devem ser <strong>evitadas ao máximo</strong>, dê prefência a <strong>usar formatos vetoriais</strong>.</p>
+
+              <h2 id="Imagens-no-CSS">
+                <a name="Imagens-no-CSS" href="#Imagens-no-CSS"></a>Imagens no CSS
+              </h2>
+            
+<p>Todas as imagens que são ligadas unicamente ao layout da sua página podem e devem ser inseridas através das folhas de estilo. Desta forma, você pode utilizar todo o poder das <a href="/hipermidia-as-avessas-responsive-design.html#Media-Queries">media queries</a> para, quando não for possível utilizar uma imagem vetorial, entregar imagens <em>bitmaps</em> adequadas a cada resolução e demais aspectos do dispositivo.</p>
+
+<p>Não se esqueça também que <a href="http://fortawesome.github.io/Font-Awesome">fontes</a> podem ser usadas como biblioteca de ícones vetoriais em seu projeto.</p>
+
+              <h2 id="Imagens-no-HTML">
+                <a name="Imagens-no-HTML" href="#Imagens-no-HTML"></a>Imagens no HTML
+              </h2>
+            
+<p>Imagens devem ser inseridas de <code>&lt;img&gt;</code> quando fizerem parte do seu conteúdo. Uma única imagem pode ser indicada e a consequência é não ser possível escolher diferentes arquivos com base nos aspectos do dispositivo.</p>
+
+              <h3 id="Soluções-no-servidor">
+                <a name="Soluções-no-servidor" href="#Soluções-no-servidor"></a>Soluções no servidor
+              </h3>
+            
+<p>Uma forma tangível aos navegadores atuais é o uso de alguma inteligência no servidor que possa ajudar a entregar a imagem mais adequada. Esta é uma <a href="https://docs.google.com/spreadsheet/ccc?key=0Al0lI17fOl9DdDgxTFVoRzFpV3VCdHk2NTBmdVI2OXc#gid=0">lista bem completa com de soluções</a>, falaremos aqui das que possuem a primeira coluna marcada.</p>
+
+<p>Mesmo sendo óbvio, acho importante destacar que estas soluções vão depender de configurações específicas nas máquinas que são servidoras do seu projeto. Além disto, a solução mais comum opera com a criação de um <em>cookie</em> com as informações do dispositivo e não há garantia que este seja criado antes da requisição das imagens.</p>
+
+<p>Outro detalhe é que tais soluções podem enfrentar problemas em servidores <a href="http://pt.wikipedia.org/wiki/Proxy">proxy</a> mal configurados além de quebrar o princípio de <a href="http://pt.wikipedia.org/wiki/REST">REST</a>, o que pode ser contornado com o cabecalho de <code>Vary</code> <a href="https://twitter.com/sergio_caelum/statuses/379684187600482304">como destacado pelo Sério Lopes</a>.</p>
+
+              <h3 id="Soluções-no-navegador">
+                <a name="Soluções-no-navegador" href="#Soluções-no-navegador"></a>Soluções no navegador
+              </h3>
+            
+<p>Sempre que pesquiso e penso sobre o assunto me parece bastante claro que o único sujeito com capacidade de decidir qual a imagem mais adequada é o navegador.</p>
+
+<p>A solução para termos imagens responsivas habita em duas novas especificações:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><a name="line-1"></a><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;pear-mobile.jpeg&quot;</span>
+<a name="line-2"></a>     <span class="na">srcset=</span><span class="s">&quot;pear-mobile.jpeg 720w, </span>
+<a name="line-3"></a><span class="s">             pear-tablet.jpeg 1280w, </span>
+<a name="line-4"></a><span class="s">             pear-desktop.jpeg 1x&quot;</span>
+<a name="line-5"></a>     <span class="na">alt=</span><span class="s">&quot;The pear is juicy.&quot;</span>
+</code></pre></div>
+<p>A epecificação de <a href="http://www.w3.org/html/wg/drafts/srcset/w3c-srcset">srcset attribute</a>, exemplificada acima, permite definir uma série de arquivos com base em resolução e densidade de <em>pixels</em> do dispositivo em relação ao <em>pixel</em> do CSS.</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><a name="line-1"></a><span class="nt">&lt;picture</span> <span class="na">width=</span><span class="s">&quot;500&quot;</span> <span class="na">height=</span><span class="s">&quot;500&quot;</span><span class="nt">&gt;</span>
+<a name="line-2"></a>  <span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">&quot;(min-width: 45em)&quot;</span> <span class="na">src=</span><span class="s">&quot;large.jpg&quot;</span><span class="nt">&gt;</span>
+<a name="line-3"></a>  <span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">&quot;(min-width: 18em)&quot;</span> <span class="na">src=</span><span class="s">&quot;med.jpg&quot;</span><span class="nt">&gt;</span>
+<a name="line-4"></a>  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">&quot;small.jpg&quot;</span><span class="nt">&gt;</span>
+<a name="line-5"></a>  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;small.jpg&quot;</span> <span class="na">alt=</span><span class="s">&quot;hi, there&quot;</span> <span class="na">lazyload</span><span class="nt">&gt;</span>
+<a name="line-6"></a><span class="nt">&lt;/picture&gt;</span>
+</code></pre></div>
+<p>O elemento <a href="http://www.w3.org/TR/html-picture-element">picture</a> viabiliza o poder total das <em>media queries</em> para selecionar a imagem mais adequada.</p>
+
+<p>Saiba que as especificações são desenhadas de maneira a manter a compatibilidade com navegadores antigos, tanto por isto a primeira mantem o <code>src</code> e a segunda possui uma <code>&lt;img&gt;</code> embutida. A questão é que são ainda rascunho e o suporte em navegadores é nulo. Existe bastante discussão em torno do assunto e um <a href="http://www.w3.org/community/respimg/">grupo exclusivo de imagens responsivas</a> para fomentar o debate.</p>
+
+              <h4 id="Soluções-possíveis">
+                <a name="Soluções-possíveis" href="#Soluções-possíveis"></a>Soluções possíveis
+              </h4>
+            
+<p>Por enquanto, nos restam algumas poucas técnicas possíveis:</p>
+
+<ul>
+<li><p><strong>Não faça nada</strong>, inclua uma imagem com nitidez mediana que esta ficará aceitável para uma vasta gama de dispositivo. Esta é a solução mais adotada, sem dúvidas.</p></li>
+<li><p>Entregue uma imagem de nitidez inferior e depois, via JavaScript, <strong>substitua por uma mais adequada</strong>. A desvantagem é que o usuário precisará fazer o <em>download</em> de duas imagens e terá sua experiência visual afetada por enxergar estas diferentes imagens.</p></li>
+<li><p>Outra técnica interessante é criar uma <strong>imagem de dimensão maior</strong> que a utilizada e de muita pouca qualidade que, depois de reescalada, terá uma nitidez bastante aceitável sem pesar muito para a banda. O detalhe é que a imagem gigantesca ficará ocupando memória do navegador.</p></li>
+</ul>
+
+<p>Enfim, não temos nada muito adequado para resolver este problema. É preciso torcer para que as especificações amadureçam logo e que os fabricantes de navegadores as adotem.</p>
+
+
+    <aside class="post-meta">
+      <time class="date">22/09/2013</time>
+      <span class="author">por <a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></span>
+      <span class="tags">
+        <strong>Tags:</strong>
+        <ul>
+          
+          <li>HTML5</li>
+          
+          <li>mobile</li>
+          
+        </ul>
+      </span>
+    </aside>
+
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <p class="wrapper">
+      <span class="brand">Jean Carlo Emer</span>
+      <span class="credits">Layout por <a href="http://curestudio.com.br" class="cure" target="_blank">Cure</a></span>
+    </p>
+  </footer>
+  <script src="/assets/scripts/main.js"></script>
+</body>
+</html>

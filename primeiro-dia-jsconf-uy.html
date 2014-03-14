@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Live posting do primeiro dia da JSConfUY ~ Jean Carlo Emer
+  </title>
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://feeds.feedburner.com/jeancarloemer" rel="alternate" type="application/rss+xml">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jean Carlo Emer"/>
+  <meta property="og:url" content="http://jcemer.com/primeiro-dia-jsconf-uy.html">
+  <meta property="og:title" content="Live posting do primeiro dia da JSConfUY ~ Jean Carlo Emer">
+  <meta property="og:description" content="Textp escrito "ao-vivo" durante a JSConf do Uruguai.">
+  <meta property="og:image" content="http://jcemer.com/assets/images/badge.jpg">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700|Raleway:300,700,800|Droid+Sans+Mono:400" rel="stylesheet" type="text/css">
+  <link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css">
+
+  <link rel="canonical" href="http://jcemer.com/primeiro-dia-jsconf-uy.html">
+
+  <script>
+    window._gaq = [
+      ['_setAccount', 'UA-37078527-1']
+    , ['_trackPageview']
+    ]
+  </script>
+</head>
+<body>
+  <div class="lobby">
+    <div class="wrapper">
+      <nav id="menu">
+        <ul>
+          
+            <li><a href="/sobre.html">Sobre</a></li>
+          
+            <li><a href="/talks.html">Talks</a></li>
+          
+            <li><a href="http://twitter.com/jcemer">Twitter</a></li>
+          
+            <li><a href="http://github.com/jcemer">GitHub</a></li>
+          
+        </ul>
+        <a href="#menu" id="menu-toggle">menu</a>
+      </nav>
+      <a href="/" class="brand" title="Página inicial">Jean Carlo Emer</a>
+    </div>
+  </div>
+
+  <header class="header">
+  <div class="wrapper">
+    <h1 class="header-title">
+      <a href="/primeiro-dia-jsconf-uy.html">Live posting do primeiro dia da JSConfUY</a>
+    </h1>
+    <time class="header-date">
+      <span class="header-date-year">2014</span>
+      <span class="header-date-month">Março</span>
+    </time>
+  </div>
+</header>
+
+<div class="main">
+  <div class="wrapper">
+    <p>Cobertura do primeiro dia da JSConfUY 2014.</p>
+
+              <h2 id="We-Play-Guillermo-Rauch">
+                <a name="We-Play-Guillermo-Rauch" href="#We-Play-Guillermo-Rauch"></a>We Play - Guillermo Rauch
+              </h2>
+            
+<p>Guillermo, conhecido pelo socket.io dentre outros vários projetos <em>open source</em>, é um dos <em>keynotes</em> do evento. Sua palestra inicia abordando um pouco da história do socket.io, que surgiu da frustração do difícil uso de outras ferramentas similares e teve como objetivo tornar simples o uso de WebSockets.</p>
+
+<p>O assunto principal são as novidades da versão 1.0.0-pre do socket.io que teve seu <em>release</em> recenente. Nesta nova versão modularização foi levada a sério e todos os commits são testados automaticamente em IE6+, iPhone, iPad entre outros navegadores e dispositivos.</p>
+
+<p>Note que a API nativa de WebSockets aceita apenas a troca de mensagens no formato de <em>strings</em>. A nova versão, além de suportar o formato JSON já presente na versão 0.x, também suporta <em>binary data</em>.</p>
+
+<p>O projeto <a href="http://weplay.io">http://weplay.io</a>, título da sua palestra, é um ótimo exemplo do transporte de informações em formato binário em um jogo colaborativo. O jogo é emulado no servidor e cada <em>frame</em> é enviado para os clientes em formato binário, o que é impressionante e extremamente performático.</p>
+
+<hr>
+
+<p>Guillermo foi muito aplaudido por ser um nome importantes da comunidade JavaScript. WebSockets é uma tecnologia incrível que infelizmente possui muitas implementações e problemas de suporte. Socket.io é um dos poucos projetos que efetivamente simplificou e popularizou a tecnologia. Foi uma honra assistir a apresentação de um dos seus criadores.</p>
+
+              <h2 id="Jade-A-templating-language-Forbes-Lindesay">
+                <a name="Jade-A-templating-language-Forbes-Lindesay" href="#Jade-A-templating-language-Forbes-Lindesay"></a>Jade: A templating language - Forbes Lindesay
+              </h2>
+            
+<p>Sem muita cerimônia, Forbes logo explora um código escrito em HTML e seu equivalente em Jade. O que segue é a apresentação completa da sintaxe e <em>feaures</em> da linguagem.</p>
+
+<p>Um dos pontos interessantes foi a demonstração de como é possível passar conteúdo JavaScript para ser renderizado nos <em>templates</em> permitindo a geração dinâmica de HTML. Em favor do reuso, os <em>mixins</em> e <em>layout templates</em> foram apresentados. Outra funcionalidade interessante são os <em>filters</em> que permitem, por exemplo, mesclar código Jade com markdown.</p>
+
+<p>O compilador do Jade foi descrito e defendido por ser bem desenvolvido e conter três estágios: <em>lexer</em>, <em>parser</em> e <em>compiler</em>. A vantagem para o usuário é a fácil depuração do código.</p>
+
+<hr>
+
+<p>Sou um grande admirador de linguagens que geram outras, por assim dizer. Mas apresentar uma nova linguagem em um evento deste porte inclui destacar os problemas que esta soluciona. O uso de uma linguagem ou tecnologia precisa ser bem justificado.</p>
+
+              <h2 id="Building-for-scale-with-KrakenJS-Lenny-Markus">
+                <a name="Building-for-scale-with-KrakenJS-Lenny-Markus" href="#Building-for-scale-with-KrakenJS-Lenny-Markus"></a>Building for scale with KrakenJS - Lenny Markus
+              </h2>
+            
+<p>O objetivo do Kraken foi o de introduzir Node.js no PayPal. O Kraken.js é <em>Web Application Framework</em>* apoiado em Express e que segue suas convenções. O <em>framework</em> compreende uma série de módulos com funções específicas: Lusca, para segurança; Marara, para internacionalização; Kappa, que é um <em>proxy#</em> NPM para manter módulos privados. Os módulos podem ser utilizados individualmente em aplicações escritas em Express.</p>
+
+<p>O Kraken teve sua infraestrutura definida em três meses e em mais quatro meses um projeto piloto foi codificado para substituir outro escrito em Java. O impressionante é que a equipe que escreveu o projeto piloto possuia apenas dois desenvolvedores contra doze do projeto anterior. As diferenças de números de linhas de código também impressionam positivamente. A função do projeto piloto foi adquirir credibilidade para a tecnologia Node.js no PayPal.</p>
+
+<hr>
+
+<p>O <em>framework</em> teve uma adoção absurda no PayPal e eles já mantem 20 aplicações escritas. A apresentação foi muito boa e o mais humilde dos ensinamentos foi: &quot;Mantenha as convenções de <em>Open Source</em> ao invés de reinventar suas próprias&quot;.</p>
+
+<hr>
+
+<p><em>Esta postagem ainda será atualizada.</em></p>
+
+
+    <aside class="post-meta">
+      <time class="date">14/03/2014</time>
+      <span class="author">por <a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></span>
+      <span class="tags">
+        <strong>Tags:</strong>
+        <ul>
+          
+          <li>javascript</li>
+          
+        </ul>
+      </span>
+    </aside>
+
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <p class="wrapper">
+      <span class="brand">Jean Carlo Emer</span>
+      <span class="credits">Layout por <a href="http://curestudio.com.br" class="cure" target="_blank">Cure</a></span>
+    </p>
+  </footer>
+  <script src="/assets/scripts/main.js"></script>
+</body>
+</html>

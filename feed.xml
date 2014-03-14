@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jean Carlo Emer</title>
+    <description>Website e blog do desenvolvedor web Jean Carlo Emer</description>
+    <link>http://jcemer.com</link>
+    <atom:link href="http://jcemer.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Live posting do primeiro dia da JSConfUY</title>
+        <description>&lt;p&gt;Cobertura do primeiro dia da JSConfUY 2014.&lt;/p&gt;
+
+              &lt;h2 id=&quot;We-Play-Guillermo-Rauch&quot;&gt;
+                &lt;a name=&quot;We-Play-Guillermo-Rauch&quot; href=&quot;#We-Play-Guillermo-Rauch&quot;&gt;&lt;/a&gt;We Play - Guillermo Rauch
+              &lt;/h2&gt;
+            
+&lt;p&gt;Guillermo, conhecido pelo socket.io dentre outros vários projetos &lt;em&gt;open source&lt;/em&gt;, é um dos &lt;em&gt;keynotes&lt;/em&gt; do evento. Sua palestra inicia abordando um pouco da história do socket.io, que surgiu da frustração do difícil uso de outras ferramentas similares e teve como objetivo tornar simples o uso de WebSockets.&lt;/p&gt;
+
+&lt;p&gt;O assunto principal são as novidades da versão 1.0.0-pre do socket.io que teve seu &lt;em&gt;release&lt;/em&gt; recenente. Nesta nova versão modularização foi levada a sério e todos os commits são testados automaticamente em IE6+, iPhone, iPad entre outros navegadores e dispositivos.&lt;/p&gt;
+
+&lt;p&gt;Note que a API nativa de WebSockets aceita apenas a troca de mensagens no formato de &lt;em&gt;strings&lt;/em&gt;. A nova versão, além de suportar o formato JSON já presente na versão 0.x, também suporta &lt;em&gt;binary data&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;O projeto &lt;a href=&quot;http://weplay.io&quot;&gt;http://weplay.io&lt;/a&gt;, título da sua palestra, é um ótimo exemplo do transporte de informações em formato binário em um jogo colaborativo. O jogo é emulado no servidor e cada &lt;em&gt;frame&lt;/em&gt; é enviado para os clientes em formato binário, o que é impressionante e extremamente performático.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Guillermo foi muito aplaudido por ser um nome importantes da comunidade JavaScript. WebSockets é uma tecnologia incrível que infelizmente possui muitas implementações e problemas de suporte. Socket.io é um dos poucos projetos que efetivamente simplificou e popularizou a tecnologia. Foi uma honra assistir a apresentação de um dos seus criadores.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Jade-A-templating-language-Forbes-Lindesay&quot;&gt;
+                &lt;a name=&quot;Jade-A-templating-language-Forbes-Lindesay&quot; href=&quot;#Jade-A-templating-language-Forbes-Lindesay&quot;&gt;&lt;/a&gt;Jade: A templating language - Forbes Lindesay
+              &lt;/h2&gt;
+            
+&lt;p&gt;Sem muita cerimônia, Forbes logo explora um código escrito em HTML e seu equivalente em Jade. O que segue é a apresentação completa da sintaxe e &lt;em&gt;feaures&lt;/em&gt; da linguagem.&lt;/p&gt;
+
+&lt;p&gt;Um dos pontos interessantes foi a demonstração de como é possível passar conteúdo JavaScript para ser renderizado nos &lt;em&gt;templates&lt;/em&gt; permitindo a geração dinâmica de HTML. Em favor do reuso, os &lt;em&gt;mixins&lt;/em&gt; e &lt;em&gt;layout templates&lt;/em&gt; foram apresentados. Outra funcionalidade interessante são os &lt;em&gt;filters&lt;/em&gt; que permitem, por exemplo, mesclar código Jade com markdown.&lt;/p&gt;
+
+&lt;p&gt;O compilador do Jade foi descrito e defendido por ser bem desenvolvido e conter três estágios: &lt;em&gt;lexer&lt;/em&gt;, &lt;em&gt;parser&lt;/em&gt; e &lt;em&gt;compiler&lt;/em&gt;. A vantagem para o usuário é a fácil depuração do código.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Sou um grande admirador de linguagens que geram outras, por assim dizer. Mas apresentar uma nova linguagem em um evento deste porte inclui destacar os problemas que esta soluciona. O uso de uma linguagem ou tecnologia precisa ser bem justificado.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Building-for-scale-with-KrakenJS-Lenny-Markus&quot;&gt;
+                &lt;a name=&quot;Building-for-scale-with-KrakenJS-Lenny-Markus&quot; href=&quot;#Building-for-scale-with-KrakenJS-Lenny-Markus&quot;&gt;&lt;/a&gt;Building for scale with KrakenJS - Lenny Markus
+              &lt;/h2&gt;
+            
+&lt;p&gt;O objetivo do Kraken foi o de introduzir Node.js no PayPal. O Kraken.js é &lt;em&gt;Web Application Framework&lt;/em&gt;* apoiado em Express e que segue suas convenções. O &lt;em&gt;framework&lt;/em&gt; compreende uma série de módulos com funções específicas: Lusca, para segurança; Marara, para internacionalização; Kappa, que é um &lt;em&gt;proxy#&lt;/em&gt; NPM para manter módulos privados. Os módulos podem ser utilizados individualmente em aplicações escritas em Express.&lt;/p&gt;
+
+&lt;p&gt;O Kraken teve sua infraestrutura definida em três meses e em mais quatro meses um projeto piloto foi codificado para substituir outro escrito em Java. O impressionante é que a equipe que escreveu o projeto piloto possuia apenas dois desenvolvedores contra doze do projeto anterior. As diferenças de números de linhas de código também impressionam positivamente. A função do projeto piloto foi adquirir credibilidade para a tecnologia Node.js no PayPal.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;O &lt;em&gt;framework&lt;/em&gt; teve uma adoção absurda no PayPal e eles já mantem 20 aplicações escritas. A apresentação foi muito boa e o mais humilde dos ensinamentos foi: &amp;quot;Mantenha as convenções de &lt;em&gt;Open Source&lt;/em&gt; ao invés de reinventar suas próprias&amp;quot;.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;Esta postagem ainda será atualizada.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 14 Mar 2014 00:00:00 -0300</pubDate>
+        <link>http://jcemer.com/primeiro-dia-jsconf-uy.html</link>
+        <guid isPermaLink="true">http://jcemer.com/primeiro-dia-jsconf-uy.html</guid>
+      </item>
+    
+      <item>
+        <title>Qual a dose certa de JavaScript</title>
+        <description></description>
+        <pubDate>Mon, 03 Feb 2014 00:00:00 -0200</pubDate>
+        <link>http://jcemer.com/qual-dose-certa-de-javascript.html</link>
+        <guid isPermaLink="true">http://jcemer.com/qual-dose-certa-de-javascript.html</guid>
+      </item>
+    
+      <item>
+        <title>O grande desencontro do HTTP com o HTML</title>
+        <description></description>
+        <pubDate>Mon, 06 Jan 2014 00:00:00 -0200</pubDate>
+        <link>http://jcemer.com/o-grande-desencontro-http-com-o-html.html</link>
+        <guid isPermaLink="true">http://jcemer.com/o-grande-desencontro-http-com-o-html.html</guid>
+      </item>
+    
+      <item>
+        <title>BrazilJS: O fantástico mundo do JavaScript</title>
+        <description>&lt;p&gt;Foi com surpresa e grande satisfação que recebi no início deste ano o convite dos amigos &lt;a href=&quot;http://twitter.com/jaydson&quot;&gt;Jaydson&lt;/a&gt; e &lt;a href=&quot;http://twitter.com/felipenmoura&quot;&gt;Felipe&lt;/a&gt; para palestrar na maior conferência de Javascript do universo. No ano anterior, havia participado ativamente do evento, a Grifo havia colaborado desenvolvendo o website. Eu conhecia todos os bastidores do evento, faltava o palco.&lt;/p&gt;
+
+&lt;p&gt;Concordo que já seja um pouco tarde, o evento ocorreu no mês de agosto, mas só agora senti que seria pertinente falar sobre o assunto. Lembro que, tão logo passou a excitação do convite, dei-me conta do tamanho da responsabilidade. Eu não sabia, mas seria anunciado como &lt;a href=&quot;http://jaydson.org/valorize-a-prata-da-casa&quot;&gt;prata da casa&lt;/a&gt;, sem palavras.&lt;/p&gt;
+
+&lt;p&gt;Desde o início eu soube que queria apresentar conteúdo técnico. Sou formado em Ciências da Computação e muito por isto gosto de definir muito bem as ferramentas, abordagens e técnicas que utilizo. Sinto a falta desta prática no dia-a-dia do front-end.&lt;/p&gt;
+
+&lt;p&gt;Pronto, esta seria minha palestra: &lt;strong&gt;um panorama sobre os paradigmas da linguagem terminando no calcanhar da modularização&lt;/strong&gt;. Dei um nome bonitinho e uma introdução falando sobre a ubiquidade da linguagem só para quebrar o gelo. Ao mesmo tempo, eu queria que, indiferente do nível de conhecimento, todos aproveitassem. Além do desafio de conseguir abordar o tema em quarenta minutos, eu consideraria também mais esta restrição.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Este foi meu primeiro grande evento, o público foi em torno de mil pessoas, é óbvio que eu estava um tanto ansioso e apreensivo já no primeiro dia. Pra ajudar um pouco, logo pela manhã, conversei sobre o uso do operador &lt;code&gt;new&lt;/code&gt; com o Crockford e ele foi sumariamente contra. Confesso que fiquei embaraçado, gosto muito de construtores e minha palestra falaria deles.&lt;/p&gt;
+
+&lt;p&gt;Na tarde do primeiro dia, aproveitei para conversar um pouco com um dos caras que mais respeito quando se trata de JavaScript: Angus Croll, &lt;a href=&quot;https://speakerdeck.com/anguscroll/break-all-the-rulez&quot;&gt;o quebrador de regras&lt;/a&gt;. Mostrei e expliquei a ele todos os &lt;em&gt;slides&lt;/em&gt; e ele prestou atenção a cada detalhe. No fim, comentei que eu estava um tanto preocupado por apresentar algumas abordagens que, mesmo eu acreditando cegamente, conhecia quem as repudiasse. A resposta de Angus foi curta e muito boa: &amp;quot;Você fez a sua pesquisa e está muito bom, não se preocupe&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;No segundo dia, subi no palco e apresentei o melhor conteúdo que eu poderia oferecer. Sei que não foi uma palestra perfeita, nunca será e este não era o objetivo. Mas a experiência foi ótima, o &lt;em&gt;feedback&lt;/em&gt; foi positivo e as críticas muito construtivas. Conheci muitos desenvolvedores desde então e tenho escrito e palestrado o máximo que posso. Tem sido um prazer.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Falando um tanto dos pontos polêmicos. Escolhi CoffeeScript por ser uma linguagem que usei para aprender muito de JavaScript e que até hoje não entendo o porquê do preconceito em torno. Também mostrei códigos escritos de diferentes maneiras, incluindo &lt;a href=&quot;https://github.com/rwaldron/idiomatic.js/pull/32&quot;&gt;Comma First&lt;/a&gt;, sou um exibicionista.&lt;/p&gt;
+
+&lt;p&gt;Gosto de pensar que é preciso conhecer diferentes linguagens e maneiras de escrita de código, e neste último aspecto, não deixar de respeitar a um padrão já estabelecido.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Os slides da palestra estão no &lt;a href=&quot;https://speakerdeck.com/jcemer/o-fantastico-mundo-do-javascript&quot;&gt;Speaker Deck&lt;/a&gt; e o vídeo você confere abaixo.&lt;/p&gt;
+
+&lt;div class=&quot;video-wrapper&quot;&gt;
+  &lt;iframe src=&quot;http://www.youtube.com/embed/Zn7B-X0y5qs&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 20 Dec 2013 00:00:00 -0200</pubDate>
+        <link>http://jcemer.com/o-fantastico-mundo-do-javascript.html</link>
+        <guid isPermaLink="true">http://jcemer.com/o-fantastico-mundo-do-javascript.html</guid>
+      </item>
+    
+      <item>
+        <title>Asset Pipeline: Rails Assets or let die</title>
+        <description>&lt;p&gt;Já de início, deixe-me esclarecer duas coisas:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Este post trata do &lt;a href=&quot;http://www.akitaonrails.com/2012/07/01/asset-pipeline-para-iniciantes&quot;&gt;Asset Pipeline do Ruby on Rails&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Considero o Asset Pipeline ainda o melhor &lt;a href=&quot;http://tableless.com.br/workflow-para-cuidar-dos-seus-assets&quot;&gt;workflow para gerência de assets, veja meus argumentos&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A motivação em escrever vêm de algumas conversas entre amigos, discussões no Twitter e sobretudo meus estudos para a palestra: &lt;a href=&quot;https://speakerdeck.com/jcemer/e-agora-virei-um-front-end-rails&quot;&gt;E agora, virei um front-end Rails!?&lt;/a&gt;.&lt;/p&gt;
+
+              &lt;h2 id=&quot;A-força-do-Node-js&quot;&gt;
+                &lt;a name=&quot;A-força-do-Node-js&quot; href=&quot;#A-força-do-Node-js&quot;&gt;&lt;/a&gt;A força do Node.js
+              &lt;/h2&gt;
+            
+&lt;p&gt;Começando com um pouco de embasamento. A maior aptidão do Node.js são as aplicações que demandam entrada e saída massiva de dados, em suma, para isto é que ele foi desenvolvido.&lt;/p&gt;
+
+&lt;p&gt;Por outro lado, o Node.js tem sido adotado pela comunidade front-end como suporte para suas ferramentas há bastante tempo. A lista vai desde transpiladores e &lt;em&gt;parsers&lt;/em&gt; de JavaScript, pré-processadores de CSS a automatizadores de tarefas.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Node.js é a ferramenta mais importante pro desenvolvedor front end.
+  &lt;br&gt;&lt;a href=&quot;http://twitter.com/askoth&quot;&gt;Marcelo Oliveira&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+              &lt;h3 id=&quot;Gerenciamento-de-pacotes&quot;&gt;
+                &lt;a name=&quot;Gerenciamento-de-pacotes&quot; href=&quot;#Gerenciamento-de-pacotes&quot;&gt;&lt;/a&gt;Gerenciamento de pacotes
+              &lt;/h3&gt;
+            
+&lt;p&gt;Disponibilizar bibliotecas, frameworks ou qualquer outro tipo de código foi um dos maiores desafios do confeiteiro de HTML da era passada. Para disponibilizar código, o jeito era criar um website com uma área para download. Fizemos isto com a &lt;a href=&quot;http://ryejs.com&quot;&gt;Rye&lt;/a&gt; nos longínquos 2012.&lt;/p&gt;
+
+&lt;p&gt;Nada mais óbvio que a medida que o NPM conquistasse o maior sucesso gerenciando pacotes do Node.js surgissem gerenciadores destinados a código front-end no geral. Surgiram vários: &lt;a href=&quot;http://jamjs.org/&quot;&gt;Jam&lt;/a&gt;, &lt;a href=&quot;http://component.io&quot;&gt;Component&lt;/a&gt; e &lt;a href=&quot;http://volojs.org&quot;&gt;Volo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sem dúvida, o gerenciador de pacotes de maior adoção até o momento foi o Bower. &lt;strong&gt;Toda a biblioteca, framework ou código front-end que se preze está no Bower&lt;/strong&gt;.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Gerenciamento-de-pacotes-no-Asset-Pipeline&quot;&gt;
+                &lt;a name=&quot;Gerenciamento-de-pacotes-no-Asset-Pipeline&quot; href=&quot;#Gerenciamento-de-pacotes-no-Asset-Pipeline&quot;&gt;&lt;/a&gt;Gerenciamento de pacotes no Asset Pipeline
+              &lt;/h2&gt;
+            
+&lt;p&gt;É importante reparar que o Asset Pipeline é apenas um framework, de maneira alguma ele seria acompanhado por um gerenciador exclusivo de pacotes. Assim como o Ruby on Rails, o Asset Pipeline utiliza as gems do Ruby para empacotar dependências. Mas a discussão que surge é: &lt;strong&gt;são as gems o empacotamento mais adequado para código front-end?&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Alguns desenvolvedores já deixaram muito claro qual a sua opinião: &lt;a href=&quot;http://simplesideias.com.br/gerenciando-dependencias-client-side-com-bower&quot;&gt;caso seu pacote forneça apenas conteúdo para a interface, ele deve estar em um gerenciador específico tal como o Bower&lt;/a&gt;. O custo desta abordagem no Ruby on Rails implica em ter dois arquivos de configuração de dependências (sim, não temos como abandonar o Gemfile) e duas etapas de &lt;em&gt;install&lt;/em&gt; e &lt;em&gt;update&lt;/em&gt; de dependências. Sem contar que muita gente não quer depender do Bower para fazer o deploy.&lt;/p&gt;
+
+&lt;p&gt;Uma das soluções apontadas é adicionar ao repositório de versionamento do projeto os pacotes baixados pelo Bower. Desculpe, mas se for o caso, prefiro continuar com o protocolo antigo de &lt;em&gt;download&lt;/em&gt; manual das dependências, um gerenciador de pacotes tem muitas mais funções que apenas esta.&lt;/p&gt;
+
+              &lt;h3 id=&quot;Rails-Assets&quot;&gt;
+                &lt;a name=&quot;Rails-Assets&quot; href=&quot;#Rails-Assets&quot;&gt;&lt;/a&gt;Rails Assets
+              &lt;/h3&gt;
+            
+&lt;p&gt;O &lt;a href=&quot;https://rails-assets.org&quot;&gt;Rails Assets&lt;/a&gt; é uma fonte de gems que empacotam código de interface já disponíveis no Bower. É a solução perfeita. Uma orla de front-enders cadastra e atualiza seus pacotes no Bower e as gems se alimentam diretamente destes repositórios para criar uma &lt;strong&gt;versão compatível&lt;/strong&gt; com o Asset Pipeline.&lt;/p&gt;
+
+&lt;p&gt;Quando me refiro a versão compatível, é importante que saiba que alguns códigos precisam de adaptações para que funcionem no Asset Pipeline. Pegando como exemplo uma &lt;a href=&quot;https://github.com/fancyapps/fancyBox/blob/master/source/jquery.fancybox.css#L97&quot;&gt;folha de estilo da Fancybox&lt;/a&gt;, todas as referências às imagens precisam de instruções especiais para preservar as estratégias de cache. O Rails Assets faz todas as conversões necessárias automaticamente.&lt;/p&gt;
+
+&lt;p&gt;Muita biblioteca front-end já está registrada no Ruby Gems com a única função de ser usada pelo Asset Pipeline, e portanto mantendo a organização de arquivos e outros aspectos propostos pelo framework. O &lt;em&gt;core team&lt;/em&gt; do Ruby on Rails já faz isto há bastante tempo com a &lt;a href=&quot;https://github.com/rails/jquery-rails&quot;&gt;jQuery&lt;/a&gt;, por exemplo. Isto implica que &lt;strong&gt;outras gems que dependam da jQuery passem a usar o mesmo pacote&lt;/strong&gt;, e esta é a vantagem de se ter um único gerenciador de pacotes.&lt;/p&gt;
+
+&lt;p&gt;O principal contra tempo de encapsular código front-end era a necessidade de se criar um repositório exclusivo e manter o código atualizado, o que já está resolvido com maestria pelo Rails Assets. É claro que o Rails Assets se trata de um produto beta, melhorias no seu processo de funcionamento com certeza ainda devem ser necessárias. Mais detalhes no &lt;a href=&quot;http://codetunes.com/2013/we-released-rails-assets&quot;&gt;blog post do seu lançamento&lt;/a&gt;.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Abandonar-o-Asset-Pipeline&quot;&gt;
+                &lt;a name=&quot;Abandonar-o-Asset-Pipeline&quot; href=&quot;#Abandonar-o-Asset-Pipeline&quot;&gt;&lt;/a&gt;Abandonar o Asset Pipeline
+              &lt;/h2&gt;
+            
+&lt;p&gt;O Grunt.js, com todos os seus inúmeros plugins, já está muito próximo (ou talvez já tenha ultrapassado) das capacidades do Asset Pipeline. Acho fantástico quando diferentes linguagens e comunidades chegam a soluções equivalentes e passam a disputar palmo a palmo por espaço.&lt;/p&gt;
+
+              &lt;h3 id=&quot;Half-Pipe&quot;&gt;
+                &lt;a name=&quot;Half-Pipe&quot; href=&quot;#Half-Pipe&quot;&gt;&lt;/a&gt;Half Pipe
+              &lt;/h3&gt;
+            
+&lt;p&gt;É óbvio que a esta altura já exista uma gem que se encarregue de trocar o Asset Pipeline por um workflow apoiado no Grunt.js e Bower, chama-se &lt;a href=&quot;https://github.com/d-i/half-pipe&quot;&gt;Half-pipe&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A vantagem é que você vai poder fugir totalmente da discussão da maneira de usar o Bower e em como é errado empacotar código de interface em gems. Além disto, todas as ferramentas de front-end estarão disponíveis em primeira mão, nossos assets estarão a cuidados do Node.js.&lt;/p&gt;
+
+&lt;p&gt;A desvantagem será a falta de integração dos seus assets com a aplicação, adeus estratégia &lt;em&gt;just works&lt;/em&gt; de gerência de &lt;em&gt;cache&lt;/em&gt;. Você até pode ter um plugin do Grunt que cuide disto, mas isto não vai influenciar no asset referenciado pelo &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; dos seus documentos HTML como acontece com o Asset Pipeline.&lt;/p&gt;
+
+&lt;p&gt;Até o momento, o Half Pipe substitui por completo o Asset Pipeline, isto significa que outras gems como o Active Admin passarão a não funcionar. E pra finalizar, o deploy em serviços como o Heroku pode ficar bem mais complicado que o usual.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Conclusão&quot;&gt;
+                &lt;a name=&quot;Conclusão&quot; href=&quot;#Conclusão&quot;&gt;&lt;/a&gt;Conclusão
+              &lt;/h2&gt;
+            
+&lt;p&gt;O Ruby on Rails tem como uma das suas maiores filosofias &amp;quot;convenção sobre configuração&amp;quot;. Não é por acaso que ele já inclui um workflow para gerenciar os assets da aplicação: &lt;strong&gt;garantir boas práticas e agilidade no desenvolvimento&lt;/strong&gt;. Dito isto, não parece fazer sentido ter o trabalho de desativar o Asset Pipeline ou até mesmo configurar outro gerenciador de dependências que não seja aquele já utilizado.&lt;/p&gt;
+
+&lt;p&gt;Aceite as escolhas tomadas por aqueles que cruzaram o caminho do Asset Pipeline ou o abandone. Digamos que até mesmo o extremo de desacoplar completamente os assets da sua aplicação pode ser uma boa ideia. Nestes casos, a escolha de ferramentas e frameworks para cada uma das partes fica a seu critério. O que você perde e ganha com isto vai depender da sua aplicação. Vale a pena?&lt;/p&gt;
+</description>
+        <pubDate>Fri, 13 Dec 2013 00:00:00 -0200</pubDate>
+        <link>http://jcemer.com/asset-pipeline-rails-assets-or-let-die.html</link>
+        <guid isPermaLink="true">http://jcemer.com/asset-pipeline-rails-assets-or-let-die.html</guid>
+      </item>
+    
+      <item>
+        <title>Modularização em JavaScript</title>
+        <description></description>
+        <pubDate>Mon, 09 Dec 2013 00:00:00 -0200</pubDate>
+        <link>http://jcemer.com/modularizacao-em-javascript.html</link>
+        <guid isPermaLink="true">http://jcemer.com/modularizacao-em-javascript.html</guid>
+      </item>
+    
+      <item>
+        <title>Navegando com o teclado</title>
+        <description>&lt;p&gt;Se analisarmos um pouco, à mesma época dos primórdios daquilo que se tornou a web, foi patenteado o mouse. Talvez por isto, estejamos tão acostumados a navegar com os cliques. Mas, muito antes dos ponteiros, eram as teclas que imperavam. O teclado é um dos mais antigos dispositivos de entrada de dados em computadores e com ele conseguimos ser bastante ágeis, mais até do que imaginamos.&lt;/p&gt;
+
+&lt;p&gt;Há algumas semanas, uma troca de &lt;em&gt;tweets&lt;/em&gt; entre eu, &lt;a href=&quot;https://twitter.com/bitbonsai&quot;&gt;Mauricio Wolff&lt;/a&gt; e &lt;a href=&quot;https://twitter.com/danielfilho&quot;&gt;Daniel Filho&lt;/a&gt;, convergiu para &lt;strong&gt;quais os atalhos de teclado mais comuns&lt;/strong&gt; que os desenvolvedores devem dar suporte em páginas de internet e este será o principal assunto deste texto.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Atalhos-padrões&quot;&gt;
+                &lt;a name=&quot;Atalhos-padrões&quot; href=&quot;#Atalhos-padrões&quot;&gt;&lt;/a&gt;Atalhos padrões
+              &lt;/h2&gt;
+            
+&lt;p&gt;É importante conhecer os atalhos implementados pelos navegadores para tirar melhor proveito das suas funcionalidades. Saiba que veremos apenas alguns deles com a intenção de justificar e servir como suporte à criação de outros atalhos.&lt;/p&gt;
+
+              &lt;h3 id=&quot;Deslocamento-da-página&quot;&gt;
+                &lt;a name=&quot;Deslocamento-da-página&quot; href=&quot;#Deslocamento-da-página&quot;&gt;&lt;/a&gt;Deslocamento da página
+              &lt;/h3&gt;
+            
+&lt;p&gt;Os mais naturais e agnósticos a sistema operacional e fabricante são: as setas para avançar e voltar uma linha, &lt;code&gt;espaço&lt;/code&gt; para descer uma página, &lt;code&gt;end&lt;/code&gt; (&lt;code&gt;Cmd + ↓&lt;/code&gt;) para chegar ao fim da página e &lt;code&gt;home&lt;/code&gt; (&lt;code&gt;Cmd + ↑&lt;/code&gt;) para voltar ao seu início.&lt;/p&gt;
+
+              &lt;h3 id=&quot;Navegação-por-elementos-que-podem-receber-foco&quot;&gt;
+                &lt;a name=&quot;Navegação-por-elementos-que-podem-receber-foco&quot; href=&quot;#Navegação-por-elementos-que-podem-receber-foco&quot;&gt;&lt;/a&gt;Navegação por elementos que podem receber foco
+              &lt;/h3&gt;
+            
+&lt;p&gt;Alguns elementos da página permitem ao usuário navegar através deles com auxílio da tecla &lt;code&gt;tab&lt;/code&gt;. Os &lt;em&gt;links&lt;/em&gt;, botões e campos de entrada de dados são elementos que, por padrão, podem receber foco e fazer parte deste modo de navegação. Além disto, o atributo &lt;code&gt;tabindex&lt;/code&gt; pode ser utilizado para guiar a ordem da navegação e &lt;strong&gt;dar a capacidade de ganhar foco a qualquer elemento&lt;/strong&gt;.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Fluxos-alternativos&quot;&gt;
+                &lt;a name=&quot;Fluxos-alternativos&quot; href=&quot;#Fluxos-alternativos&quot;&gt;&lt;/a&gt;Fluxos alternativos
+              &lt;/h2&gt;
+            
+&lt;p&gt;É bastante importante introduzir um conceito empírico (leia-se, não tenho referências) de &lt;strong&gt;fluxo alternativo&lt;/strong&gt; de uma página de internet. Um fluxo alternativo é criado quando abrimos um &lt;em&gt;login&lt;/em&gt; flutuante, mostramos uma galeria de imagens em uma camada superior à página ou mostramos qualquer outro conteúdo de maneira semelhante.&lt;/p&gt;
+
+&lt;p&gt;Os fluxos alternativos devem ser compostos por &lt;a href=&quot;#Navega%C3%A7%C3%A3o-por-elementos-que-podem-receber-foco&quot;&gt;elementos que possam receber foco&lt;/a&gt;, o que pode ser alcançado com o auxílio do atributo &lt;code&gt;tabindex&lt;/code&gt;. Saiba que o valor igual a &lt;code&gt;-1&lt;/code&gt; no atributo é usado para que este não participe da navegação por &lt;code&gt;tab&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;É imprescindível que quando o fluxo alternativo for ativado, o foco seja atribuído ao elemento, por exemplo:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;jQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;.modal&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Definir atalhos de teclado é principalmente uma medida de usabilidade que influencia na acessibilidade do documento. Em via de regra, os atalhos irão facilitar o uso por pessoas sem acesso a &lt;em&gt;mouse&lt;/em&gt; ou &lt;em&gt;trackpad&lt;/em&gt; e que possuam problemas motores. Acessibilidade é um campo vasto e você pode começar por &lt;a href=&quot;http://www.slideshare.net/horacio.soares/frontin-rio-junho2013&quot;&gt;esta palestra do Horácio Soares&lt;/a&gt;.&lt;/p&gt;
+
+              &lt;h3 id=&quot;Sair-de-um-fluxo&quot;&gt;
+                &lt;a name=&quot;Sair-de-um-fluxo&quot; href=&quot;#Sair-de-um-fluxo&quot;&gt;&lt;/a&gt;Sair de um fluxo
+              &lt;/h3&gt;
+            
+&lt;p&gt;A tecla &lt;code&gt;esc&lt;/code&gt; deve ser responsável por cancelar qualquer fluxo alternativo. É uma experiência bastante frustrante para o usuário ampliar uma imagem que toma toda a tela e não conseguir cancelar esta ação por meio da tecla &lt;code&gt;esc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;O &lt;a href=&quot;http://getbootstrap.com&quot;&gt;Twitter Bootstrap&lt;/a&gt;, por exemplo, possui uma preocupação digna com este comportamento, o código abaixo foi extraído do componente de modal.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;keyup.dismiss.bs.modal&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;proxy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;which&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A implementação verifica se o código da tecla &lt;code&gt;esc&lt;/code&gt;, identificado pelo número 27, foi pressionado por meio de um evento de &lt;code&gt;keyup&lt;/code&gt;. Um exemplo mais desacoplado ainda utilizando jQuery:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;KEYBOARD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;nx&quot;&gt;esc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;
+&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;
+&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;keyup.modal&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-6&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;which&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;KEYBOARD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;esc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-7&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;c1&quot;&gt;// handle action&lt;/span&gt;
+&lt;a name=&quot;line-8&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;a name=&quot;line-9&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+              &lt;h3 id=&quot;Navegar-pelas-setas&quot;&gt;
+                &lt;a name=&quot;Navegar-pelas-setas&quot; href=&quot;#Navegar-pelas-setas&quot;&gt;&lt;/a&gt;Navegar pelas setas
+              &lt;/h3&gt;
+            
+&lt;p&gt;Galerias de fotos na forma de um fluxo alternativo são sempre acompanhadas de botões para avançar e retroceder a imagem. Nestes casos, é essencial que as setas do teclado também possam fazer este trabalho. Veja o código de exemplo com as teclas &lt;code&gt;left&lt;/code&gt; e &lt;code&gt;right&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;KEYBOARD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;nx&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;37&lt;/span&gt;
+&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;39&lt;/span&gt;
+&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;
+&lt;a name=&quot;line-6&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;keyup.modal&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-7&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;which&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;KEYBOARD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-8&quot;&gt;&lt;/a&gt;       &lt;span class=&quot;c1&quot;&gt;// handle action&lt;/span&gt;
+&lt;a name=&quot;line-9&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;which&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;KEYBOARD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-10&quot;&gt;&lt;/a&gt;       &lt;span class=&quot;c1&quot;&gt;// handle action&lt;/span&gt;
+&lt;a name=&quot;line-11&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;a name=&quot;line-12&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Lembre-se que estes tratadores de eventos devem ser respectivamente definidos e desativados quando o fluxo ganha e perde foco. Em uma aplicação, pode ser útil a criação de eventos específicos, veja:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$document&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;
+&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;$document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;keyup.observe&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;p&quot;&gt;;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;esc&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;left&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;which&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;KEYBOARD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-6&quot;&gt;&lt;/a&gt;            &lt;span class=&quot;nx&quot;&gt;$document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;keyup&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;a name=&quot;line-7&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;a name=&quot;line-8&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;a name=&quot;line-9&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O código dos fluxos se torna mais expressivo:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;$document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;esckeyup.modal&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;c1&quot;&gt;// handle action&lt;/span&gt;
+&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;$document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;leftkeyup.modal&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;c1&quot;&gt;// handle action&lt;/span&gt;
+&lt;a name=&quot;line-6&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+              &lt;h2 id=&quot;Formulários&quot;&gt;
+                &lt;a name=&quot;Formulários&quot; href=&quot;#Formulários&quot;&gt;&lt;/a&gt;Formulários
+              &lt;/h2&gt;
+            
+&lt;blockquote&gt;
+&lt;p&gt;Every textarea should let you submit comments by pressing cmd-enter or ctrl-enter. For every site that doesn&amp;#39;t support it, a kitten weeps. Here&amp;#39;s to making less kittens weep.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Esta é a descrição do projeto &lt;a href=&quot;https://github.com/dewski/cmd-enter&quot;&gt;cmd-enter&lt;/a&gt;. Diferente dos outros campos de um formulário, em que a tecla &lt;code&gt;Enter&lt;/code&gt; tem a função de enviar os dados, quando em um textarea, sua função é a de quebrar a linha. Nada mais justo que exista uma maneira de enviar o formulário quando em um textarea, e esta é convencionalmente a combinação de &lt;code&gt;Ctrl+Enter&lt;/code&gt; (&lt;code&gt;Cmd+Enter&lt;/code&gt;).&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;KEYBOARD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;nx&quot;&gt;enter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;
+&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;
+&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;$document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;keydown&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;textarea&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-6&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;which&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;KEYBOARD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;metaKey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ctrlKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-7&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;form&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;submit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;a name=&quot;line-8&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;a name=&quot;line-9&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/rPWhv/&quot;&gt;Experimente o funcionamento&lt;/a&gt;. Tenho certeza que se ainda não conhecia, passará a tentar a combinação em todos os próximos formulários que preencher, vicia.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Crie-seu-ecosistema&quot;&gt;
+                &lt;a name=&quot;Crie-seu-ecosistema&quot; href=&quot;#Crie-seu-ecosistema&quot;&gt;&lt;/a&gt;Crie seu ecosistema
+              &lt;/h2&gt;
+            
+&lt;p&gt;Aplicações de uso massivo possuem uma gama de atalhos bastante rica. A convenção é que a tecla &lt;code&gt;?&lt;/code&gt; mostre o mapa; tente pressionar no Gmail ou GitHub. É interessante notar que alguns dos atalhos do Gmail como o &lt;code&gt;J&lt;/code&gt; e &lt;code&gt;K&lt;/code&gt; são baseados no &lt;a href=&quot;http://www.vim.org&quot;&gt;VIM&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Confesso que ainda estou explorando a maneira de melhor tirar proveito dos atalhos de teclado no meu dia-a-dia (relaxa, &lt;a href=&quot;http://en.wikipedia.org/wiki/Konami_Code&quot;&gt;Konami Code&lt;/a&gt; eu conheço) e nos projetos que desenvolvo.&lt;/p&gt;
+
+&lt;p&gt;A mensagem final? Vale bastante a pena se ater a definição de atalhos para garantir um experiência ainda mais rica para os usuários.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 27 Nov 2013 00:00:00 -0200</pubDate>
+        <link>http://jcemer.com/navegando-com-o-teclado.html</link>
+        <guid isPermaLink="true">http://jcemer.com/navegando-com-o-teclado.html</guid>
+      </item>
+    
+      <item>
+        <title>CSS on steroids</title>
+        <description></description>
+        <pubDate>Tue, 12 Nov 2013 00:00:00 -0200</pubDate>
+        <link>http://jcemer.com/css-on-steroids.html</link>
+        <guid isPermaLink="true">http://jcemer.com/css-on-steroids.html</guid>
+      </item>
+    
+      <item>
+        <title>Workflow para cuidar dos seus assets</title>
+        <description></description>
+        <pubDate>Wed, 30 Oct 2013 00:00:00 -0200</pubDate>
+        <link>http://jcemer.com/workflow-para-cuidar-dos-seus-assets.html</link>
+        <guid isPermaLink="true">http://jcemer.com/workflow-para-cuidar-dos-seus-assets.html</guid>
+      </item>
+    
+      <item>
+        <title>Criando bons construtores em JavaScript</title>
+        <description>&lt;p&gt;Este texto não se trata de uma introdução a Orientação a Objetos, para isto, &lt;a href=&quot;https://developer.mozilla.org/pt-PT/docs/Javascript_orientado_a_objetos&quot;&gt;este artigo da MDN serve melhor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tive o prazer de &lt;a href=&quot;https://speakerdeck.com/jcemer/o-fantastico-mundo-do-javascript&quot;&gt;palestrar sobre os paradigmas do JavaScript&lt;/a&gt; no &lt;a href=&quot;http://braziljs.com.br&quot;&gt;BrazilJS&lt;/a&gt; deste ano, este texto é um complemento com alguns &lt;em&gt;insights&lt;/em&gt; sobre Orientação a Objetos e em especial: construtores.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Inspiração&quot;&gt;
+                &lt;a name=&quot;Inspiração&quot; href=&quot;#Inspiração&quot;&gt;&lt;/a&gt;Inspiração
+              &lt;/h2&gt;
+            
+&lt;p&gt;Costumo sempre ficar de olhos abertos para sugar ao máximo o que diferentes linguagens e suas comunidades tem a oferecer.&lt;/p&gt;
+
+&lt;p&gt;Aprendi Ruby há alguns anos atrás. Na época, o que mais me chamou atenção era que quase tudo pode se comportar como um objeto, assim como no JavaScript. Fique tranquilo, minha intenção aqui não é fazer com que você aprenda Ruby, só usarei a linguagem por alguns parágrafos para defender um ponto.&lt;/p&gt;
+
+&lt;p&gt;Nossa inspiração será uma versão simplificada da principal classe responsável pelos &lt;em&gt;models&lt;/em&gt; no &lt;a href=&quot;http://rubyonrails.org&quot;&gt;Ruby on Rails&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;n&quot;&gt;assign_attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Considerando um &lt;em&gt;model&lt;/em&gt; &lt;code&gt;User&lt;/code&gt;, posso executar &lt;code&gt;User.new(name: &amp;#39;Jean&amp;#39;)&lt;/code&gt; para instanciar um objeto. Neste caso, o método &lt;code&gt;initialize&lt;/code&gt; acima é chamado e &lt;code&gt;name&lt;/code&gt; é armazenado no objeto que acabei de criar.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;O ponto chave: nenhum efeito colateral é ou deve ser desencadeado com a simples instanciação de um objeto&lt;/strong&gt;. Esta execução, por exemplo, não salva este usuário no banco de dados ou o persiste de qualquer outra maneira que não seja como atributo do objeto recem criado.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Adicionalmente, nossa classe possui o método &lt;code&gt;create&lt;/code&gt;. Este método pode ser chamado ao invés do &lt;code&gt;new&lt;/code&gt;, que é o construtor padrão.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;
+&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;
+&lt;a name=&quot;line-6&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;a name=&quot;line-7&quot;&gt;&lt;/a&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Como você deve suspeitar, &lt;code&gt;User.create(name: &amp;#39;Jean&amp;#39;)&lt;/code&gt; instancia um objeto e o salva no banco de dados. Sim, agora temos efeito colateral, mas isto é claro pois tenho um método específico que possui este comportamento documentado.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Construtores-ideais&quot;&gt;
+                &lt;a name=&quot;Construtores-ideais&quot; href=&quot;#Construtores-ideais&quot;&gt;&lt;/a&gt;Construtores ideais
+              &lt;/h2&gt;
+            
+&lt;p&gt;O construtor ideal é aquele que não adiciona &lt;em&gt;listeners&lt;/em&gt; de eventos ou elementos no DOM e muito menos dispara um &lt;code&gt;alert&lt;/code&gt;. E é óbvio que isto não é tão simples e a maioria dos códigos não seguem esta regra.&lt;/p&gt;
+
+              &lt;h3 id=&quot;Modelo&quot;&gt;
+                &lt;a name=&quot;Modelo&quot; href=&quot;#Modelo&quot;&gt;&lt;/a&gt;Modelo
+              &lt;/h3&gt;
+            
+&lt;p&gt;Vamos portar nossa &lt;a href=&quot;#Inspira%C3%A7%C3%A3o&quot;&gt;inspiração&lt;/a&gt; para JavaScript na forma de uma das aplicações mais comuns (e detestadas) de vermos em websites: um carrossel.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;
+&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-6&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;a name=&quot;line-7&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;nx&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;a name=&quot;line-8&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;a name=&quot;line-9&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;a name=&quot;line-10&quot;&gt;&lt;/a&gt;
+&lt;a name=&quot;line-11&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-12&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListeners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;a name=&quot;line-13&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;startAutomaticTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;a name=&quot;line-14&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note, a única função do construtor é armazenar o &lt;em&gt;container&lt;/em&gt; utilizado como base para o carrosel. O método de instância &lt;code&gt;init&lt;/code&gt; é que irá disparar o comportamento. Um exemplo de uso.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;productsCarousel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;[data-carousel=&amp;quot;products&amp;quot;]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;productsCarousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Temos outra forma de uso com o mesmo resultado. Repare que desta vez não usamos o operador &lt;code&gt;new&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;[data-carousel=&amp;quot;products&amp;quot;]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Lembre-se sempre de tirar o máximo proveito da linguagem e definir seus métodos no &lt;code&gt;prototype&lt;/code&gt;. Desta maneira, uma única função será criada e compartilhada por todas as instâncias do seu construtor.&lt;/p&gt;
+
+              &lt;h3 id=&quot;Vantagens&quot;&gt;
+                &lt;a name=&quot;Vantagens&quot; href=&quot;#Vantagens&quot;&gt;&lt;/a&gt;Vantagens
+              &lt;/h3&gt;
+            
+&lt;p&gt;A principal vantagem é poder &lt;strong&gt;instanciar um objeto sem precisar se preocupar com efeitos colaterais&lt;/strong&gt;, este é o ganho.&lt;/p&gt;
+
+&lt;p&gt;Sem dúvidas, herança em navegadores modernos deve ser apoiada em &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Classical_inheritance_with_Object.create&quot;&gt;Object.create&lt;/a&gt;. Mas para uma técnica compatível com todos os navegadores, o construtor a ser herdado deve ser instanciado no &lt;em&gt;prototype&lt;/em&gt; do sub construtor. A maneira mais comum de se fazer isto é &lt;a href=&quot;https://github.com/jashkenas/backbone/blob/f6fa0cb87e26bb3d1b7f47144fd720d1ab48e88f/backbone.js#L1552-L1556&quot;&gt;criando um construtor temporário para que o construtor herdado não seja executado&lt;/a&gt;. Com construtores sem efeito colateral, esta etapa não é necessária.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarouselWithLasers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;CarouselWithLasers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;CarouselWithLasers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;constructor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarouselWithLasers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Viabilizar os testes é outra grande vantagem em não ter comportamento definido no construtor. Desta forma, fica possível aplicar &lt;a href=&quot;http://sinonjs.org/docs/#stubs&quot;&gt;stubs&lt;/a&gt; no método &lt;code&gt;init&lt;/code&gt; para poder testar e ser feliz.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Na biblioteca &lt;a href=&quot;http://backbonejs.org&quot;&gt;Backbone&lt;/a&gt;, que é um dos &lt;em&gt;cases&lt;/em&gt; mais fantásticos de herança em JavaScript que conheço, todos os construtores quando não extendidos podem ser instanciados sem efeitos colaterais. Isto vale para &lt;code&gt;new Backbone.Model()&lt;/code&gt;, &lt;code&gt;new Backbone.View()&lt;/code&gt;, &lt;code&gt;new Backbone.History()&lt;/code&gt;. Pode experimentar, faça estas chamadas no &lt;em&gt;console&lt;/em&gt; do seu navegador quando estiver acessando o endereço &lt;a href=&quot;http://backbonejs.org&quot;&gt;http://backbonejs.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Um último detalhe é que, para as views do Backbone, a documentação incentiva o uso da propriedade &lt;code&gt;events&lt;/code&gt;, que associa &lt;em&gt;listeners&lt;/em&gt; na instanciação do objeto. Tem também o método &lt;code&gt;this.listenTo&lt;/code&gt; geralmente usado no &lt;code&gt;initialize&lt;/code&gt;, outro que é chamado na instanciação. Não digo que não devam ser utilizados, apenas aconselho que fique atento.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;strong&gt;Edição 1:&lt;/strong&gt; Chamar de &lt;code&gt;create&lt;/code&gt; o método do construtor evita confusões e deixa mais clara qual a sua real função.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Edição 2:&lt;/strong&gt; Incentivo ao uso do &lt;code&gt;prototype&lt;/code&gt; como essência da definição de um bom construtor.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Oct 2013 00:00:00 -0300</pubDate>
+        <link>http://jcemer.com/construtores-em-javascript.html</link>
+        <guid isPermaLink="true">http://jcemer.com/construtores-em-javascript.html</guid>
+      </item>
+    
+  </channel>
+</rss>

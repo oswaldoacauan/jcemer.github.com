@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Navegando com o teclado ~ Jean Carlo Emer
+  </title>
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://feeds.feedburner.com/jeancarloemer" rel="alternate" type="application/rss+xml">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jean Carlo Emer"/>
+  <meta property="og:url" content="http://jcemer.com/navegando-com-o-teclado.html">
+  <meta property="og:title" content="Navegando com o teclado ~ Jean Carlo Emer">
+  <meta property="og:description" content="Sobre quais os benefícios de pensar a navegação da sua aplicação além dos cliques do mouse. Aprenda a definir atalhos de teclados e conheça alguns mapa de atalhos de aplicações populares.">
+  <meta property="og:image" content="http://jcemer.com/assets/images/badge.jpg">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700|Raleway:300,700,800|Droid+Sans+Mono:400" rel="stylesheet" type="text/css">
+  <link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css">
+
+  <link rel="canonical" href="http://jcemer.com/navegando-com-o-teclado.html">
+
+  <script>
+    window._gaq = [
+      ['_setAccount', 'UA-37078527-1']
+    , ['_trackPageview']
+    ]
+  </script>
+</head>
+<body>
+  <div class="lobby">
+    <div class="wrapper">
+      <nav id="menu">
+        <ul>
+          
+            <li><a href="/sobre.html">Sobre</a></li>
+          
+            <li><a href="/talks.html">Talks</a></li>
+          
+            <li><a href="http://twitter.com/jcemer">Twitter</a></li>
+          
+            <li><a href="http://github.com/jcemer">GitHub</a></li>
+          
+        </ul>
+        <a href="#menu" id="menu-toggle">menu</a>
+      </nav>
+      <a href="/" class="brand" title="Página inicial">Jean Carlo Emer</a>
+    </div>
+  </div>
+
+  <header class="header">
+  <div class="wrapper">
+    <h1 class="header-title">
+      <a href="/navegando-com-o-teclado.html">Navegando com o teclado</a>
+    </h1>
+    <time class="header-date">
+      <span class="header-date-year">2013</span>
+      <span class="header-date-month">Novembro</span>
+    </time>
+  </div>
+</header>
+
+<div class="main">
+  <div class="wrapper">
+    <p>Se analisarmos um pouco, à mesma época dos primórdios daquilo que se tornou a web, foi patenteado o mouse. Talvez por isto, estejamos tão acostumados a navegar com os cliques. Mas, muito antes dos ponteiros, eram as teclas que imperavam. O teclado é um dos mais antigos dispositivos de entrada de dados em computadores e com ele conseguimos ser bastante ágeis, mais até do que imaginamos.</p>
+
+<p>Há algumas semanas, uma troca de <em>tweets</em> entre eu, <a href="https://twitter.com/bitbonsai">Mauricio Wolff</a> e <a href="https://twitter.com/danielfilho">Daniel Filho</a>, convergiu para <strong>quais os atalhos de teclado mais comuns</strong> que os desenvolvedores devem dar suporte em páginas de internet e este será o principal assunto deste texto.</p>
+
+              <h2 id="Atalhos-padrões">
+                <a name="Atalhos-padrões" href="#Atalhos-padrões"></a>Atalhos padrões
+              </h2>
+            
+<p>É importante conhecer os atalhos implementados pelos navegadores para tirar melhor proveito das suas funcionalidades. Saiba que veremos apenas alguns deles com a intenção de justificar e servir como suporte à criação de outros atalhos.</p>
+
+              <h3 id="Deslocamento-da-página">
+                <a name="Deslocamento-da-página" href="#Deslocamento-da-página"></a>Deslocamento da página
+              </h3>
+            
+<p>Os mais naturais e agnósticos a sistema operacional e fabricante são: as setas para avançar e voltar uma linha, <code>espaço</code> para descer uma página, <code>end</code> (<code>Cmd + ↓</code>) para chegar ao fim da página e <code>home</code> (<code>Cmd + ↑</code>) para voltar ao seu início.</p>
+
+              <h3 id="Navegação-por-elementos-que-podem-receber-foco">
+                <a name="Navegação-por-elementos-que-podem-receber-foco" href="#Navegação-por-elementos-que-podem-receber-foco"></a>Navegação por elementos que podem receber foco
+              </h3>
+            
+<p>Alguns elementos da página permitem ao usuário navegar através deles com auxílio da tecla <code>tab</code>. Os <em>links</em>, botões e campos de entrada de dados são elementos que, por padrão, podem receber foco e fazer parte deste modo de navegação. Além disto, o atributo <code>tabindex</code> pode ser utilizado para guiar a ordem da navegação e <strong>dar a capacidade de ganhar foco a qualquer elemento</strong>.</p>
+
+              <h2 id="Fluxos-alternativos">
+                <a name="Fluxos-alternativos" href="#Fluxos-alternativos"></a>Fluxos alternativos
+              </h2>
+            
+<p>É bastante importante introduzir um conceito empírico (leia-se, não tenho referências) de <strong>fluxo alternativo</strong> de uma página de internet. Um fluxo alternativo é criado quando abrimos um <em>login</em> flutuante, mostramos uma galeria de imagens em uma camada superior à página ou mostramos qualquer outro conteúdo de maneira semelhante.</p>
+
+<p>Os fluxos alternativos devem ser compostos por <a href="#Navega%C3%A7%C3%A3o-por-elementos-que-podem-receber-foco">elementos que possam receber foco</a>, o que pode ser alcançado com o auxílio do atributo <code>tabindex</code>. Saiba que o valor igual a <code>-1</code> no atributo é usado para que este não participe da navegação por <code>tab</code>.</p>
+
+<p>É imprescindível que quando o fluxo alternativo for ativado, o foco seja atribuído ao elemento, por exemplo:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="nx">jQuery</span><span class="p">(</span><span class="s1">&#39;.modal&#39;</span><span class="p">).</span><span class="nx">focus</span><span class="p">();</span>
+</code></pre></div>
+<p>Definir atalhos de teclado é principalmente uma medida de usabilidade que influencia na acessibilidade do documento. Em via de regra, os atalhos irão facilitar o uso por pessoas sem acesso a <em>mouse</em> ou <em>trackpad</em> e que possuam problemas motores. Acessibilidade é um campo vasto e você pode começar por <a href="http://www.slideshare.net/horacio.soares/frontin-rio-junho2013">esta palestra do Horácio Soares</a>.</p>
+
+              <h3 id="Sair-de-um-fluxo">
+                <a name="Sair-de-um-fluxo" href="#Sair-de-um-fluxo"></a>Sair de um fluxo
+              </h3>
+            
+<p>A tecla <code>esc</code> deve ser responsável por cancelar qualquer fluxo alternativo. É uma experiência bastante frustrante para o usuário ampliar uma imagem que toma toda a tela e não conseguir cancelar esta ação por meio da tecla <code>esc</code>.</p>
+
+<p>O <a href="http://getbootstrap.com">Twitter Bootstrap</a>, por exemplo, possui uma preocupação digna com este comportamento, o código abaixo foi extraído do componente de modal.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">$element</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;keyup.dismiss.bs.modal&#39;</span><span class="p">,</span> <span class="nx">$</span><span class="p">.</span><span class="nx">proxy</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-2"></a>    <span class="nx">e</span><span class="p">.</span><span class="nx">which</span> <span class="o">==</span> <span class="mi">27</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
+<a name="line-3"></a><span class="p">},</span> <span class="k">this</span><span class="p">))</span>
+</code></pre></div>
+<p>A implementação verifica se o código da tecla <code>esc</code>, identificado pelo número 27, foi pressionado por meio de um evento de <code>keyup</code>. Um exemplo mais desacoplado ainda utilizando jQuery:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="kd">var</span> <span class="nx">KEYBOARD</span> <span class="o">=</span> <span class="p">{</span>
+<a name="line-2"></a>    <span class="nx">esc</span><span class="o">:</span> <span class="mi">27</span>
+<a name="line-3"></a><span class="p">}</span>
+<a name="line-4"></a>
+<a name="line-5"></a><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;keyup.modal&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-6"></a>    <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">which</span> <span class="o">==</span> <span class="nx">KEYBOARD</span><span class="p">.</span><span class="nx">esc</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-7"></a>        <span class="c1">// handle action</span>
+<a name="line-8"></a>    <span class="p">}</span>
+<a name="line-9"></a><span class="p">})</span>
+</code></pre></div>
+              <h3 id="Navegar-pelas-setas">
+                <a name="Navegar-pelas-setas" href="#Navegar-pelas-setas"></a>Navegar pelas setas
+              </h3>
+            
+<p>Galerias de fotos na forma de um fluxo alternativo são sempre acompanhadas de botões para avançar e retroceder a imagem. Nestes casos, é essencial que as setas do teclado também possam fazer este trabalho. Veja o código de exemplo com as teclas <code>left</code> e <code>right</code>:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="kd">var</span> <span class="nx">KEYBOARD</span> <span class="o">=</span> <span class="p">{</span>
+<a name="line-2"></a>    <span class="nx">left</span><span class="o">:</span> <span class="mi">37</span>
+<a name="line-3"></a>  <span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="mi">39</span>
+<a name="line-4"></a><span class="p">}</span>
+<a name="line-5"></a>
+<a name="line-6"></a><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;keyup.modal&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-7"></a>    <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">which</span> <span class="o">==</span> <span class="nx">KEYBOARD</span><span class="p">.</span><span class="nx">left</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-8"></a>       <span class="c1">// handle action</span>
+<a name="line-9"></a>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">which</span> <span class="o">==</span> <span class="nx">KEYBOARD</span><span class="p">.</span><span class="nx">right</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-10"></a>       <span class="c1">// handle action</span>
+<a name="line-11"></a>    <span class="p">}</span>
+<a name="line-12"></a><span class="p">})</span>
+</code></pre></div>
+<p>Lembre-se que estes tratadores de eventos devem ser respectivamente definidos e desativados quando o fluxo ganha e perde foco. Em uma aplicação, pode ser útil a criação de eventos específicos, veja:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="kd">var</span> <span class="nx">$document</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">)</span>
+<a name="line-2"></a>
+<a name="line-3"></a><span class="nx">$document</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;keyup.observe&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-4"></a>    <span class="p">;[</span><span class="s1">&#39;esc&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">].</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-5"></a>        <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">which</span> <span class="o">==</span> <span class="nx">KEYBOARD</span><span class="p">[</span><span class="nx">key</span><span class="p">])</span> <span class="p">{</span>
+<a name="line-6"></a>            <span class="nx">$document</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="nx">key</span> <span class="o">+</span> <span class="s1">&#39;keyup&#39;</span><span class="p">)</span>
+<a name="line-7"></a>        <span class="p">}</span>
+<a name="line-8"></a>    <span class="p">})</span>
+<a name="line-9"></a><span class="p">})</span>
+</code></pre></div>
+<p>O código dos fluxos se torna mais expressivo:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="nx">$document</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;esckeyup.modal&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-2"></a>    <span class="c1">// handle action</span>
+<a name="line-3"></a><span class="p">})</span>
+<a name="line-4"></a><span class="nx">$document</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;leftkeyup.modal&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-5"></a>    <span class="c1">// handle action</span>
+<a name="line-6"></a><span class="p">})</span>
+</code></pre></div>
+              <h2 id="Formulários">
+                <a name="Formulários" href="#Formulários"></a>Formulários
+              </h2>
+            
+<blockquote>
+<p>Every textarea should let you submit comments by pressing cmd-enter or ctrl-enter. For every site that doesn&#39;t support it, a kitten weeps. Here&#39;s to making less kittens weep.</p>
+</blockquote>
+
+<p>Esta é a descrição do projeto <a href="https://github.com/dewski/cmd-enter">cmd-enter</a>. Diferente dos outros campos de um formulário, em que a tecla <code>Enter</code> tem a função de enviar os dados, quando em um textarea, sua função é a de quebrar a linha. Nada mais justo que exista uma maneira de enviar o formulário quando em um textarea, e esta é convencionalmente a combinação de <code>Ctrl+Enter</code> (<code>Cmd+Enter</code>).</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="kd">var</span> <span class="nx">KEYBOARD</span> <span class="o">=</span> <span class="p">{</span>
+<a name="line-2"></a>    <span class="nx">enter</span><span class="o">:</span> <span class="mi">13</span>
+<a name="line-3"></a><span class="p">}</span>
+<a name="line-4"></a>
+<a name="line-5"></a><span class="nx">$document</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;keydown&#39;</span><span class="p">,</span> <span class="s1">&#39;textarea&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-6"></a>  <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">which</span> <span class="o">==</span> <span class="nx">KEYBOARD</span><span class="p">.</span><span class="nx">enter</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">metaKey</span> <span class="o">||</span> <span class="nx">event</span><span class="p">.</span><span class="nx">ctrlKey</span><span class="p">))</span> <span class="p">{</span>
+<a name="line-7"></a>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parents</span><span class="p">(</span><span class="s1">&#39;form&#39;</span><span class="p">).</span><span class="nx">submit</span><span class="p">()</span>
+<a name="line-8"></a>  <span class="p">}</span>
+<a name="line-9"></a><span class="p">})</span>
+</code></pre></div>
+<p><a href="http://jsfiddle.net/rPWhv/">Experimente o funcionamento</a>. Tenho certeza que se ainda não conhecia, passará a tentar a combinação em todos os próximos formulários que preencher, vicia.</p>
+
+              <h2 id="Crie-seu-ecosistema">
+                <a name="Crie-seu-ecosistema" href="#Crie-seu-ecosistema"></a>Crie seu ecosistema
+              </h2>
+            
+<p>Aplicações de uso massivo possuem uma gama de atalhos bastante rica. A convenção é que a tecla <code>?</code> mostre o mapa; tente pressionar no Gmail ou GitHub. É interessante notar que alguns dos atalhos do Gmail como o <code>J</code> e <code>K</code> são baseados no <a href="http://www.vim.org">VIM</a>.</p>
+
+<hr>
+
+<p>Confesso que ainda estou explorando a maneira de melhor tirar proveito dos atalhos de teclado no meu dia-a-dia (relaxa, <a href="http://en.wikipedia.org/wiki/Konami_Code">Konami Code</a> eu conheço) e nos projetos que desenvolvo.</p>
+
+<p>A mensagem final? Vale bastante a pena se ater a definição de atalhos para garantir um experiência ainda mais rica para os usuários.</p>
+
+
+    <aside class="post-meta">
+      <time class="date">27/11/2013</time>
+      <span class="author">por <a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></span>
+      <span class="tags">
+        <strong>Tags:</strong>
+        <ul>
+          
+          <li>JavaScript</li>
+          
+          <li>Usabilidade</li>
+          
+        </ul>
+      </span>
+    </aside>
+
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <p class="wrapper">
+      <span class="brand">Jean Carlo Emer</span>
+      <span class="credits">Layout por <a href="http://curestudio.com.br" class="cure" target="_blank">Cure</a></span>
+    </p>
+  </footer>
+  <script src="/assets/scripts/main.js"></script>
+</body>
+</html>

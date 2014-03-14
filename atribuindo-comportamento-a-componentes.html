@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Atribuindo comportamento a componentes ~ Jean Carlo Emer
+  </title>
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://feeds.feedburner.com/jeancarloemer" rel="alternate" type="application/rss+xml">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jean Carlo Emer"/>
+  <meta property="og:url" content="http://jcemer.com/atribuindo-comportamento-a-componentes.html">
+  <meta property="og:title" content="Atribuindo comportamento a componentes ~ Jean Carlo Emer">
+  <meta property="og:description" content="Tratar elementos do seu HTML como componentes é bastante útil para manter a sanidade do seu projeto. Este texto discute um assunto muitas vezes subestimado: qual o local mais adequado para iniciar seus componentes.">
+  <meta property="og:image" content="http://jcemer.com/assets/images/badge.jpg">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700|Raleway:300,700,800|Droid+Sans+Mono:400" rel="stylesheet" type="text/css">
+  <link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css">
+
+  <link rel="canonical" href="http://jcemer.com/atribuindo-comportamento-a-componentes.html">
+
+  <script>
+    window._gaq = [
+      ['_setAccount', 'UA-37078527-1']
+    , ['_trackPageview']
+    ]
+  </script>
+</head>
+<body>
+  <div class="lobby">
+    <div class="wrapper">
+      <nav id="menu">
+        <ul>
+          
+            <li><a href="/sobre.html">Sobre</a></li>
+          
+            <li><a href="/talks.html">Talks</a></li>
+          
+            <li><a href="http://twitter.com/jcemer">Twitter</a></li>
+          
+            <li><a href="http://github.com/jcemer">GitHub</a></li>
+          
+        </ul>
+        <a href="#menu" id="menu-toggle">menu</a>
+      </nav>
+      <a href="/" class="brand" title="Página inicial">Jean Carlo Emer</a>
+    </div>
+  </div>
+
+  <header class="header">
+  <div class="wrapper">
+    <h1 class="header-title">
+      <a href="/atribuindo-comportamento-a-componentes.html">Atribuindo comportamento a componentes</a>
+    </h1>
+    <time class="header-date">
+      <span class="header-date-year">2013</span>
+      <span class="header-date-month">Setembro</span>
+    </time>
+  </div>
+</header>
+
+<div class="main">
+  <div class="wrapper">
+    <p><a href="http://plugins.jquery.com">Plugins</a> e <a href="http://jqueryui.com">widgets</a> de jQuery, <a href="http://component.io">componentes</a> e outras muitas abstrações de organização e modularização de código são muito úteis para manter a sanidade do seu projeto.</p>
+
+              <h2 id="O-problema">
+                <a name="O-problema" href="#O-problema"></a>O problema
+              </h2>
+            
+<p>A partir do momento que um elemento no HTML é considerado um componente e precisa ter comportamento, este precisa ser instanciado por alguma abstração. O problema é justamente este: <strong>como e aonde fazer isto</strong>. Lembre-se que você terá várias páginas que terão diferentes (e alguns mesmos) componentes.</p>
+
+              <h2 id="Solução-simplista">
+                <a name="Solução-simplista" href="#Solução-simplista"></a>Solução simplista
+              </h2>
+            
+<p>Acredito que já seja um consenso que entregar o mínimo e os mesmos arquivos em uma série de páginas seja essencial para economizar requisições e tirar proveito do <em>cache</em> do navegador do usuário.</p>
+
+<p>A primeira vista, o mais simples então é empacotar todos os seus componentes em um único arquivo e instanciar todos eles no fim do arquivo. Claro, seu <code>&lt;script&gt;</code> precisa estar no fim do <code>&lt;body&gt;</code> para que isto tenha efeito.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s2">&quot;datepicker&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">})</span>
+<a name="line-2"></a><span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s2">&quot;draggable&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">})</span>
+<a name="line-3"></a><span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s2">&quot;comments&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">})</span>
+<a name="line-4"></a><span class="cm">/* ... */</span>
+<a name="line-5"></a>
+<a name="line-6"></a><span class="c1">// Setup</span>
+<a name="line-7"></a><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.draggable&quot;</span><span class="p">).</span><span class="nx">draggable</span><span class="p">()</span>
+<a name="line-8"></a><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.datepicker&quot;</span><span class="p">).</span><span class="nx">datepicker</span><span class="p">()</span>
+<a name="line-9"></a><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.comments&quot;</span><span class="p">).</span><span class="nx">comments</span><span class="p">()</span>
+</code></pre></div>
+<p>Código típico da jQuery UI, apenas um pitaco a respeito: componentes não possuem ligação nenhuma com estilização, <a href="http://blog.realstuffforabstractpeople.com/post/31753521367/classnames-for-styling-data-attributes-for-behavior">instanciar elementos com base em <code>data-*</code> é muito melhor</a>. Posto isto, chegamos a uma instanciação parecida com <code>$(&quot;[data-draggable]&quot;).draggable()</code>.</p>
+
+<p>Esta abordagem nos leva a varrer o DOM, e chamar uma série de funções para isto, na intenção de instanciar os componentes de <em>draggable</em>. Mas, talvez uma página em específico, não tenha nenhum.</p>
+
+<p>Na tentativa de corrigir este problema, na minha opinião não tão significativo, chegamos a outros piores.</p>
+
+              <h2 id="Soluções-piores">
+                <a name="Soluções-piores" href="#Soluções-piores"></a>Soluções piores
+              </h2>
+            
+<p>Uma abordagem que é bastante útil para estilização é atribuir uma classe no <code>&lt;body&gt;</code> indicando a página, algo como: <code>page-home</code>, <code>page-product</code>. Deixando claro, nada contra utilizar classes no <code>&lt;body&gt;</code> para apoiar a <strong>estilização</strong>.</p>
+
+<p>Naturalmente portamos isto para o JavaScript e chegamos no código a seguir:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s2">&quot;datepicker&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">})</span>
+<a name="line-2"></a><span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s2">&quot;draggable&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">})</span>
+<a name="line-3"></a><span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s2">&quot;comments&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">})</span>
+<a name="line-4"></a><span class="cm">/* ... */</span>
+<a name="line-5"></a>
+<a name="line-6"></a><span class="kd">var</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)</span>
+<a name="line-7"></a>
+<a name="line-8"></a><span class="c1">// Setup product page</span>
+<a name="line-9"></a><span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="s1">&#39;.page-product&#39;</span><span class="p">))</span> <span class="p">{</span>
+<a name="line-10"></a>  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;[data-draggable]&quot;</span><span class="p">).</span><span class="nx">draggable</span><span class="p">()</span>
+<a name="line-11"></a>  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;[data-comments]&quot;</span><span class="p">).</span><span class="nx">comments</span><span class="p">()</span>
+<a name="line-12"></a>
+<a name="line-13"></a><span class="c1">// Setup checkout page</span>
+<a name="line-14"></a><span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="s1">&#39;.page-checkout&#39;</span><span class="p">))</span> <span class="p">{</span>
+<a name="line-15"></a>  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;[data-draggable]&quot;</span><span class="p">).</span><span class="nx">draggable</span><span class="p">()</span>
+<a name="line-16"></a>  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;[data-datepicker]&quot;</span><span class="p">).</span><span class="nx">datepicker</span><span class="p">()</span>
+<a name="line-17"></a><span class="p">}</span>
+</code></pre></div>
+<p>Outra solução não apoiada em seletores é passar todas as instanciações para um arquivo específico que é exclusivo para cada página. Isto nos leva a uma requisição extra.</p>
+
+              <h3 id="Problemas">
+                <a name="Problemas" href="#Problemas"></a>Problemas
+              </h3>
+            
+<p>É importante salientar que ambas soluções: classes no <code>&lt;body&gt;</code> e arquivo JavaScript exclusivo enfrentam problemas de manutenção.</p>
+
+<p>Um componente pode ser removido de alguma página e o JavaScript precisará ser alterado para que este <strong>não seja mais instanciado</strong>. Pior, em muitos destes casos o JavaScript não será alterado por esquecimento, chegamos às famosas inconsistências.</p>
+
+<p>Da mesma forma, quando a página de produtos ganhar um elemento que precisa utilizar <em>datepicker</em>, sei lá o porquê, este componente <strong>não será instanciado</strong>. Ok, isto será notado com alguns poucos testes e com alguma experiência no projeto (e boa memória) a solução será rápida. O arquivo de JavaScript será alterado com a adiação desta nova instanciação específica àquela página.</p>
+
+<p>Alterar o JavaScript como efeito colateral da alteração de uma página não me parece prático, este arquivo precisará ser baixado novamente pelo usuário. Além disto, a estrutura de cache dos seus <em>assets</em> será afetada, os que trabalham com aplicações ou portais sabem o quanto isto pode não ser simples.</p>
+
+              <h2 id="Soluções-melhores">
+                <a name="Soluções-melhores" href="#Soluções-melhores"></a>Soluções melhores
+              </h2>
+            
+<p>Frameworks como o <a href="http://angularjs.org">Angular.js</a> e a biblioteca <a href="http://dojotoolkit.org/features/1.6/html5data-attributes">Dojo</a> há tempo tomaram a consciência de que o próprio elemento HTML deve indicar a qual componente pertence. Caso você não esteja utilizando nenhuma destas soluções, algo como o <a href="https://github.com/jcemer/piecemaker">Piecemaker</a> deve resolver bem este problema.</p>
+
+              <h3 id="Piecemaker">
+                <a name="Piecemaker" href="#Piecemaker"></a>Piecemaker
+              </h3>
+            
+<p>A solução é simples, basta indicar quais os componentes que devem ser instanciados para cada elemento. Por convenção, o atributo utilizado será <code>data-pieces</code>.</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><a name="line-1"></a><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span> <span class="na">data-pieces=</span><span class="s">&quot;colorize&quot;</span> <span class="na">data-color=</span><span class="s">&quot;#903D3D&quot;</span><span class="nt">&gt;</span>
+<a name="line-2"></a>  Colorize
+<a name="line-3"></a><span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>O JavaScript precisará conter, é claro, a definição do componente e o <code>setup</code> do Piecemaker.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><a name="line-1"></a><span class="kd">var</span> <span class="nx">pieces</span> <span class="o">=</span> <span class="p">{</span>
+<a name="line-2"></a>  <span class="nx">colorize</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">container</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-3"></a>    <span class="nx">container</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span> <span class="o">=</span> <span class="nx">container</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">color</span>
+<a name="line-4"></a>  <span class="p">}</span>
+<a name="line-5"></a><span class="p">}</span>
+<a name="line-6"></a>
+<a name="line-7"></a><span class="c1">// Setup</span>
+<a name="line-8"></a><span class="kd">var</span> <span class="nx">piecemaker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Piecemaker</span><span class="p">({</span>
+<a name="line-9"></a>  <span class="nx">namespace</span><span class="o">:</span> <span class="nx">pieces</span>
+<a name="line-10"></a><span class="p">})</span>
+<a name="line-11"></a><span class="nx">piecemaker</span><span class="p">.</span><span class="nx">setup</span><span class="p">()</span>
+</code></pre></div>
+<p>O <em>setup</em> é responsável por buscar todos os elementos com <code>[data-pieces]</code> e instanciar as &quot;peças&quot; como se fossem construtores passando o <em>container</em> como parâmetro.</p>
+
+<p><a href="http://jcemer.com/piecemaker/samples">Veja mais exemplos de usos da ferramenta</a> que também dá suporte a <a href="http://jcemer.com/piecemaker/samples/namespace_reload">ativação de componentes sob demanda</a>, <a href="http://jcemer.com/piecemaker/samples/amd">AMD</a> e suporte a <em>mediator</em> para disparar novos <em>setups</em>.</p>
+
+<hr>
+
+<p>O Piecemaker, que já utilizei em alguns projetos, é apenas mais uma solução para este problema. O código é ainda imaturo e Pull Requests são bem vindos.</p>
+
+<p>Por fim, espero gerar uma discusão saudável sobre este tema que vejo muitas vezes ser desprezado e cercado de soluções ruins. Atrelar comportamento via JavaScript ao seu projeto não é tão trivial quanto parece.</p>
+
+
+    <aside class="post-meta">
+      <time class="date">27/09/2013</time>
+      <span class="author">por <a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></span>
+      <span class="tags">
+        <strong>Tags:</strong>
+        <ul>
+          
+          <li>JavaScript</li>
+          
+          <li>Módulos</li>
+          
+        </ul>
+      </span>
+    </aside>
+
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <p class="wrapper">
+      <span class="brand">Jean Carlo Emer</span>
+      <span class="credits">Layout por <a href="http://curestudio.com.br" class="cure" target="_blank">Cure</a></span>
+    </p>
+  </footer>
+  <script src="/assets/scripts/main.js"></script>
+</body>
+</html>

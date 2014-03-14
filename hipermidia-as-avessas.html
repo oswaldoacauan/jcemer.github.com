@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Hipermídia as Avessas ~ Jean Carlo Emer
+  </title>
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://feeds.feedburner.com/jeancarloemer" rel="alternate" type="application/rss+xml">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jean Carlo Emer"/>
+  <meta property="og:url" content="http://jcemer.com/hipermidia-as-avessas.html">
+  <meta property="og:title" content="Hipermídia as Avessas ~ Jean Carlo Emer">
+  <meta property="og:description" content="O primeiro de uma série de textos sobre Hipermídia as avessas: desafios, meios e técnicas objetivando entregar uma única mídia para diferentes suportes computacionais.">
+  <meta property="og:image" content="http://jcemer.com/assets/images/badge.jpg">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700|Raleway:300,700,800|Droid+Sans+Mono:400" rel="stylesheet" type="text/css">
+  <link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css">
+
+  <link rel="canonical" href="http://jcemer.com/hipermidia-as-avessas.html">
+
+  <script>
+    window._gaq = [
+      ['_setAccount', 'UA-37078527-1']
+    , ['_trackPageview']
+    ]
+  </script>
+</head>
+<body>
+  <div class="lobby">
+    <div class="wrapper">
+      <nav id="menu">
+        <ul>
+          
+            <li><a href="/sobre.html">Sobre</a></li>
+          
+            <li><a href="/talks.html">Talks</a></li>
+          
+            <li><a href="http://twitter.com/jcemer">Twitter</a></li>
+          
+            <li><a href="http://github.com/jcemer">GitHub</a></li>
+          
+        </ul>
+        <a href="#menu" id="menu-toggle">menu</a>
+      </nav>
+      <a href="/" class="brand" title="Página inicial">Jean Carlo Emer</a>
+    </div>
+  </div>
+
+  <header class="header">
+  <div class="wrapper">
+    <h1 class="header-title">
+      <a href="/hipermidia-as-avessas.html">Hipermídia as Avessas</a>
+    </h1>
+    <time class="header-date">
+      <span class="header-date-year">2013</span>
+      <span class="header-date-month">Setembro</span>
+    </time>
+  </div>
+</header>
+
+<div class="main">
+  <div class="wrapper">
+    <p>Tive o prazer de palestrar no primeiro <a href="http://mobilebrazilconference.com.br">Mobile Brazil Conference</a> junto com o <a href="https://twitter.com/askoth">Marcelo Oliveira</a>. Quando do convite, soube que o assunto deveria ser desenvolvimento web mobile e com base na definição de <a href="http://pt.wikipedia.org/wiki/Hiperm%C3%ADdia">Hipermídia</a> logo chegamos no título. <strong>Hipermídia as avessas</strong> são os desafios, meios e técnicas de se entregar uma única mídia para diferentes suportes computacionais.</p>
+
+<p>Existem vários dispositivos que podem ser alcançados por uma hipermídia: desktops, laptops, impressoras, TVs, smartphones e tablets só para citar alguns. Além disto, não são apenas os browsers o meio: aplicativos como Apple Store, Netflix e o Steam são escritos em HTML5. Mas a maior revolução da nossa era, sem ter como negar, é o mobile: dispositivos pequenos e de fácil locomoção. Eles é que serão foco principal do nosso estudo.</p>
+
+<p>Aqui estão os <a href="https://speakerdeck.com/jcemer/hipermidia-as-avessas">slides da palestra</a> e o <a href="https://www.eventials.com/pt-br/mobilebrazilconference/hipermidia-as-avessas-seu-conteudo-na-web-por-diferentes-formas">vídeo</a>. Pule para <a href="http://localhost:4000/hipermidia-as-avessas-responsive-design.html">responsive design</a> ou vá direto para o <a href="/hipermidia-as-avessas-passo-a-passo.html">passo a passo final</a> caso interessar. Continue a leitura por aqui para acompanhar o assunto na íntegra.</p>
+
+              <h2 id="Mobile">
+                <a name="Mobile" href="#Mobile"></a>Mobile
+              </h2>
+            
+<p>O aparelho que foi o marco da web mobile (mesmo tendo muitos outros aparelhos e experimentos anteriores) foi o iPhone da Apple. Muito daquilo que temos hoje foi definido pela própria Apple antes mesmo de o telefone ser lançado. É claro que existia todo um suspense em torno do lançamento e por isso as documentações e especificações foram deixadas de lado. O resultado é que, no início, desenvolvedores utilizavam soluções em seus sites sem ter certeza alguma de seu funcionamento.</p>
+
+<p>Uma característica bastante interessante é que o iPhone foi desenvolvido para desfrutar da mesma experiência de navegação de um desktop ou laptop. A intenção nunca foi a de utilizar o protocolo <a href="http://en.wikipedia.org/wiki/Wireless_Application_Protocol">WAP</a>, por exemplo. E isto é ótimo: &quot;A web é de todos e para todos&quot;.</p>
+
+              <h3 id="Mobile-Viewport">
+                <a name="Mobile-Viewport" href="#Mobile-Viewport"></a>Mobile Viewport
+              </h3>
+            
+<p>Na época do seu lançamento, o aparelho tinha resolução de <a href="http://www.iphoneresolution.com">320x480</a> e a maioria dos websites tinha seu layout definido com base numa resolução de 1024x768.</p>
+
+<p>A solução para que o usuário tivesse uma visão completa do website à primeira vista foi definir uma resolução de viewport diferente do tamanho do display. Então, com base na maioria dos websites da época, a viewport do aparelho possui configuração inicial com largura de 980px. Os websites que não ficam adequados podem indicar uma diferente largura através da <code>meta tag viewport</code> a seguir.</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><a name="line-1"></a><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=1024&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+              <h3 id="Pinch-Zoom">
+                <a name="Pinch-Zoom" href="#Pinch-Zoom"></a>Pinch Zoom
+              </h3>
+            
+<p>O <em>pinch zoom</em> (ou <em>pinch to zoom</em>) é a principal ferramenta do usuário para driblar os pequenos displays aproximando a visualização para porções da página. A ferramenta, ativada por gesto, já vem habilitada por padrão e desabilitá-la não é uma boa prática pois os usuários já estão bastante acostumados e esperam poder utilizá-la.</p>
+
+<p>Apenas desabilite o <em>pinch zoom</em> em jogos ou <em>webapps</em> que permitem interações com dois ou mais dedos através da <code>meta tag</code> a seguir.</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><a name="line-1"></a><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;user-scalable=no&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<hr>
+
+              <h2 id="Desafios-da-web-plural">
+                <a name="Desafios-da-web-plural" href="#Desafios-da-web-plural"></a>Desafios da web plural
+              </h2>
+            
+<p>A tarefa de disponibilizar para uma gama de dispositivos o mesmo conteúdo traz consigo alguns desafios:</p>
+
+<ul>
+<li><p><strong>Garantir boa legibilidade</strong> em diferentes tamanhos e resoluções de tela. Além disto, diferentes dispositivos são geralmente utilizados a diferentes distâncias em relação a nossos olhos (pense na distância em que você assiste TV e utiliza seu <em>smartphone</em>).</p></li>
+<li><p>Mostrar sempre o conteúdo mais importante para o usuário à primeira vista considerando diferentes <strong>aspect ratios</strong>. Lembre-se: gráficos de calor e outras medidas provam que o usuário nem sempre utiliza a rolagem da página, não esconda conteúdo.</p></li>
+<li><p>Permitir que o usuário <strong>consiga interagir</strong> com a página indiferente de dispositivo e considerando as limitações de cada um.</p></li>
+</ul>
+
+<p>A técnica para enfrentar estes e mais desafios você conhece em <a href="hipermidia-as-avessas-responsive-design.html">Hipermídia as avessas: Responsive Design</a>.</p>
+
+
+    <aside class="post-meta">
+      <time class="date">21/09/2013</time>
+      <span class="author">por <a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></span>
+      <span class="tags">
+        <strong>Tags:</strong>
+        <ul>
+          
+          <li>HTML5</li>
+          
+          <li>mobile</li>
+          
+        </ul>
+      </span>
+    </aside>
+
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <p class="wrapper">
+      <span class="brand">Jean Carlo Emer</span>
+      <span class="credits">Layout por <a href="http://curestudio.com.br" class="cure" target="_blank">Cure</a></span>
+    </p>
+  </footer>
+  <script src="/assets/scripts/main.js"></script>
+</body>
+</html>

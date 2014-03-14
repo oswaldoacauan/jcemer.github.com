@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Hipermídia as Avessas: Passo a passo ~ Jean Carlo Emer
+  </title>
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://feeds.feedburner.com/jeancarloemer" rel="alternate" type="application/rss+xml">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jean Carlo Emer"/>
+  <meta property="og:url" content="http://jcemer.com/hipermidia-as-avessas-passo-a-passo.html">
+  <meta property="og:title" content="Hipermídia as Avessas: Passo a passo ~ Jean Carlo Emer">
+  <meta property="og:description" content="Reunião dos pontos e técnicas mais importantes que você deve lembrar enquanto estiver desenvolvendo um projeto para diferentes suportes computacionais.">
+  <meta property="og:image" content="http://jcemer.com/assets/images/badge.jpg">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700|Raleway:300,700,800|Droid+Sans+Mono:400" rel="stylesheet" type="text/css">
+  <link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css">
+
+  <link rel="canonical" href="http://jcemer.com/hipermidia-as-avessas-passo-a-passo.html">
+
+  <script>
+    window._gaq = [
+      ['_setAccount', 'UA-37078527-1']
+    , ['_trackPageview']
+    ]
+  </script>
+</head>
+<body>
+  <div class="lobby">
+    <div class="wrapper">
+      <nav id="menu">
+        <ul>
+          
+            <li><a href="/sobre.html">Sobre</a></li>
+          
+            <li><a href="/talks.html">Talks</a></li>
+          
+            <li><a href="http://twitter.com/jcemer">Twitter</a></li>
+          
+            <li><a href="http://github.com/jcemer">GitHub</a></li>
+          
+        </ul>
+        <a href="#menu" id="menu-toggle">menu</a>
+      </nav>
+      <a href="/" class="brand" title="Página inicial">Jean Carlo Emer</a>
+    </div>
+  </div>
+
+  <header class="header">
+  <div class="wrapper">
+    <h1 class="header-title">
+      <a href="/hipermidia-as-avessas-passo-a-passo.html">Hipermídia as Avessas: Passo a passo</a>
+    </h1>
+    <time class="header-date">
+      <span class="header-date-year">2013</span>
+      <span class="header-date-month">Setembro</span>
+    </time>
+  </div>
+</header>
+
+<div class="main">
+  <div class="wrapper">
+    <p>Espero que já tenha lido as outras postagens da série, comece pela <a href="/hipermidia-as-avessas.html">introdução</a> caso não o tenha, recomendo. Conheceremos a partir de agora os pontos e técnicas mais importantes para lembrar enquanto estiver desenvolvendo um projeto para diferentes suportes computacionais.</p>
+
+<p>A dica mais importante é que você deve começar a desenvolver para os dispositivos que oferecem menor performance e nos quais você tem menos experiência como desenvolvedor:  os dispositivos mobile. Nunca se esqueça de testar desde as fases iniciais e principalmente na de homologação como seu projeto se comporta em mobile.</p>
+
+              <h2 id="Layout-desktop">
+                <a name="Layout-desktop" href="#Layout-desktop"></a>Layout desktop
+              </h2>
+            
+<p>Caso seu projeto não seja <a href="/hipermidia-as-avessas-responsive-design.html">responsivo</a>, não utilize a <code>meta viewport</code> a menos que a página não renderize na largura correta em mobile.</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><a name="line-1"></a><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=1024&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+              <h2 id="Layout-responsivo">
+                <a name="Layout-responsivo" href="#Layout-responsivo"></a>Layout responsivo
+              </h2>
+            
+<p>Defina a <code>meta viewport</code> e os <em>breakpoints</em> a medida que forem necessários, <a href="/hipermidia-as-avessas-responsive-design.html#Breakpoints">esqueça as receitas com resoluções padrões</a>.</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><a name="line-1"></a><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+              <h3 id="CSS">
+                <a name="CSS" href="#CSS"></a>CSS
+              </h3>
+            
+<p>Escreva primeiro as folhas de estilo para que seu layout funcione bem em mobile. Suas <em>media queries</em> devem ser usadas para adaptar o <em>layout</em> para resoluções maiores, repare nos <code>min-width</code> abaixo:</p>
+<div class="highlight"><pre><code class="css language-css" data-lang="css"><a name="line-1"></a><span class="c">/* Styles to mobile */</span>
+<a name="line-2"></a>
+<a name="line-3"></a><span class="c">/* a bit wider */</span>
+<a name="line-4"></a><span class="k">@media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="o">..</span><span class="nc">.em</span><span class="o">)</span> <span class="p">{</span> <span class="c">/* Styles */</span> <span class="p">}</span>
+<a name="line-5"></a>
+<a name="line-6"></a><span class="c">/* wider */</span>
+<a name="line-7"></a><span class="k">@media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="o">..</span><span class="nc">.em</span><span class="o">)</span> <span class="p">{</span> <span class="c">/* Styles */</span> <span class="p">}</span>
+</code></pre></div>
+              <h3 id="Fontes">
+                <a name="Fontes" href="#Fontes"></a>Fontes
+              </h3>
+            
+<p>Utilize sempre <a href="/hipermidia-as-avessas-responsive-design.html#Tamanho-relativo">medidas relativas</a>. Isto possibilita que, ao alterar o tamanho da fonte no <code>body</code>, os tamanhos de fonte dos demais elementos sejam afetados na mesma proporção.</p>
+<div class="highlight"><pre><code class="css language-css" data-lang="css"><a name="line-1"></a><span class="c">/* Styles to mobile */</span>
+<a name="line-2"></a>
+<a name="line-3"></a><span class="nc">.body</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">23px</span><span class="p">;</span> <span class="p">}</span>
+<a name="line-4"></a>
+<a name="line-5"></a><span class="nt">p</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">0.8em</span><span class="p">;</span> <span class="p">}</span>
+<a name="line-6"></a>
+<a name="line-7"></a><span class="c">/* wider */</span>
+<a name="line-8"></a><span class="k">@media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="o">..</span><span class="nc">.em</span><span class="o">)</span> <span class="p">{</span>
+<a name="line-9"></a>   <span class="nc">.body</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">16px</span><span class="p">;</span> <span class="p">}</span>
+<a name="line-10"></a><span class="p">}</span>
+</code></pre></div>
+              <h3 id="Imagens">
+                <a name="Imagens" href="#Imagens"></a>Imagens
+              </h3>
+            
+<p>Tente achar um tamanho que fique com nitidez razoável na maior parte dos dispositivos ou aplique uma das <a href="/hipermidia-as-avessas-imagens.html#Solu%C3%A7%C3%B5es-poss%C3%ADveis">soluções possíveis</a> até que exista uma melhor.</p>
+
+              <h2 id="Por-fim">
+                <a name="Por-fim" href="#Por-fim"></a>Por fim
+              </h2>
+            
+<p>Obrigado ao <a href="https://twitter.com/askoth">Marcelo</a> por ter ajudado e apresentado comigo. Muitas das ideias desta série partiram da experiência e conhecimento dele. Outro salve à <a href="https://twitter.com/morvanabonin">Morvana</a> e <a href="https://twitter.com/cynthia_zanoni">Cynthia</a> por terem organizado o <a href="http://mobilebrazilconference.com.br">primeiro evento de mobile do sul do país</a>, o nível estava altíssimo.</p>
+
+<p>A você, respeite e fique antenado a era mobile, ela está por aqui para ficar e a tendência é que teremos mais e mais dispositivos conectados. É nossa responsabilidade como desenvolvedores fazer uma web melhor e adequada a todos estes dispositivos.</p>
+
+
+    <aside class="post-meta">
+      <time class="date">23/09/2013</time>
+      <span class="author">por <a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></span>
+      <span class="tags">
+        <strong>Tags:</strong>
+        <ul>
+          
+          <li>HTML5</li>
+          
+          <li>mobile</li>
+          
+        </ul>
+      </span>
+    </aside>
+
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <p class="wrapper">
+      <span class="brand">Jean Carlo Emer</span>
+      <span class="credits">Layout por <a href="http://curestudio.com.br" class="cure" target="_blank">Cure</a></span>
+    </p>
+  </footer>
+  <script src="/assets/scripts/main.js"></script>
+</body>
+</html>

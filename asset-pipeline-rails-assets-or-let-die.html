@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Asset Pipeline: Rails Assets or let die ~ Jean Carlo Emer
+  </title>
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://feeds.feedburner.com/jeancarloemer" rel="alternate" type="application/rss+xml">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jean Carlo Emer"/>
+  <meta property="og:url" content="http://jcemer.com/asset-pipeline-rails-assets-or-let-die.html">
+  <meta property="og:title" content="Asset Pipeline: Rails Assets or let die ~ Jean Carlo Emer">
+  <meta property="og:description" content="A popularização do Bower como gerenciador de pacotes de código de interface e o dilema sobre a adoção de um workflow Node.js para gerenciar assets em projetos Ruby on Rails.">
+  <meta property="og:image" content="http://jcemer.com/assets/images/badge.jpg">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700|Raleway:300,700,800|Droid+Sans+Mono:400" rel="stylesheet" type="text/css">
+  <link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css">
+
+  <link rel="canonical" href="http://jcemer.com/asset-pipeline-rails-assets-or-let-die.html">
+
+  <script>
+    window._gaq = [
+      ['_setAccount', 'UA-37078527-1']
+    , ['_trackPageview']
+    ]
+  </script>
+</head>
+<body>
+  <div class="lobby">
+    <div class="wrapper">
+      <nav id="menu">
+        <ul>
+          
+            <li><a href="/sobre.html">Sobre</a></li>
+          
+            <li><a href="/talks.html">Talks</a></li>
+          
+            <li><a href="http://twitter.com/jcemer">Twitter</a></li>
+          
+            <li><a href="http://github.com/jcemer">GitHub</a></li>
+          
+        </ul>
+        <a href="#menu" id="menu-toggle">menu</a>
+      </nav>
+      <a href="/" class="brand" title="Página inicial">Jean Carlo Emer</a>
+    </div>
+  </div>
+
+  <header class="header">
+  <div class="wrapper">
+    <h1 class="header-title">
+      <a href="/asset-pipeline-rails-assets-or-let-die.html">Asset Pipeline: Rails Assets or let die</a>
+    </h1>
+    <time class="header-date">
+      <span class="header-date-year">2013</span>
+      <span class="header-date-month">Dezembro</span>
+    </time>
+  </div>
+</header>
+
+<div class="main">
+  <div class="wrapper">
+    <p>Já de início, deixe-me esclarecer duas coisas:</p>
+
+<ol>
+<li><p>Este post trata do <a href="http://www.akitaonrails.com/2012/07/01/asset-pipeline-para-iniciantes">Asset Pipeline do Ruby on Rails</a></p></li>
+<li><p>Considero o Asset Pipeline ainda o melhor <a href="http://tableless.com.br/workflow-para-cuidar-dos-seus-assets">workflow para gerência de assets, veja meus argumentos</a>.</p></li>
+</ol>
+
+<p>A motivação em escrever vêm de algumas conversas entre amigos, discussões no Twitter e sobretudo meus estudos para a palestra: <a href="https://speakerdeck.com/jcemer/e-agora-virei-um-front-end-rails">E agora, virei um front-end Rails!?</a>.</p>
+
+              <h2 id="A-força-do-Node-js">
+                <a name="A-força-do-Node-js" href="#A-força-do-Node-js"></a>A força do Node.js
+              </h2>
+            
+<p>Começando com um pouco de embasamento. A maior aptidão do Node.js são as aplicações que demandam entrada e saída massiva de dados, em suma, para isto é que ele foi desenvolvido.</p>
+
+<p>Por outro lado, o Node.js tem sido adotado pela comunidade front-end como suporte para suas ferramentas há bastante tempo. A lista vai desde transpiladores e <em>parsers</em> de JavaScript, pré-processadores de CSS a automatizadores de tarefas.</p>
+
+<blockquote>
+<p>Node.js é a ferramenta mais importante pro desenvolvedor front end.
+  <br><a href="http://twitter.com/askoth">Marcelo Oliveira</a></p>
+</blockquote>
+
+              <h3 id="Gerenciamento-de-pacotes">
+                <a name="Gerenciamento-de-pacotes" href="#Gerenciamento-de-pacotes"></a>Gerenciamento de pacotes
+              </h3>
+            
+<p>Disponibilizar bibliotecas, frameworks ou qualquer outro tipo de código foi um dos maiores desafios do confeiteiro de HTML da era passada. Para disponibilizar código, o jeito era criar um website com uma área para download. Fizemos isto com a <a href="http://ryejs.com">Rye</a> nos longínquos 2012.</p>
+
+<p>Nada mais óbvio que a medida que o NPM conquistasse o maior sucesso gerenciando pacotes do Node.js surgissem gerenciadores destinados a código front-end no geral. Surgiram vários: <a href="http://jamjs.org/">Jam</a>, <a href="http://component.io">Component</a> e <a href="http://volojs.org">Volo</a>.</p>
+
+<p>Sem dúvida, o gerenciador de pacotes de maior adoção até o momento foi o Bower. <strong>Toda a biblioteca, framework ou código front-end que se preze está no Bower</strong>.</p>
+
+              <h2 id="Gerenciamento-de-pacotes-no-Asset-Pipeline">
+                <a name="Gerenciamento-de-pacotes-no-Asset-Pipeline" href="#Gerenciamento-de-pacotes-no-Asset-Pipeline"></a>Gerenciamento de pacotes no Asset Pipeline
+              </h2>
+            
+<p>É importante reparar que o Asset Pipeline é apenas um framework, de maneira alguma ele seria acompanhado por um gerenciador exclusivo de pacotes. Assim como o Ruby on Rails, o Asset Pipeline utiliza as gems do Ruby para empacotar dependências. Mas a discussão que surge é: <strong>são as gems o empacotamento mais adequado para código front-end?</strong>.</p>
+
+<p>Alguns desenvolvedores já deixaram muito claro qual a sua opinião: <a href="http://simplesideias.com.br/gerenciando-dependencias-client-side-com-bower">caso seu pacote forneça apenas conteúdo para a interface, ele deve estar em um gerenciador específico tal como o Bower</a>. O custo desta abordagem no Ruby on Rails implica em ter dois arquivos de configuração de dependências (sim, não temos como abandonar o Gemfile) e duas etapas de <em>install</em> e <em>update</em> de dependências. Sem contar que muita gente não quer depender do Bower para fazer o deploy.</p>
+
+<p>Uma das soluções apontadas é adicionar ao repositório de versionamento do projeto os pacotes baixados pelo Bower. Desculpe, mas se for o caso, prefiro continuar com o protocolo antigo de <em>download</em> manual das dependências, um gerenciador de pacotes tem muitas mais funções que apenas esta.</p>
+
+              <h3 id="Rails-Assets">
+                <a name="Rails-Assets" href="#Rails-Assets"></a>Rails Assets
+              </h3>
+            
+<p>O <a href="https://rails-assets.org">Rails Assets</a> é uma fonte de gems que empacotam código de interface já disponíveis no Bower. É a solução perfeita. Uma orla de front-enders cadastra e atualiza seus pacotes no Bower e as gems se alimentam diretamente destes repositórios para criar uma <strong>versão compatível</strong> com o Asset Pipeline.</p>
+
+<p>Quando me refiro a versão compatível, é importante que saiba que alguns códigos precisam de adaptações para que funcionem no Asset Pipeline. Pegando como exemplo uma <a href="https://github.com/fancyapps/fancyBox/blob/master/source/jquery.fancybox.css#L97">folha de estilo da Fancybox</a>, todas as referências às imagens precisam de instruções especiais para preservar as estratégias de cache. O Rails Assets faz todas as conversões necessárias automaticamente.</p>
+
+<p>Muita biblioteca front-end já está registrada no Ruby Gems com a única função de ser usada pelo Asset Pipeline, e portanto mantendo a organização de arquivos e outros aspectos propostos pelo framework. O <em>core team</em> do Ruby on Rails já faz isto há bastante tempo com a <a href="https://github.com/rails/jquery-rails">jQuery</a>, por exemplo. Isto implica que <strong>outras gems que dependam da jQuery passem a usar o mesmo pacote</strong>, e esta é a vantagem de se ter um único gerenciador de pacotes.</p>
+
+<p>O principal contra tempo de encapsular código front-end era a necessidade de se criar um repositório exclusivo e manter o código atualizado, o que já está resolvido com maestria pelo Rails Assets. É claro que o Rails Assets se trata de um produto beta, melhorias no seu processo de funcionamento com certeza ainda devem ser necessárias. Mais detalhes no <a href="http://codetunes.com/2013/we-released-rails-assets">blog post do seu lançamento</a>.</p>
+
+              <h2 id="Abandonar-o-Asset-Pipeline">
+                <a name="Abandonar-o-Asset-Pipeline" href="#Abandonar-o-Asset-Pipeline"></a>Abandonar o Asset Pipeline
+              </h2>
+            
+<p>O Grunt.js, com todos os seus inúmeros plugins, já está muito próximo (ou talvez já tenha ultrapassado) das capacidades do Asset Pipeline. Acho fantástico quando diferentes linguagens e comunidades chegam a soluções equivalentes e passam a disputar palmo a palmo por espaço.</p>
+
+              <h3 id="Half-Pipe">
+                <a name="Half-Pipe" href="#Half-Pipe"></a>Half Pipe
+              </h3>
+            
+<p>É óbvio que a esta altura já exista uma gem que se encarregue de trocar o Asset Pipeline por um workflow apoiado no Grunt.js e Bower, chama-se <a href="https://github.com/d-i/half-pipe">Half-pipe</a>.</p>
+
+<p>A vantagem é que você vai poder fugir totalmente da discussão da maneira de usar o Bower e em como é errado empacotar código de interface em gems. Além disto, todas as ferramentas de front-end estarão disponíveis em primeira mão, nossos assets estarão a cuidados do Node.js.</p>
+
+<p>A desvantagem será a falta de integração dos seus assets com a aplicação, adeus estratégia <em>just works</em> de gerência de <em>cache</em>. Você até pode ter um plugin do Grunt que cuide disto, mas isto não vai influenciar no asset referenciado pelo <code>&lt;head&gt;</code> dos seus documentos HTML como acontece com o Asset Pipeline.</p>
+
+<p>Até o momento, o Half Pipe substitui por completo o Asset Pipeline, isto significa que outras gems como o Active Admin passarão a não funcionar. E pra finalizar, o deploy em serviços como o Heroku pode ficar bem mais complicado que o usual.</p>
+
+              <h2 id="Conclusão">
+                <a name="Conclusão" href="#Conclusão"></a>Conclusão
+              </h2>
+            
+<p>O Ruby on Rails tem como uma das suas maiores filosofias &quot;convenção sobre configuração&quot;. Não é por acaso que ele já inclui um workflow para gerenciar os assets da aplicação: <strong>garantir boas práticas e agilidade no desenvolvimento</strong>. Dito isto, não parece fazer sentido ter o trabalho de desativar o Asset Pipeline ou até mesmo configurar outro gerenciador de dependências que não seja aquele já utilizado.</p>
+
+<p>Aceite as escolhas tomadas por aqueles que cruzaram o caminho do Asset Pipeline ou o abandone. Digamos que até mesmo o extremo de desacoplar completamente os assets da sua aplicação pode ser uma boa ideia. Nestes casos, a escolha de ferramentas e frameworks para cada uma das partes fica a seu critério. O que você perde e ganha com isto vai depender da sua aplicação. Vale a pena?</p>
+
+
+    <aside class="post-meta">
+      <time class="date">13/12/2013</time>
+      <span class="author">por <a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></span>
+      <span class="tags">
+        <strong>Tags:</strong>
+        <ul>
+          
+          <li>assets</li>
+          
+          <li>rails</li>
+          
+        </ul>
+      </span>
+    </aside>
+
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <p class="wrapper">
+      <span class="brand">Jean Carlo Emer</span>
+      <span class="credits">Layout por <a href="http://curestudio.com.br" class="cure" target="_blank">Cure</a></span>
+    </p>
+  </footer>
+  <script src="/assets/scripts/main.js"></script>
+</body>
+</html>
