@@ -70,7 +70,7 @@
                 <a name="We-Play-Guillermo-Rauch" href="#We-Play-Guillermo-Rauch"></a>We Play - Guillermo Rauch
               </h2>
             
-<p>Guillermo, conhecido pelo socket.io dentre outros vários projetos <em>open source</em>, é um dos <em>keynotes</em> do evento. Sua palestra inicia abordando um pouco da história do socket.io, que surgiu da frustração do difícil uso de outras ferramentas similares e teve como objetivo tornar simples o uso de WebSockets.</p>
+<p>Guillermo, conhecido pelo <a href="http://socket.io">socket.io</a> dentre outros vários projetos <em>open source</em>, é um dos <em>keynotes</em> do evento. Sua palestra inicia abordando um pouco da história do socket.io, que surgiu da frustração do difícil uso de outras ferramentas similares e teve como objetivo tornar simples o uso de WebSockets.</p>
 
 <p>O assunto principal são as novidades da versão 1.0.0-pre do socket.io que teve seu <em>release</em> recenente. Nesta nova versão modularização foi levada a sério e todos os commits são testados automaticamente em IE6+, iPhone, iPad entre outros navegadores e dispositivos.</p>
 
@@ -86,7 +86,7 @@
                 <a name="Jade-A-templating-language-Forbes-Lindesay" href="#Jade-A-templating-language-Forbes-Lindesay"></a>Jade: A templating language - Forbes Lindesay
               </h2>
             
-<p>Sem muita cerimônia, Forbes logo explora um código escrito em HTML e seu equivalente em Jade. O que segue é a apresentação completa da sintaxe e <em>feaures</em> da linguagem.</p>
+<p>Sem muita cerimônia, Forbes logo explora um código escrito em HTML e seu equivalente em <a href="http://jade-lang.com">Jade</a>. O que segue é a apresentação completa da sintaxe e <em>feaures</em> da linguagem.</p>
 
 <p>Um dos pontos interessantes foi a demonstração de como é possível passar conteúdo JavaScript para ser renderizado nos <em>templates</em> permitindo a geração dinâmica de HTML. Em favor do reuso, os <em>mixins</em> e <em>layout templates</em> foram apresentados. Outra funcionalidade interessante são os <em>filters</em> que permitem, por exemplo, mesclar código Jade com markdown.</p>
 
@@ -100,13 +100,29 @@
                 <a name="Building-for-scale-with-KrakenJS-Lenny-Markus" href="#Building-for-scale-with-KrakenJS-Lenny-Markus"></a>Building for scale with KrakenJS - Lenny Markus
               </h2>
             
-<p>O objetivo do Kraken foi o de introduzir Node.js no PayPal. O Kraken.js é <em>Web Application Framework</em>* apoiado em Express e que segue suas convenções. O <em>framework</em> compreende uma série de módulos com funções específicas: Lusca, para segurança; Marara, para internacionalização; Kappa, que é um <em>proxy#</em> NPM para manter módulos privados. Os módulos podem ser utilizados individualmente em aplicações escritas em Express.</p>
+<p>O objetivo do Kraken foi o de introduzir Node.js no PayPal. O <a href="http://krakenjs.com">Kraken.js</a> é <em>Web Application Framework</em>* apoiado em Express e que segue suas convenções. O <em>framework</em> compreende uma série de módulos com funções específicas: Lusca, para segurança; Marara, para internacionalização; Kappa, que é um <em>proxy#</em> NPM para manter módulos privados. Os módulos podem ser utilizados individualmente em aplicações escritas em Express.</p>
 
 <p>O Kraken teve sua infraestrutura definida em três meses e em mais quatro meses um projeto piloto foi codificado para substituir outro escrito em Java. O impressionante é que a equipe que escreveu o projeto piloto possuia apenas dois desenvolvedores contra doze do projeto anterior. As diferenças de números de linhas de código também impressionam positivamente. A função do projeto piloto foi adquirir credibilidade para a tecnologia Node.js no PayPal.</p>
 
 <hr>
 
 <p>O <em>framework</em> teve uma adoção absurda no PayPal e eles já mantêm 20 aplicações escritas. A apresentação foi muito boa e o mais humilde dos ensinamentos foi: &quot;Mantenha as convenções de <em>Open Source</em> ao invés de reinventar suas próprias&quot;.</p>
+
+              <h2 id="Improving-client-side-apps-39-perfomance-with-Facebook-39-s-React-Jú-Gonçalves">
+                <a name="Improving-client-side-apps-39-perfomance-with-Facebook-39-s-React-Jú-Gonçalves" href="#Improving-client-side-apps-39-perfomance-with-Facebook-39-s-React-Jú-Gonçalves"></a>Improving client-side apps&#39; perfomance with Facebook&#39;s React - Jú Gonçalves
+              </h2>
+            
+<p>Jú Gonçalves inicia sua palestra ilustrando um de seus tweets que demonstra sua preocupação com performance seguindo para a explanação de como <em>frameworks</em> MVW geralmente funcionam.</p>
+
+<p>O que faz o <a href="http://facebook.github.io/react">React</a> diferente inicialmente é que ele não se trata de um MVW <em>framework</em>: não há <em>views</em>, <em>controllers</em> e similares. A chave dos ganhos de performance estão relacionados com o fato de o React evitar acessar o DOM, o que ocasionaria <em>repaints</em> e <em>reflows</em>.</p>
+
+<p>A biblioteca obtem informações do DOM através de uma abstração da <em>DOMTree</em>: a <em>ComponentTree</em>. Após uma série de processamentos, esta abastração pode ser consultada e atestar se é necessária alguma intervenção no DOM.</p>
+
+<p>Em seguida, o projeto <a href="https://github.com/swannodette/om">Om</a>, uma interface em ClojureScript para React foi apresentado. Om alcança peformances mais interessantes ainda devido as características de imutabilidade das linguagens funcionais.</p>
+
+<hr>
+
+<p>A palestra tem um nível técnico de tirar o fôlego. É necessário muito estudo para dominar o uso e entender o funcionamento interno de cada uma das ferramentas apresentadas.</p>
 
 <hr>
 

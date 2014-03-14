@@ -14,7 +14,7 @@
                 &lt;a name=&quot;We-Play-Guillermo-Rauch&quot; href=&quot;#We-Play-Guillermo-Rauch&quot;&gt;&lt;/a&gt;We Play - Guillermo Rauch
               &lt;/h2&gt;
             
-&lt;p&gt;Guillermo, conhecido pelo socket.io dentre outros vários projetos &lt;em&gt;open source&lt;/em&gt;, é um dos &lt;em&gt;keynotes&lt;/em&gt; do evento. Sua palestra inicia abordando um pouco da história do socket.io, que surgiu da frustração do difícil uso de outras ferramentas similares e teve como objetivo tornar simples o uso de WebSockets.&lt;/p&gt;
+&lt;p&gt;Guillermo, conhecido pelo &lt;a href=&quot;http://socket.io&quot;&gt;socket.io&lt;/a&gt; dentre outros vários projetos &lt;em&gt;open source&lt;/em&gt;, é um dos &lt;em&gt;keynotes&lt;/em&gt; do evento. Sua palestra inicia abordando um pouco da história do socket.io, que surgiu da frustração do difícil uso de outras ferramentas similares e teve como objetivo tornar simples o uso de WebSockets.&lt;/p&gt;
 
 &lt;p&gt;O assunto principal são as novidades da versão 1.0.0-pre do socket.io que teve seu &lt;em&gt;release&lt;/em&gt; recenente. Nesta nova versão modularização foi levada a sério e todos os commits são testados automaticamente em IE6+, iPhone, iPad entre outros navegadores e dispositivos.&lt;/p&gt;
 
@@ -30,7 +30,7 @@
                 &lt;a name=&quot;Jade-A-templating-language-Forbes-Lindesay&quot; href=&quot;#Jade-A-templating-language-Forbes-Lindesay&quot;&gt;&lt;/a&gt;Jade: A templating language - Forbes Lindesay
               &lt;/h2&gt;
             
-&lt;p&gt;Sem muita cerimônia, Forbes logo explora um código escrito em HTML e seu equivalente em Jade. O que segue é a apresentação completa da sintaxe e &lt;em&gt;feaures&lt;/em&gt; da linguagem.&lt;/p&gt;
+&lt;p&gt;Sem muita cerimônia, Forbes logo explora um código escrito em HTML e seu equivalente em &lt;a href=&quot;http://jade-lang.com&quot;&gt;Jade&lt;/a&gt;. O que segue é a apresentação completa da sintaxe e &lt;em&gt;feaures&lt;/em&gt; da linguagem.&lt;/p&gt;
 
 &lt;p&gt;Um dos pontos interessantes foi a demonstração de como é possível passar conteúdo JavaScript para ser renderizado nos &lt;em&gt;templates&lt;/em&gt; permitindo a geração dinâmica de HTML. Em favor do reuso, os &lt;em&gt;mixins&lt;/em&gt; e &lt;em&gt;layout templates&lt;/em&gt; foram apresentados. Outra funcionalidade interessante são os &lt;em&gt;filters&lt;/em&gt; que permitem, por exemplo, mesclar código Jade com markdown.&lt;/p&gt;
 
@@ -44,13 +44,29 @@
                 &lt;a name=&quot;Building-for-scale-with-KrakenJS-Lenny-Markus&quot; href=&quot;#Building-for-scale-with-KrakenJS-Lenny-Markus&quot;&gt;&lt;/a&gt;Building for scale with KrakenJS - Lenny Markus
               &lt;/h2&gt;
             
-&lt;p&gt;O objetivo do Kraken foi o de introduzir Node.js no PayPal. O Kraken.js é &lt;em&gt;Web Application Framework&lt;/em&gt;* apoiado em Express e que segue suas convenções. O &lt;em&gt;framework&lt;/em&gt; compreende uma série de módulos com funções específicas: Lusca, para segurança; Marara, para internacionalização; Kappa, que é um &lt;em&gt;proxy#&lt;/em&gt; NPM para manter módulos privados. Os módulos podem ser utilizados individualmente em aplicações escritas em Express.&lt;/p&gt;
+&lt;p&gt;O objetivo do Kraken foi o de introduzir Node.js no PayPal. O &lt;a href=&quot;http://krakenjs.com&quot;&gt;Kraken.js&lt;/a&gt; é &lt;em&gt;Web Application Framework&lt;/em&gt;* apoiado em Express e que segue suas convenções. O &lt;em&gt;framework&lt;/em&gt; compreende uma série de módulos com funções específicas: Lusca, para segurança; Marara, para internacionalização; Kappa, que é um &lt;em&gt;proxy#&lt;/em&gt; NPM para manter módulos privados. Os módulos podem ser utilizados individualmente em aplicações escritas em Express.&lt;/p&gt;
 
 &lt;p&gt;O Kraken teve sua infraestrutura definida em três meses e em mais quatro meses um projeto piloto foi codificado para substituir outro escrito em Java. O impressionante é que a equipe que escreveu o projeto piloto possuia apenas dois desenvolvedores contra doze do projeto anterior. As diferenças de números de linhas de código também impressionam positivamente. A função do projeto piloto foi adquirir credibilidade para a tecnologia Node.js no PayPal.&lt;/p&gt;
 
 &lt;hr&gt;
 
 &lt;p&gt;O &lt;em&gt;framework&lt;/em&gt; teve uma adoção absurda no PayPal e eles já mantêm 20 aplicações escritas. A apresentação foi muito boa e o mais humilde dos ensinamentos foi: &amp;quot;Mantenha as convenções de &lt;em&gt;Open Source&lt;/em&gt; ao invés de reinventar suas próprias&amp;quot;.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Improving-client-side-apps-39-perfomance-with-Facebook-39-s-React-Jú-Gonçalves&quot;&gt;
+                &lt;a name=&quot;Improving-client-side-apps-39-perfomance-with-Facebook-39-s-React-Jú-Gonçalves&quot; href=&quot;#Improving-client-side-apps-39-perfomance-with-Facebook-39-s-React-Jú-Gonçalves&quot;&gt;&lt;/a&gt;Improving client-side apps&amp;#39; perfomance with Facebook&amp;#39;s React - Jú Gonçalves
+              &lt;/h2&gt;
+            
+&lt;p&gt;Jú Gonçalves inicia sua palestra ilustrando um de seus tweets que demonstra sua preocupação com performance seguindo para a explanação de como &lt;em&gt;frameworks&lt;/em&gt; MVW geralmente funcionam.&lt;/p&gt;
+
+&lt;p&gt;O que faz o &lt;a href=&quot;http://facebook.github.io/react&quot;&gt;React&lt;/a&gt; diferente inicialmente é que ele não se trata de um MVW &lt;em&gt;framework&lt;/em&gt;: não há &lt;em&gt;views&lt;/em&gt;, &lt;em&gt;controllers&lt;/em&gt; e similares. A chave dos ganhos de performance estão relacionados com o fato de o React evitar acessar o DOM, o que ocasionaria &lt;em&gt;repaints&lt;/em&gt; e &lt;em&gt;reflows&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;A biblioteca obtem informações do DOM através de uma abstração da &lt;em&gt;DOMTree&lt;/em&gt;: a &lt;em&gt;ComponentTree&lt;/em&gt;. Após uma série de processamentos, esta abastração pode ser consultada e atestar se é necessária alguma intervenção no DOM.&lt;/p&gt;
+
+&lt;p&gt;Em seguida, o projeto &lt;a href=&quot;https://github.com/swannodette/om&quot;&gt;Om&lt;/a&gt;, uma interface em ClojureScript para React foi apresentado. Om alcança peformances mais interessantes ainda devido as características de imutabilidade das linguagens funcionais.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;A palestra tem um nível técnico de tirar o fôlego. É necessário muito estudo para dominar o uso e entender o funcionamento interno de cada uma das ferramentas apresentadas.&lt;/p&gt;
 
 &lt;hr&gt;
 
