@@ -101,6 +101,28 @@
 
 &lt;p&gt;Angel fez uma abordagem bastante humorada e simplificada de um tópico bastante interessante que tem raízes bastante acadêmicas. Vale a pena conferir sua postagem &lt;a href=&quot;http://ajlopez.wordpress.com/2013/05/30/aplicaciones-distribuidas-y-node-js&quot;&gt;Distributed Applications and Node.js&lt;/a&gt; que explica minuciosamente toda a palestra.&lt;/p&gt;
 
+              &lt;h2 id=&quot;Why-Bacon-is-actually-good-for-your-health-Leonardo-Garcia-e-Sergio-Gianazza&quot;&gt;
+                &lt;a name=&quot;Why-Bacon-is-actually-good-for-your-health-Leonardo-Garcia-e-Sergio-Gianazza&quot; href=&quot;#Why-Bacon-is-actually-good-for-your-health-Leonardo-Garcia-e-Sergio-Gianazza&quot;&gt;&lt;/a&gt;Why Bacon is actually good for your health - Leonardo Garcia e Sergio Gianazza
+              &lt;/h2&gt;
+            
+&lt;p&gt;A apresentação é a respeito de &lt;em&gt;Functional Reactive Programming (FRP)&lt;/em&gt; utilizando a biblioteca &lt;a href=&quot;https://github.com/baconjs/bacon.js/tree/master&quot;&gt;Bacon.js&lt;/a&gt;. O paradigma FRP é baseado na represetação de um valor que varia em um espaço de tempo. Uma &lt;em&gt;event stream&lt;/em&gt; é uma coleção de eventos que acontece ao longo de um tempo. Simplificando, é como um cano que, ao invés de água, recebe eventos. A media que o evento flui pela &lt;em&gt;stream&lt;/em&gt;, se este não for assitido, é perdido.&lt;/p&gt;
+
+&lt;p&gt;FRP merece nossa anteção pelos seguintes motivos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Permitir a composição de eventos.&lt;/li&gt;
+&lt;li&gt;Podemos tratar nossas coleções utilizando programação funcional.&lt;/li&gt;
+&lt;li&gt;Alto level de abstração que nos permite expressar mais o &amp;quot;o que&amp;quot; ao invés de &amp;quot;como&amp;quot;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As &lt;em&gt;streams&lt;/em&gt; permitem a aplicações de funções já bastante conhecidas como &lt;code&gt;map&lt;/code&gt; e &lt;code&gt;filter&lt;/code&gt; dentro outras.&lt;/p&gt;
+
+&lt;p&gt;O funcionamento da biblioteca Bacon.js foi mostrado através de um fluxo de &lt;em&gt;ticks&lt;/em&gt; que resulta em um relógio completo com suporte a alarme. Outras duas implementações integradas com Backbone e Angular são mostradas justificando as múltiplas possibilidades de uso da biblioteca.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;É essencial justificar o uso de novos paradigmas, melhor ainda se puderem interagir com o que já utilizamos atualmente. Os exemplos com Backbone e Angular foram excelentes para isto. A apresentação fluiu bem e me provocou a investigar e implementar código usando o paradigma. Ótimo trabalho.&lt;/p&gt;
+
 &lt;hr&gt;
 
 &lt;p&gt;&lt;em&gt;Esta postagem será editada.&lt;/em&gt;&lt;/p&gt;
