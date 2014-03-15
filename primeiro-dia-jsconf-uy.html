@@ -64,7 +64,7 @@
 
 <div class="main">
   <div class="wrapper">
-    <p>Cobertura do primeiro dia da JSConfUY 2014.</p>
+    <p>Cobertura comentada sobre o primeiro dia da JSConfUY 2014.</p>
 
               <h2 id="We-Play-Guillermo-Rauch">
                 <a name="We-Play-Guillermo-Rauch" href="#We-Play-Guillermo-Rauch"></a>We Play - Guillermo Rauch
@@ -128,17 +128,17 @@
                 <a name="Taking-Promises-Seriously-James-MacAulay" href="#Taking-Promises-Seriously-James-MacAulay"></a>Taking Promises Seriously - James MacAulay
               </h2>
             
-<p><em>Promisses</em> surgiram de diferentes bibliotecas e propostas de especificações. O padrão mais aceito é o Promises/A+ e já há uma especificação rascunho no ES6: <code>function Promise() { [native code] }</code>. Antes das <em>promisses</em>, o único jeito era usar <em>callbacks</em> aninhadas.</p>
+<p><em>Promises</em> surgiram de diferentes bibliotecas e propostas de especificações. O padrão mais aceito é o Promises/A+ e já há uma especificação rascunho no ES6: <code>function Promise() { [native code] }</code>. Antes das <em>promises</em>, o único jeito era usar <em>callbacks</em> aninhadas.</p>
 
-<p>O uso de <em>promisses</em> é baseado na função <code>.then</code>: <em>promisses</em> que seguem a especificação irão retornar um valor transformado em uma chamada de <code>.then</code>. Desta forma, é possível aninhar chamadas de tal maneira que sua ordem afete o resultado final. É importante notar que o <code>Deferred</code> retornado nas chamadas assíncronas da jQuery não segue esta premissa.</p>
+<p>O uso de <em>promises</em> é baseado na função <code>.then</code>: <em>promises</em> que seguem a especificação irão retornar um valor transformado em uma chamada de <code>.then</code>. Desta forma, é possível aninhar chamadas de tal maneira que sua ordem afete o resultado final. É importante notar que o <code>Deferred</code> retornado nas chamadas assíncronas da jQuery não segue esta premissa.</p>
 
-<p>Um uso interessante da API de <em>promisses</em>, é utilizar a função <code>race</code> para definir um tempo limite de espera para que um valor fique &quot;pronto&quot;.</p>
+<p>Um uso interessante da API de <em>promises</em>, é utilizar a função <code>race</code> para definir um tempo limite de espera para que um valor fique &quot;pronto&quot;.</p>
 
-<p>É essencial que biblitoecas e <em>frameworks</em> passem cada vez mais a aceitar valores de <em>promisses</em>. Para ajudar com esta tarefa, bibliotecas como <a href="http://github.com/jamesmacaulat/kozu">kozu</a> permite tornar qualquer função passível de ser utilizada com promisses. Assim podem usar underscore com coleções cujos valores sejam <em>promisses</em>, o que é muito interessante.</p>
+<p>É essencial que biblitoecas e <em>frameworks</em> passem cada vez mais a aceitar valores de <em>promises</em>. Para ajudar com esta tarefa, bibliotecas como <a href="http://github.com/jamesmacaulat/kozu">kozu</a> permite tornar qualquer função passível de ser utilizada com promises. Assim podem usar underscore com coleções cujos valores sejam <em>promises</em>, o que é muito interessante.</p>
 
 <hr>
 
-<p>A palestra é cheia de boas sacadas em diversas bibliotecas e o conteúdo foi apresentado de maneira muito clara. Além disto, dominar <em>promisses</em> é essencial para todo desenvolvedor que queira evitar o <code>callback hell</code> e explorar outras características poderosas.</p>
+<p>A palestra é cheia de boas sacadas em diversas bibliotecas e o conteúdo foi apresentado de maneira muito clara. Além disto, dominar <em>promises</em> é essencial para todo desenvolvedor que queira evitar o <code>callback hell</code> e explorar outras características poderosas.</p>
 
               <h2 id="Functional-JavaScript-Federico-Silva">
                 <a name="Functional-JavaScript-Federico-Silva" href="#Functional-JavaScript-Federico-Silva"></a>Functional JavaScript - Federico Silva
@@ -165,7 +165,49 @@
 
 <hr>
 
-<p><em>Esta postagem ainda será atualizada.</em></p>
+              <h2 id="Promises-and-Generators-control-flow-utopia-Forbes-Lindesay">
+                <a name="Promises-and-Generators-control-flow-utopia-Forbes-Lindesay" href="#Promises-and-Generators-control-flow-utopia-Forbes-Lindesay"></a>Promises and Generators: control flow utopia - Forbes Lindesay
+              </h2>
+            
+<p>A palestra apresenta um cenário utilizando <em>callbacks</em> para tratar um processamento assíncrono. A partir de várias implementações, a dificuldade e <em>workarounds</em> para tratar erros e excessões é explicado.</p>
+
+<p>Além da definição de <em>promises</em>, a palestra apresenta o método <code>.done</code>. A máxima é que <code>.then</code> é para <code>.done</code> o que <code>.map</code> é para <code>.forEach</code>. Vale ressaltar que a especificação ES6 não inclui <code>.done</code> e portanto é necessário um <em>polyfill</em>. A justificativa de uso de <em>promises</em> é possibilitar uma escrita de código descomplicada que possa facilmente tratar erros.</p>
+
+<p>A apresentação também abordou <em>generators</em> que são funções que podem interromper o fluxo de sua execução para posteriormente seguir daquele mesmo ponto. A integração de <em>promises</em> com <em>generators</em> pode ser bastante interessante e possibilitar a escrita de códigos poderosos. Um bom exemplo são as construções possíveis quando usando bibliotecas como a <a href="https://github.com/visionmedia/co">co</a>.</p>
+
+<hr>
+
+<p>Forbes já havia palestrado mais cedo no evento e conseguiu convencer mais nesta segunda palestra. O assunto é interessante e foi muito bem apresentado. Em especial, <a href="http://en.wikipedia.org/wiki/Generator_(computer_programming">generators</a> permitem sintaxes absurdamente expressivas.</p>
+
+              <h2 id="Backbone-js-Jeremy-Ashkenas">
+                <a name="Backbone-js-Jeremy-Ashkenas" href="#Backbone-js-Jeremy-Ashkenas"></a>Backbone.js - Jeremy Ashkenas
+              </h2>
+            
+<p>Jeremy é criador do Backbone.js, Underscore.js e CoffeeScript, nada mais óbvio que seja um dos palestrantes mais esperados do evento.</p>
+
+<p>A apresenta apresenta o cenário atual de desenvolvimento. Há cinco anos atrás, um website não era tão ambicioso quanto os que estamos acostumados desenvolver. Por isto é que devemos levar a sério o uso de JavaScript, aplicações monolíticas não é a melhor maneira de se escrever código.</p>
+
+<p><a href="http://backbonejs.org">Backbone.js</a> nasceu de uma aplicação destinada a armazenar e compartilhar documentos de trabalho de jornalistas. A principal característica da biblioteca é não fazer do DOM a principal fonte de informações da aplicação e uma das filosofias é sempre se manter o mais minimalista possível. Toda nova funcionalidade do Backbone.js é implementada com base em casos de usos.</p>
+
+<p>O ponto mais fantástico é que Jeremy acredita que o código da biblioteca, mesmo que não necessariamente precise ser explorado pelo programador, deve ser simples o suficiente para ser lido sem impedimentos.</p>
+
+<p>Jeremy apresenta alguns dos seus <em>Backbone.js Patterns</em> preferidos:</p>
+
+<ul>
+<li>Adicionar métodos em <em>Models</em> e <em>Collections</em>.</li>
+<li>Filtrar coleções no front-end da aplicação.</li>
+<li>Utilizar <code>listenTo</code> para evitar <em>memory leaks</em>.</li>
+<li>Utilizar <code>_.debounce</code> para evitar múltiplos <em>renders</em> em espaços muito curtos de tempo.</li>
+<li>Dividir em lotes a geração de elementos e postergar sua criação e inserção no documento para ganhos de performance.</li>
+</ul>
+
+<p>Dentre outros padrões.</p>
+
+<hr>
+
+<p>A palestra durou quase uma hora e valeu cada segundo. O Jeremy demonstra uma maturidade fora do comum no palco. E isto não é por nada. O nível de conhecimento e sua influência na comunidade JavaScript é inquestionável.</p>
+
+<p>Sua observação de que código se escreve para leitura e sua paciência em manter todos os seus projetos <em>open sources</em> sempre atualizados é incrível. Melhor palestra do dia.</p>
 
 
     <aside class="post-meta">

@@ -8,7 +8,7 @@
     
       <item>
         <title>Live posting do primeiro dia da JSConfUY</title>
-        <description>&lt;p&gt;Cobertura do primeiro dia da JSConfUY 2014.&lt;/p&gt;
+        <description>&lt;p&gt;Cobertura comentada sobre o primeiro dia da JSConfUY 2014.&lt;/p&gt;
 
               &lt;h2 id=&quot;We-Play-Guillermo-Rauch&quot;&gt;
                 &lt;a name=&quot;We-Play-Guillermo-Rauch&quot; href=&quot;#We-Play-Guillermo-Rauch&quot;&gt;&lt;/a&gt;We Play - Guillermo Rauch
@@ -72,17 +72,17 @@
                 &lt;a name=&quot;Taking-Promises-Seriously-James-MacAulay&quot; href=&quot;#Taking-Promises-Seriously-James-MacAulay&quot;&gt;&lt;/a&gt;Taking Promises Seriously - James MacAulay
               &lt;/h2&gt;
             
-&lt;p&gt;&lt;em&gt;Promisses&lt;/em&gt; surgiram de diferentes bibliotecas e propostas de especificações. O padrão mais aceito é o Promises/A+ e já há uma especificação rascunho no ES6: &lt;code&gt;function Promise() { [native code] }&lt;/code&gt;. Antes das &lt;em&gt;promisses&lt;/em&gt;, o único jeito era usar &lt;em&gt;callbacks&lt;/em&gt; aninhadas.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Promises&lt;/em&gt; surgiram de diferentes bibliotecas e propostas de especificações. O padrão mais aceito é o Promises/A+ e já há uma especificação rascunho no ES6: &lt;code&gt;function Promise() { [native code] }&lt;/code&gt;. Antes das &lt;em&gt;promises&lt;/em&gt;, o único jeito era usar &lt;em&gt;callbacks&lt;/em&gt; aninhadas.&lt;/p&gt;
 
-&lt;p&gt;O uso de &lt;em&gt;promisses&lt;/em&gt; é baseado na função &lt;code&gt;.then&lt;/code&gt;: &lt;em&gt;promisses&lt;/em&gt; que seguem a especificação irão retornar um valor transformado em uma chamada de &lt;code&gt;.then&lt;/code&gt;. Desta forma, é possível aninhar chamadas de tal maneira que sua ordem afete o resultado final. É importante notar que o &lt;code&gt;Deferred&lt;/code&gt; retornado nas chamadas assíncronas da jQuery não segue esta premissa.&lt;/p&gt;
+&lt;p&gt;O uso de &lt;em&gt;promises&lt;/em&gt; é baseado na função &lt;code&gt;.then&lt;/code&gt;: &lt;em&gt;promises&lt;/em&gt; que seguem a especificação irão retornar um valor transformado em uma chamada de &lt;code&gt;.then&lt;/code&gt;. Desta forma, é possível aninhar chamadas de tal maneira que sua ordem afete o resultado final. É importante notar que o &lt;code&gt;Deferred&lt;/code&gt; retornado nas chamadas assíncronas da jQuery não segue esta premissa.&lt;/p&gt;
 
-&lt;p&gt;Um uso interessante da API de &lt;em&gt;promisses&lt;/em&gt;, é utilizar a função &lt;code&gt;race&lt;/code&gt; para definir um tempo limite de espera para que um valor fique &amp;quot;pronto&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Um uso interessante da API de &lt;em&gt;promises&lt;/em&gt;, é utilizar a função &lt;code&gt;race&lt;/code&gt; para definir um tempo limite de espera para que um valor fique &amp;quot;pronto&amp;quot;.&lt;/p&gt;
 
-&lt;p&gt;É essencial que biblitoecas e &lt;em&gt;frameworks&lt;/em&gt; passem cada vez mais a aceitar valores de &lt;em&gt;promisses&lt;/em&gt;. Para ajudar com esta tarefa, bibliotecas como &lt;a href=&quot;http://github.com/jamesmacaulat/kozu&quot;&gt;kozu&lt;/a&gt; permite tornar qualquer função passível de ser utilizada com promisses. Assim podem usar underscore com coleções cujos valores sejam &lt;em&gt;promisses&lt;/em&gt;, o que é muito interessante.&lt;/p&gt;
+&lt;p&gt;É essencial que biblitoecas e &lt;em&gt;frameworks&lt;/em&gt; passem cada vez mais a aceitar valores de &lt;em&gt;promises&lt;/em&gt;. Para ajudar com esta tarefa, bibliotecas como &lt;a href=&quot;http://github.com/jamesmacaulat/kozu&quot;&gt;kozu&lt;/a&gt; permite tornar qualquer função passível de ser utilizada com promises. Assim podem usar underscore com coleções cujos valores sejam &lt;em&gt;promises&lt;/em&gt;, o que é muito interessante.&lt;/p&gt;
 
 &lt;hr&gt;
 
-&lt;p&gt;A palestra é cheia de boas sacadas em diversas bibliotecas e o conteúdo foi apresentado de maneira muito clara. Além disto, dominar &lt;em&gt;promisses&lt;/em&gt; é essencial para todo desenvolvedor que queira evitar o &lt;code&gt;callback hell&lt;/code&gt; e explorar outras características poderosas.&lt;/p&gt;
+&lt;p&gt;A palestra é cheia de boas sacadas em diversas bibliotecas e o conteúdo foi apresentado de maneira muito clara. Além disto, dominar &lt;em&gt;promises&lt;/em&gt; é essencial para todo desenvolvedor que queira evitar o &lt;code&gt;callback hell&lt;/code&gt; e explorar outras características poderosas.&lt;/p&gt;
 
               &lt;h2 id=&quot;Functional-JavaScript-Federico-Silva&quot;&gt;
                 &lt;a name=&quot;Functional-JavaScript-Federico-Silva&quot; href=&quot;#Functional-JavaScript-Federico-Silva&quot;&gt;&lt;/a&gt;Functional JavaScript - Federico Silva
@@ -109,7 +109,49 @@
 
 &lt;hr&gt;
 
-&lt;p&gt;&lt;em&gt;Esta postagem ainda será atualizada.&lt;/em&gt;&lt;/p&gt;
+              &lt;h2 id=&quot;Promises-and-Generators-control-flow-utopia-Forbes-Lindesay&quot;&gt;
+                &lt;a name=&quot;Promises-and-Generators-control-flow-utopia-Forbes-Lindesay&quot; href=&quot;#Promises-and-Generators-control-flow-utopia-Forbes-Lindesay&quot;&gt;&lt;/a&gt;Promises and Generators: control flow utopia - Forbes Lindesay
+              &lt;/h2&gt;
+            
+&lt;p&gt;A palestra apresenta um cenário utilizando &lt;em&gt;callbacks&lt;/em&gt; para tratar um processamento assíncrono. A partir de várias implementações, a dificuldade e &lt;em&gt;workarounds&lt;/em&gt; para tratar erros e excessões é explicado.&lt;/p&gt;
+
+&lt;p&gt;Além da definição de &lt;em&gt;promises&lt;/em&gt;, a palestra apresenta o método &lt;code&gt;.done&lt;/code&gt;. A máxima é que &lt;code&gt;.then&lt;/code&gt; é para &lt;code&gt;.done&lt;/code&gt; o que &lt;code&gt;.map&lt;/code&gt; é para &lt;code&gt;.forEach&lt;/code&gt;. Vale ressaltar que a especificação ES6 não inclui &lt;code&gt;.done&lt;/code&gt; e portanto é necessário um &lt;em&gt;polyfill&lt;/em&gt;. A justificativa de uso de &lt;em&gt;promises&lt;/em&gt; é possibilitar uma escrita de código descomplicada que possa facilmente tratar erros.&lt;/p&gt;
+
+&lt;p&gt;A apresentação também abordou &lt;em&gt;generators&lt;/em&gt; que são funções que podem interromper o fluxo de sua execução para posteriormente seguir daquele mesmo ponto. A integração de &lt;em&gt;promises&lt;/em&gt; com &lt;em&gt;generators&lt;/em&gt; pode ser bastante interessante e possibilitar a escrita de códigos poderosos. Um bom exemplo são as construções possíveis quando usando bibliotecas como a &lt;a href=&quot;https://github.com/visionmedia/co&quot;&gt;co&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Forbes já havia palestrado mais cedo no evento e conseguiu convencer mais nesta segunda palestra. O assunto é interessante e foi muito bem apresentado. Em especial, &lt;a href=&quot;http://en.wikipedia.org/wiki/Generator_(computer_programming&quot;&gt;generators&lt;/a&gt; permitem sintaxes absurdamente expressivas.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Backbone-js-Jeremy-Ashkenas&quot;&gt;
+                &lt;a name=&quot;Backbone-js-Jeremy-Ashkenas&quot; href=&quot;#Backbone-js-Jeremy-Ashkenas&quot;&gt;&lt;/a&gt;Backbone.js - Jeremy Ashkenas
+              &lt;/h2&gt;
+            
+&lt;p&gt;Jeremy é criador do Backbone.js, Underscore.js e CoffeeScript, nada mais óbvio que seja um dos palestrantes mais esperados do evento.&lt;/p&gt;
+
+&lt;p&gt;A apresenta apresenta o cenário atual de desenvolvimento. Há cinco anos atrás, um website não era tão ambicioso quanto os que estamos acostumados desenvolver. Por isto é que devemos levar a sério o uso de JavaScript, aplicações monolíticas não é a melhor maneira de se escrever código.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backbonejs.org&quot;&gt;Backbone.js&lt;/a&gt; nasceu de uma aplicação destinada a armazenar e compartilhar documentos de trabalho de jornalistas. A principal característica da biblioteca é não fazer do DOM a principal fonte de informações da aplicação e uma das filosofias é sempre se manter o mais minimalista possível. Toda nova funcionalidade do Backbone.js é implementada com base em casos de usos.&lt;/p&gt;
+
+&lt;p&gt;O ponto mais fantástico é que Jeremy acredita que o código da biblioteca, mesmo que não necessariamente precise ser explorado pelo programador, deve ser simples o suficiente para ser lido sem impedimentos.&lt;/p&gt;
+
+&lt;p&gt;Jeremy apresenta alguns dos seus &lt;em&gt;Backbone.js Patterns&lt;/em&gt; preferidos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Adicionar métodos em &lt;em&gt;Models&lt;/em&gt; e &lt;em&gt;Collections&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Filtrar coleções no front-end da aplicação.&lt;/li&gt;
+&lt;li&gt;Utilizar &lt;code&gt;listenTo&lt;/code&gt; para evitar &lt;em&gt;memory leaks&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Utilizar &lt;code&gt;_.debounce&lt;/code&gt; para evitar múltiplos &lt;em&gt;renders&lt;/em&gt; em espaços muito curtos de tempo.&lt;/li&gt;
+&lt;li&gt;Dividir em lotes a geração de elementos e postergar sua criação e inserção no documento para ganhos de performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dentre outros padrões.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;A palestra durou quase uma hora e valeu cada segundo. O Jeremy demonstra uma maturidade fora do comum no palco. E isto não é por nada. O nível de conhecimento e sua influência na comunidade JavaScript é inquestionável.&lt;/p&gt;
+
+&lt;p&gt;Sua observação de que código se escreve para leitura e sua paciência em manter todos os seus projetos &lt;em&gt;open sources&lt;/em&gt; sempre atualizados é incrível. Melhor palestra do dia.&lt;/p&gt;
 </description>
         <pubDate>Fri, 14 Mar 2014 00:00:00 -0300</pubDate>
         <link>http://jcemer.com/primeiro-dia-jsconf-uy.html</link>
