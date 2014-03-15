@@ -36,6 +36,22 @@
 &lt;p&gt;É fantástico como Zeno consegue inspirar a galera e instigar o crescimento de todas as comunidades pelas quais ele passa. A palestra é perfeita em apontar desafios que temos nos tempos atuais e apresentar interessantes evoluções.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;WebComponents&lt;/em&gt; e um conjunto de especificações que ainda precisam amadurecer e fugir do alvo de disputadas como esta da &lt;a href=&quot;http://trac.webkit.org/changeset/164131&quot;&gt;Apple que removeu o suporte&lt;/a&gt; de &lt;em&gt;ShadownDOM&lt;/em&gt; do &lt;em&gt;Webkit&lt;/em&gt;. Mesmo que não sejam estas as especificações que teremos nos futuro, com certeza estas ideias farão parte de uma evolução eminente do desenvolvimento &lt;em&gt;front-end&lt;/em&gt;.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Source-Maps-how-they-work-and-why-you-should-care-Thorsten-Lorenz&quot;&gt;
+                &lt;a name=&quot;Source-Maps-how-they-work-and-why-you-should-care-Thorsten-Lorenz&quot; href=&quot;#Source-Maps-how-they-work-and-why-you-should-care-Thorsten-Lorenz&quot;&gt;&lt;/a&gt;Source Maps, how they work and why you should care - Thorsten Lorenz
+              &lt;/h2&gt;
+            
+&lt;p&gt;Thorsten, criador do &lt;a href=&quot;https://github.com/thlorenz/es6ify&quot;&gt;es6ify&lt;/a&gt;, inicia sua apresentação explicando qual a utilidade dos &lt;em&gt;source maps&lt;/em&gt; e como ferramentas como &lt;a href=&quot;https://github.com/thlorenz/stack-mapper&quot;&gt;stack-mapper&lt;/a&gt; auxiliam na sua geração.&lt;/p&gt;
+
+&lt;p&gt;A sequência da palestra aborda muitos exemplos e ferramentas que fazem uso de &lt;em&gt;source maps&lt;/em&gt;. O funcionamento de geradores de &lt;em&gt;source maps&lt;/em&gt; também é abordado.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Thorsten tem uma série de projetos relacionados com &lt;em&gt;source maps&lt;/em&gt; e sua palestra mostrou como tirar proveito de cada um deles.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;Esta postagem será editada.&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 15 Mar 2014 00:00:00 -0300</pubDate>
         <link>http://jcemer.com/segundo-dia-jsconf-uy-parte-2.html</link>
