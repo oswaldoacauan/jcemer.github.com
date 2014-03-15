@@ -56,6 +56,24 @@
 &lt;hr&gt;
 
 &lt;p&gt;A palestra atende seu propósito de apresentar as tecnologias e suas particularidades. É tentador observar a quantidade de recursos que já temos acesso via JavaScript. Não acredito que toda a aplicação deve utilizar necessariamente este &lt;em&gt;stack&lt;/em&gt;, mas com certeza muitas aplicações podem se beneficiar de alguma das tecnologias.&lt;/p&gt;
+
+              &lt;h2 id=&quot;JavaScript-Security-myths-fallacies-and-anti-patterns-Joe-Petterson&quot;&gt;
+                &lt;a name=&quot;JavaScript-Security-myths-fallacies-and-anti-patterns-Joe-Petterson&quot; href=&quot;#JavaScript-Security-myths-fallacies-and-anti-patterns-Joe-Petterson&quot;&gt;&lt;/a&gt;JavaScript Security: myths, fallacies and anti-patterns - Joe Petterson
+              &lt;/h2&gt;
+            
+&lt;p&gt;Joe justifica que não pensamos o suficiente em segurança. Nosso principal desafio é considerar o ambiente do cliente como nosso ambiente de execução.&lt;/p&gt;
+
+&lt;p&gt;Os conceitos de segurança no &lt;em&gt;front-end&lt;/em&gt; estão ficando cada vez mais complexos. Várias das técnicas apresentadas estão relacionadas com tratar qualquer informação não confiável antes de adicioná-la a elementos HTML.&lt;/p&gt;
+
+&lt;p&gt;Outros assuntos abordados foram: &lt;em&gt;LocalStore&lt;/em&gt;, &lt;em&gt;SesssionStorage&lt;/em&gt;, &lt;em&gt;WebWorkers&lt;/em&gt;, &lt;em&gt;Sandboxed iframes&lt;/em&gt;, &lt;em&gt;Offline Applications&lt;/em&gt; e &lt;em&gt;WebGL&lt;/em&gt;. O ataque mais interessante apresentado foi o de &lt;em&gt;WebGL&lt;/em&gt;: um modelo 3D com capacidade de explorar algum &lt;em&gt;driver&lt;/em&gt; de GPU vulnerável é enviado para o cliente em uma tentativa de executar código em &lt;em&gt;kernel mode&lt;/em&gt;.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;O conteúdo da palestra foi bastante vasto e denso, até o momento, foi a apresentação mais difícil de acompanhar. Todavia, os &lt;em&gt;slides&lt;/em&gt; são (TODO: adicionar o hiperlink) uma fonte de estudo muito boa.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;Esta postagem será atualizada.&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 15 Mar 2014 00:00:00 -0300</pubDate>
         <link>http://jcemer.com/segundo-dia-jsconf-uy-parte-1.html</link>
