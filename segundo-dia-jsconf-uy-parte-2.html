@@ -179,9 +179,66 @@
 
 <p>É essencial justificar o uso de novos paradigmas, melhor ainda se puderem interagir com o que já utilizamos atualmente. Os exemplos com Backbone e Angular foram excelentes para isto. A apresentação fluiu bem e me provocou a investigar e implementar código usando o paradigma. Ótimo trabalho.</p>
 
+              <h2 id="A-merger-of-the-Browser-and-Operating-System-Nick-Desaulniers">
+                <a name="A-merger-of-the-Browser-and-Operating-System-Nick-Desaulniers" href="#A-merger-of-the-Browser-and-Operating-System-Nick-Desaulniers"></a>A merger of the Browser and Operating System - Nick Desaulniers
+              </h2>
+            
+<p>Nick, trabalha na Mozilla no projeto do FirefoxOS, sua apresentação surge de um questonamento para a platéia: tudo aquilo que você vê no computador pode ser feito em aplicações que funcionam em navegadores.</p>
+
+<p>Nick observa o quanto de poder nossos sistema operacionais dão para aplicações que instalamos. O que pensar a respeito de uma aplicação que acessa nosso sistema de arquivos ou recursos via rede. Devíamos ter medo de fazer <em>download</em> de novas aplicações.</p>
+
+<p>Atualmente, é totalmente justificável pensar em aplicações escritas inteiramente em JavaScript, a linguagem se tornou cem vezes mais rápido desde 2006. Nick apresentou o asm.js também e sua aplicação em jogos como Banana Bread e Unreal Enfine 3 e <a href="https://blog.mozilla.org/blog/2014/03/12/mozilla-and-epic-preview-unreal-engine-4-running-in-firefox/">4</a>. Outros exemplos mais foram mostrados apoiando a performance da linguagem.</p>
+
 <hr>
 
-<p><em>Esta postagem será editada.</em></p>
+<p>A missão da Mozilla tenta trazer <em>web</em> para o <em>desktop</em> através do FirefoxOS. Assim como o Google está trazendo o ChromeOS. Os resultados de vendas de ambos os produtos já demonstram sucesso.</p>
+
+              <h2 id="The-Better-Parts-Douglas-Crockford">
+                <a name="The-Better-Parts-Douglas-Crockford" href="#The-Better-Parts-Douglas-Crockford"></a>The Better Parts - Douglas Crockford
+              </h2>
+            
+<p>Autor do livro JavaScript: The Good Parts, Douglas Crockford sobe ao palco contando a história do autor de outro livro, O Pequeno Príncipe.</p>
+
+<p>Se uma funcionalidade é útil e ao mesmo tempo perigosa, devemos ficar com a funcionalidade mais útil. Douglas brinca que não somos pagos por usar todas as partes de uma linguagem e que uma boa linguagem tem a capacidade de ensinar algo.</p>
+
+<blockquote>
+<p>Eu já fiz todos os erros que você pode fazer escrevendo JavaScript. - Douglas Crockford</p>
+</blockquote>
+
+<p>Esta experiência guiou a criação do JSLint que então passou a lhe ensinar algumas coisas. Surgem então alguns argumentos contra as boas partes, dentre eles, que cada funcionalidade é útil e é um direito poder utiliza-la.</p>
+
+<p>Muitas das funcionalidades da linguagem estão lá unicamente para induzir ao erro. Apesar disto, é necessário poder escrever bons programas utilizando JavaScript.</p>
+
+<p>Segundo Douglas, aqueles que não usam ponto e virgula, não passam de iniciantes. Existem dois tempos envolvidos na escrita de código: escrever e fazer o código funcionar de acordo. Sempre se leva tempo para se codificar bem.</p>
+
+<p>A parte mais esperada da apresentação são as melhores partes da ES6:
+- <a href="http://bbenvie.com/articles/2013-01-06/JavaScript-ES6-Has-Tail-Call-Optimization"><em>Proper Tail Calls</em></a>
+- <em>Rest</em> e <em>spread</em>
+- Módulos</p>
+
+<p>Douglas explica que há muitos anos deixou de usar <code>new</code> em favor de <code>Object.create</code> e que ultimamente abandonou por completo o uso de <code>this</code>.</p>
+
+<p>A construção de laço <em>for</em> também foi alvo do abandono em favor do uso dos métodos de <em>array</em>. Em especial no ES6, graças a <em>Proper Tail Calls</em>, o <code>while</code> pode ser deixado de lado.</p>
+
+<p>Douglas acredita que uma das piores partes da nova especificação do ES6 serão as classes. Os argumetos são baseados em que a herança clássica é dificil de manter e desnecessária em uma linguagem como JavaScript em que objetos podem ser criados seguindo a demanda. A herança por protótipos fazia todo o sentido em 1995, não são necessárias. Objetos literias devem ser criados através de funções.</p>
+
+<p>O que segue são comparações entre JavaScript e funcionalidades de outras linguagens. Uma ressalva é que alguns dos erros do JavaScript são por culpa de outros padrões adotados que continham erros, como <em>Binary Floating Point</em>.</p>
+
+<p>A responsabilidade do programador diz respeito as pessoas que utilizam seu trabalho. Outras responsabilidades envolvem trabalhar em equipe e gerenciar seu trabalho.</p>
+
+<p>O conselho final foi para que ninguém deixe <em>bugs</em> no código.</p>
+
+<hr>
+
+<p>Não existe outro palestrante que possa me deixar tão frustrado quanto este. Concordo com muitas das suas opiniões e reconheço a função e importância do seu livro na época em que foi escrito. Mas a sua opinião inflexível e muitas vezes grosseiras joga tudo por terra.</p>
+
+<p>Objetos gerados por funções são órfãos. Classes são abstrações extremamente úteis para identificar e organizar código. Pegue como exemplo o padrão MVC: Jeremy fez um trabalho fantástico com Backbone.js e isto justifica completamente a necessidade de classes na linguagem.</p>
+
+<p>Veja, não precisamos fazer tudo com classes. O mesmo Jeremy não fez uso deste tipo de abstração para manipular coleções de dados na Underscore.js.</p>
+
+<hr>
+
+<p>A minha opinião é que o <em>keynote</em> do evento esteve ontem, neste mesmo palco, falando sobre Backbone.js. Outros bons palestrantes foram os que abordaram <em>Promises</em> e o show de simplicidade e habilidade do substack. Por fim, os amigos do Brasil representaram muito bem nossa comunidade. O evento estava impecável e foi um prazer trocar figurinhas por aqui.</p>
 
 
     <aside class="post-meta">
