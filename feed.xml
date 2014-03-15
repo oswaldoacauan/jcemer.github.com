@@ -7,6 +7,62 @@
     <atom:link href="http://jcemer.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Live posting do segundo dia da JSConfUY - parte 1</title>
+        <description>&lt;p&gt;Cobertura comentada da manhã do segundo dia da JSConfUY 2014.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Tiny-modules-on-the-frontend-James-Halliday&quot;&gt;
+                &lt;a name=&quot;Tiny-modules-on-the-frontend-James-Halliday&quot; href=&quot;#Tiny-modules-on-the-frontend-James-Halliday&quot;&gt;&lt;/a&gt;Tiny modules on the frontend - James Halliday
+              &lt;/h2&gt;
+            
+&lt;p&gt;Conhecido como &lt;a href=&quot;https://twitter.com/substack%E2%80%8E&quot;&gt;@substack&lt;/a&gt;, Halliday tem o título de maior número de pacotes publicados no NPM, gerenciador de pacotes do Node.js.&lt;/p&gt;
+
+&lt;p&gt;A palestra inicia com a justificativa de que aplicações podem ser compostas por pequenos módulos e um bom exemplo daquilo que pode ser um módulo são os &lt;em&gt;polyfills&lt;/em&gt;. A partir do momento que você desenvolve módulos no estilo do node.js (usando &lt;code&gt;require()&lt;/code&gt;), ferramentas como &lt;a href=&quot;https://github.com/substack/node-browserify&quot;&gt;browserify&lt;/a&gt;, criação do substack, podem ser usadas para empacotar seus módulos permitindo que sejam usados no &lt;em&gt;front-end&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;A principal vantagem é poder usar toda a organização e padrões adotados pelo node.js e escrever código que, quando adequado, possa ser executado tanto no &lt;em&gt;front-end&lt;/em&gt; quanto no &lt;em&gt;back-end&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;James mostrou alguns de seus pequenos módulos preferidos em ação, dentre eles:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/observable&quot;&gt;observable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/insert-css&quot;&gt;insert-css&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/class-list&quot;&gt;class-list&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/baudio&quot;&gt;baudio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;A palestra teve muito &lt;em&gt;live conding&lt;/em&gt;. Substack tem uma capacidade incrível de raciocinar e escrever, não é por nada que ele possui mais de três centenas de módulos publicados. Todos os exemplos focaram em ilustrar como uma aplicação pode ser construída com base em módulos com responsabildiades bem definidas.&lt;/p&gt;
+
+&lt;p&gt;O desenvolvimento web já está com os dois pés na modularização, se você ainda está por fora do assunto, aconselho que confira &lt;a href=&quot;tableless.com.br/modularizacao-em-javascript&quot;&gt;Modularização em JavaScript&lt;/a&gt;.&lt;/p&gt;
+
+              &lt;h2 id=&quot;Be-MEAN-Jean-Carlo-Nascimento&quot;&gt;
+                &lt;a name=&quot;Be-MEAN-Jean-Carlo-Nascimento&quot; href=&quot;#Be-MEAN-Jean-Carlo-Nascimento&quot;&gt;&lt;/a&gt;Be MEAN - Jean Carlo Nascimento
+              &lt;/h2&gt;
+            
+&lt;p&gt;Suissa, como é conhecido, é um grande evangelista do &lt;em&gt;stack&lt;/em&gt; MEAN no Brasil. A proposta é a escrita de aplicações utilizando o máximo possível de JavaScript. O &lt;em&gt;stack&lt;/em&gt; compreende, na ordem das letras de seu nome: MongoDB, Express, Angular e Node.js.&lt;/p&gt;
+
+&lt;p&gt;O sitema de gerenciamento de banco de dados MongoDB é não relacional e permite que dados em formato JSON sejam traduzidos automaticamente e armazenados. MongoDB tem a características de escalar com facilidade. Uma série de conceitos e outros mecanismos permitem utilizar mais de uma instância de máquina com tolerância a falhas. O sistema permite ainda o uso de GridFS, um sistema de arquivos distribuído baseado em mémoria, para reduzir significativamente o acesso a disco.&lt;/p&gt;
+
+&lt;p&gt;A principal mudança de paradigma é deixar de lado a modelagem dos relacionamentos do banco de dados e focar nas perguntas e respostas que se espera extrair dos dados.&lt;/p&gt;
+
+&lt;p&gt;As demais tecnologias são apresentadas.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Node.js:  A plataforma  é utilizada no &lt;em&gt;back-end&lt;/em&gt; graças a sua característica de I/O não bloqueante&lt;/li&gt;
+&lt;li&gt;Express: &lt;em&gt;framework&lt;/em&gt; para escrita de aplicações em Node.js&lt;/li&gt;
+&lt;li&gt;Angular: &lt;em&gt;framework front-end&lt;/em&gt; para escrita de aplicações caracterizado por ser &lt;em&gt;two-way data-binding&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;A palestra atende seu propósito de apresentar as tecnologias e suas particularidades. É tentador observar a quantidade de recursos que já temos acesso via JavaScript. Não acredito que toda a aplicação deve utilizar necessariamente este &lt;em&gt;stack&lt;/em&gt;, mas com certeza muitas aplicações podem se beneficiar de alguma das tecnologias.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 15 Mar 2014 00:00:00 -0300</pubDate>
+        <link>http://jcemer.com/segundo-dia-jsconf-uy-parte-1.html</link>
+        <guid isPermaLink="true">http://jcemer.com/segundo-dia-jsconf-uy-parte-1.html</guid>
+      </item>
+    
+      <item>
         <title>Live posting do primeiro dia da JSConfUY</title>
         <description>&lt;p&gt;Cobertura comentada sobre o primeiro dia da JSConfUY 2014.&lt;/p&gt;
 
@@ -454,111 +510,6 @@
         <pubDate>Wed, 30 Oct 2013 00:00:00 -0200</pubDate>
         <link>http://jcemer.com/workflow-para-cuidar-dos-seus-assets.html</link>
         <guid isPermaLink="true">http://jcemer.com/workflow-para-cuidar-dos-seus-assets.html</guid>
-      </item>
-    
-      <item>
-        <title>Criando bons construtores em JavaScript</title>
-        <description>&lt;p&gt;Este texto não se trata de uma introdução a Orientação a Objetos, para isto, &lt;a href=&quot;https://developer.mozilla.org/pt-PT/docs/Javascript_orientado_a_objetos&quot;&gt;este artigo da MDN serve melhor&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Tive o prazer de &lt;a href=&quot;https://speakerdeck.com/jcemer/o-fantastico-mundo-do-javascript&quot;&gt;palestrar sobre os paradigmas do JavaScript&lt;/a&gt; no &lt;a href=&quot;http://braziljs.com.br&quot;&gt;BrazilJS&lt;/a&gt; deste ano, este texto é um complemento com alguns &lt;em&gt;insights&lt;/em&gt; sobre Orientação a Objetos e em especial: construtores.&lt;/p&gt;
-
-              &lt;h2 id=&quot;Inspiração&quot;&gt;
-                &lt;a name=&quot;Inspiração&quot; href=&quot;#Inspiração&quot;&gt;&lt;/a&gt;Inspiração
-              &lt;/h2&gt;
-            
-&lt;p&gt;Costumo sempre ficar de olhos abertos para sugar ao máximo o que diferentes linguagens e suas comunidades tem a oferecer.&lt;/p&gt;
-
-&lt;p&gt;Aprendi Ruby há alguns anos atrás. Na época, o que mais me chamou atenção era que quase tudo pode se comportar como um objeto, assim como no JavaScript. Fique tranquilo, minha intenção aqui não é fazer com que você aprenda Ruby, só usarei a linguagem por alguns parágrafos para defender um ponto.&lt;/p&gt;
-
-&lt;p&gt;Nossa inspiração será uma versão simplificada da principal classe responsável pelos &lt;em&gt;models&lt;/em&gt; no &lt;a href=&quot;http://rubyonrails.org&quot;&gt;Ruby on Rails&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
-&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;n&quot;&gt;assign_attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Considerando um &lt;em&gt;model&lt;/em&gt; &lt;code&gt;User&lt;/code&gt;, posso executar &lt;code&gt;User.new(name: &amp;#39;Jean&amp;#39;)&lt;/code&gt; para instanciar um objeto. Neste caso, o método &lt;code&gt;initialize&lt;/code&gt; acima é chamado e &lt;code&gt;name&lt;/code&gt; é armazenado no objeto que acabei de criar.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;O ponto chave: nenhum efeito colateral é ou deve ser desencadeado com a simples instanciação de um objeto&lt;/strong&gt;. Esta execução, por exemplo, não salva este usuário no banco de dados ou o persiste de qualquer outra maneira que não seja como atributo do objeto recem criado.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Adicionalmente, nossa classe possui o método &lt;code&gt;create&lt;/code&gt;. Este método pode ser chamado ao invés do &lt;code&gt;new&lt;/code&gt;, que é o construtor padrão.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
-&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;
-&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;
-&lt;a name=&quot;line-6&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;a name=&quot;line-7&quot;&gt;&lt;/a&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como você deve suspeitar, &lt;code&gt;User.create(name: &amp;#39;Jean&amp;#39;)&lt;/code&gt; instancia um objeto e o salva no banco de dados. Sim, agora temos efeito colateral, mas isto é claro pois tenho um método específico que possui este comportamento documentado.&lt;/p&gt;
-
-              &lt;h2 id=&quot;Construtores-ideais&quot;&gt;
-                &lt;a name=&quot;Construtores-ideais&quot; href=&quot;#Construtores-ideais&quot;&gt;&lt;/a&gt;Construtores ideais
-              &lt;/h2&gt;
-            
-&lt;p&gt;O construtor ideal é aquele que não adiciona &lt;em&gt;listeners&lt;/em&gt; de eventos ou elementos no DOM e muito menos dispara um &lt;code&gt;alert&lt;/code&gt;. E é óbvio que isto não é tão simples e a maioria dos códigos não seguem esta regra.&lt;/p&gt;
-
-              &lt;h3 id=&quot;Modelo&quot;&gt;
-                &lt;a name=&quot;Modelo&quot; href=&quot;#Modelo&quot;&gt;&lt;/a&gt;Modelo
-              &lt;/h3&gt;
-            
-&lt;p&gt;Vamos portar nossa &lt;a href=&quot;#Inspira%C3%A7%C3%A3o&quot;&gt;inspiração&lt;/a&gt; para JavaScript na forma de uma das aplicações mais comuns (e detestadas) de vermos em websites: um carrossel.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;
-&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;a name=&quot;line-6&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;a name=&quot;line-7&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;nx&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;a name=&quot;line-8&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;a name=&quot;line-9&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;a name=&quot;line-10&quot;&gt;&lt;/a&gt;
-&lt;a name=&quot;line-11&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;a name=&quot;line-12&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListeners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;a name=&quot;line-13&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;startAutomaticTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;a name=&quot;line-14&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Note, a única função do construtor é armazenar o &lt;em&gt;container&lt;/em&gt; utilizado como base para o carrosel. O método de instância &lt;code&gt;init&lt;/code&gt; é que irá disparar o comportamento. Um exemplo de uso.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;productsCarousel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;[data-carousel=&amp;quot;products&amp;quot;]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;productsCarousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Temos outra forma de uso com o mesmo resultado. Repare que desta vez não usamos o operador &lt;code&gt;new&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;[data-carousel=&amp;quot;products&amp;quot;]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Lembre-se sempre de tirar o máximo proveito da linguagem e definir seus métodos no &lt;code&gt;prototype&lt;/code&gt;. Desta maneira, uma única função será criada e compartilhada por todas as instâncias do seu construtor.&lt;/p&gt;
-
-              &lt;h3 id=&quot;Vantagens&quot;&gt;
-                &lt;a name=&quot;Vantagens&quot; href=&quot;#Vantagens&quot;&gt;&lt;/a&gt;Vantagens
-              &lt;/h3&gt;
-            
-&lt;p&gt;A principal vantagem é poder &lt;strong&gt;instanciar um objeto sem precisar se preocupar com efeitos colaterais&lt;/strong&gt;, este é o ganho.&lt;/p&gt;
-
-&lt;p&gt;Sem dúvidas, herança em navegadores modernos deve ser apoiada em &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Classical_inheritance_with_Object.create&quot;&gt;Object.create&lt;/a&gt;. Mas para uma técnica compatível com todos os navegadores, o construtor a ser herdado deve ser instanciado no &lt;em&gt;prototype&lt;/em&gt; do sub construtor. A maneira mais comum de se fazer isto é &lt;a href=&quot;https://github.com/jashkenas/backbone/blob/f6fa0cb87e26bb3d1b7f47144fd720d1ab48e88f/backbone.js#L1552-L1556&quot;&gt;criando um construtor temporário para que o construtor herdado não seja executado&lt;/a&gt;. Com construtores sem efeito colateral, esta etapa não é necessária.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarouselWithLasers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;a name=&quot;line-2&quot;&gt;&lt;/a&gt;  &lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;a name=&quot;line-3&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;a name=&quot;line-4&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;CarouselWithLasers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Carousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;a name=&quot;line-5&quot;&gt;&lt;/a&gt;&lt;span class=&quot;nx&quot;&gt;CarouselWithLasers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;constructor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarouselWithLasers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Viabilizar os testes é outra grande vantagem em não ter comportamento definido no construtor. Desta forma, fica possível aplicar &lt;a href=&quot;http://sinonjs.org/docs/#stubs&quot;&gt;stubs&lt;/a&gt; no método &lt;code&gt;init&lt;/code&gt; para poder testar e ser feliz.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Na biblioteca &lt;a href=&quot;http://backbonejs.org&quot;&gt;Backbone&lt;/a&gt;, que é um dos &lt;em&gt;cases&lt;/em&gt; mais fantásticos de herança em JavaScript que conheço, todos os construtores quando não extendidos podem ser instanciados sem efeitos colaterais. Isto vale para &lt;code&gt;new Backbone.Model()&lt;/code&gt;, &lt;code&gt;new Backbone.View()&lt;/code&gt;, &lt;code&gt;new Backbone.History()&lt;/code&gt;. Pode experimentar, faça estas chamadas no &lt;em&gt;console&lt;/em&gt; do seu navegador quando estiver acessando o endereço &lt;a href=&quot;http://backbonejs.org&quot;&gt;http://backbonejs.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Um último detalhe é que, para as views do Backbone, a documentação incentiva o uso da propriedade &lt;code&gt;events&lt;/code&gt;, que associa &lt;em&gt;listeners&lt;/em&gt; na instanciação do objeto. Tem também o método &lt;code&gt;this.listenTo&lt;/code&gt; geralmente usado no &lt;code&gt;initialize&lt;/code&gt;, outro que é chamado na instanciação. Não digo que não devam ser utilizados, apenas aconselho que fique atento.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;strong&gt;Edição 1:&lt;/strong&gt; Chamar de &lt;code&gt;create&lt;/code&gt; o método do construtor evita confusões e deixa mais clara qual a sua real função.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Edição 2:&lt;/strong&gt; Incentivo ao uso do &lt;code&gt;prototype&lt;/code&gt; como essência da definição de um bom construtor.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 03 Oct 2013 00:00:00 -0300</pubDate>
-        <link>http://jcemer.com/construtores-em-javascript.html</link>
-        <guid isPermaLink="true">http://jcemer.com/construtores-em-javascript.html</guid>
       </item>
     
   </channel>
