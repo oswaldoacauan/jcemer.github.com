@@ -43,7 +43,7 @@
             
 &lt;p&gt;Thorsten, criador do &lt;a href=&quot;https://github.com/thlorenz/es6ify&quot;&gt;es6ify&lt;/a&gt;, inicia sua apresentação explicando qual a utilidade dos &lt;em&gt;source maps&lt;/em&gt; e como ferramentas como &lt;a href=&quot;https://github.com/thlorenz/stack-mapper&quot;&gt;stack-mapper&lt;/a&gt; auxiliam na sua geração.&lt;/p&gt;
 
-&lt;p&gt;A sequência da palestra aborda muitos exemplos e ferramentas que fazem uso de &lt;em&gt;source maps&lt;/em&gt;. O funcionamento de geradores de &lt;em&gt;source maps&lt;/em&gt; também é abordado.&lt;/p&gt;
+&lt;p&gt;A sequência da palestra mostra muitos exemplos e ferramentas que fazem uso de &lt;em&gt;source maps&lt;/em&gt;. O funcionamento de geradores de &lt;em&gt;source maps&lt;/em&gt; também é abordado.&lt;/p&gt;
 
 &lt;hr&gt;
 
