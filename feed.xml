@@ -7,6 +7,42 @@
     <atom:link href="http://jcemer.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Live posting do segundo dia da JSConfUY - parte 2</title>
+        <description>&lt;p&gt;Cobertura comentada da tarde do segundo dia da JSConfUY 2014.&lt;/p&gt;
+
+              &lt;h2 id=&quot;A-future-called-Web-Components-Zeno-Rocha&quot;&gt;
+                &lt;a name=&quot;A-future-called-Web-Components-Zeno-Rocha&quot; href=&quot;#A-future-called-Web-Components-Zeno-Rocha&quot;&gt;&lt;/a&gt;A future called Web Components - Zeno Rocha
+              &lt;/h2&gt;
+            
+&lt;p&gt;Zeno Rocha, nosso Paul Irish do Brasil, começou com sua predição de que todos os projetos &lt;em&gt;client-sides&lt;/em&gt; estão fadados ao fracasso. Sua opinião é logo justificada com o surgimento de &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt;, &lt;code&gt;document.querySelector()&lt;/code&gt; e &lt;code&gt;&amp;lt;input type=&amp;quot;date&amp;quot;&amp;gt;&lt;/code&gt; que abalaram o mercado do Flash, jQuery e JQueryUI, respectivamente.&lt;/p&gt;
+
+&lt;p&gt;Temos uma quantidade incrível de &lt;em&gt;frameworks&lt;/em&gt; e bibliotecas &lt;em&gt;front-end&lt;/em&gt; atualmente, e todas elas são baseadas em seus próprios pequenos módulos. Sempre que precisamos de algo novo, vamos direto aos buscadores e testamos (com muito pouco sucesso) uma infinidade de &lt;em&gt;plugins&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;WebComponents permitem criar novos componentes ou extender outros elementos com novas funcionalidades. WebComponents é termo mestre para as seguintes tecnologias:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;CustomElements&lt;/em&gt;: permitem definir um novo elemento através de JavaScript já prevendo uma série de comportamentos. A especificação ainda está em rascunho e por isto é preciso usar &lt;em&gt;polyfills&lt;/em&gt; como &lt;a href=&quot;http://www.polymer-project.org&quot;&gt;Polymer&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Templates&lt;/em&gt;: Todos sabemos que a tarefa de definir &lt;em&gt;templates&lt;/em&gt; em HTML é um tanto arriscada. Principalmente porque o conteúdo será processado podendo requisitar recursos. Por tal motivo é que encapsulamos &lt;em&gt;templates&lt;/em&gt; com &lt;code&gt;&amp;lt;script type=&amp;quot;template&amp;quot;&amp;gt;&lt;/code&gt;. A especificação de &lt;em&gt;Template&lt;/em&gt; é a solução definitiva.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;ShadowDOM&lt;/em&gt;: diz respeito a como os navegadores escondem os detalhes de implementação de um elemento. A especificação nos dá acesso a esta abstração permitindo, por exemplo, que possamos definir estilos próprios para este conteúdo. Adeus a todos os &lt;em&gt;namespaces&lt;/em&gt; e dificuldades de organização de &lt;em&gt;CSS&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;imports&lt;/em&gt;: permitem incluir recursos externos aos documentos, assim como fazemos no &lt;em&gt;back-end&lt;/em&gt; das aplicações.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;É preciso ter maturidade e conhecimento para entender que, mesmo com todas estas funcionalidades, não devemos criar uma aplicação inteira utilizando uma única &lt;em&gt;tag&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Inspirado em repositórios de código e componentes como NPM e Bower, Zeno juntou uma &lt;em&gt;turma da pesada&lt;/em&gt; e lançou o projeto &lt;a href=&quot;http://customelements.io&quot;&gt;Custom Elements&lt;/a&gt;. O que segue é a apresentação de alguns destes componentes.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;É fantástico como Zeno consegue inspirar a galera e instigar o crescimento de todas as comunidades pelas quais ele passa. A palestra é perfeita em apontar desafios que temos nos tempos atuais e apresentar interessantes evoluções.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;WebComponents&lt;/em&gt; e um conjunto de especificações que ainda precisam amadurecer e fugir do alvo de disputadas como esta da &lt;a href=&quot;http://trac.webkit.org/changeset/164131&quot;&gt;Apple que removeu o suporte&lt;/a&gt; de &lt;em&gt;ShadownDOM&lt;/em&gt; do &lt;em&gt;Webkit&lt;/em&gt;. Mesmo que não sejam estas as especificações que teremos nos futuro, com certeza estas ideias farão parte de uma evolução eminente do desenvolvimento &lt;em&gt;front-end&lt;/em&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 15 Mar 2014 00:00:00 -0300</pubDate>
+        <link>http://jcemer.com/segundo-dia-jsconf-uy-parte-2.html</link>
+        <guid isPermaLink="true">http://jcemer.com/segundo-dia-jsconf-uy-parte-2.html</guid>
+      </item>
+    
+      <item>
         <title>Live posting do segundo dia da JSConfUY - parte 1</title>
         <description>&lt;p&gt;Cobertura comentada da manhã do segundo dia da JSConfUY 2014.&lt;/p&gt;
 
@@ -530,14 +566,6 @@
         <pubDate>Tue, 12 Nov 2013 00:00:00 -0200</pubDate>
         <link>http://jcemer.com/css-on-steroids.html</link>
         <guid isPermaLink="true">http://jcemer.com/css-on-steroids.html</guid>
-      </item>
-    
-      <item>
-        <title>Workflow para cuidar dos seus assets</title>
-        <description></description>
-        <pubDate>Wed, 30 Oct 2013 00:00:00 -0200</pubDate>
-        <link>http://jcemer.com/workflow-para-cuidar-dos-seus-assets.html</link>
-        <guid isPermaLink="true">http://jcemer.com/workflow-para-cuidar-dos-seus-assets.html</guid>
       </item>
     
   </channel>

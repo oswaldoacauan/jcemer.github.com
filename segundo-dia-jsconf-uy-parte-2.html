@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Live posting do segundo dia da JSConfUY - parte 2 ~ Jean Carlo Emer
+  </title>
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://feeds.feedburner.com/jeancarloemer" rel="alternate" type="application/rss+xml">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jean Carlo Emer"/>
+  <meta property="og:url" content="http://jcemer.com/segundo-dia-jsconf-uy-parte-2.html">
+  <meta property="og:title" content="Live posting do segundo dia da JSConfUY - parte 2 ~ Jean Carlo Emer">
+  <meta property="og:description" content="Texto escrito "ao-vivo" durante a JSConf do Uruguai.">
+  <meta property="og:image" content="http://jcemer.com/assets/images/badge.jpg">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700|Raleway:300,700,800|Droid+Sans+Mono:400" rel="stylesheet" type="text/css">
+  <link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css">
+
+  <link rel="canonical" href="http://jcemer.com/segundo-dia-jsconf-uy-parte-2.html">
+
+  <script>
+    window._gaq = [
+      ['_setAccount', 'UA-37078527-1']
+    , ['_trackPageview']
+    ]
+  </script>
+</head>
+<body>
+  <div class="lobby">
+    <div class="wrapper">
+      <nav id="menu">
+        <ul>
+          
+            <li><a href="/sobre.html">Sobre</a></li>
+          
+            <li><a href="/talks.html">Talks</a></li>
+          
+            <li><a href="http://twitter.com/jcemer">Twitter</a></li>
+          
+            <li><a href="http://github.com/jcemer">GitHub</a></li>
+          
+        </ul>
+        <a href="#menu" id="menu-toggle">menu</a>
+      </nav>
+      <a href="/" class="brand" title="Página inicial">Jean Carlo Emer</a>
+    </div>
+  </div>
+
+  <header class="header">
+  <div class="wrapper">
+    <h1 class="header-title">
+      <a href="/segundo-dia-jsconf-uy-parte-2.html">Live posting do segundo dia da JSConfUY - parte 2</a>
+    </h1>
+    <time class="header-date">
+      <span class="header-date-year">2014</span>
+      <span class="header-date-month">Março</span>
+    </time>
+  </div>
+</header>
+
+<div class="main">
+  <div class="wrapper">
+    <p>Cobertura comentada da tarde do segundo dia da JSConfUY 2014.</p>
+
+              <h2 id="A-future-called-Web-Components-Zeno-Rocha">
+                <a name="A-future-called-Web-Components-Zeno-Rocha" href="#A-future-called-Web-Components-Zeno-Rocha"></a>A future called Web Components - Zeno Rocha
+              </h2>
+            
+<p>Zeno Rocha, nosso Paul Irish do Brasil, começou com sua predição de que todos os projetos <em>client-sides</em> estão fadados ao fracasso. Sua opinião é logo justificada com o surgimento de <code>&lt;canvas&gt;</code>, <code>document.querySelector()</code> e <code>&lt;input type=&quot;date&quot;&gt;</code> que abalaram o mercado do Flash, jQuery e JQueryUI, respectivamente.</p>
+
+<p>Temos uma quantidade incrível de <em>frameworks</em> e bibliotecas <em>front-end</em> atualmente, e todas elas são baseadas em seus próprios pequenos módulos. Sempre que precisamos de algo novo, vamos direto aos buscadores e testamos (com muito pouco sucesso) uma infinidade de <em>plugins</em>.</p>
+
+<p>WebComponents permitem criar novos componentes ou extender outros elementos com novas funcionalidades. WebComponents é termo mestre para as seguintes tecnologias:</p>
+
+<ul>
+<li><p><em>CustomElements</em>: permitem definir um novo elemento através de JavaScript já prevendo uma série de comportamentos. A especificação ainda está em rascunho e por isto é preciso usar <em>polyfills</em> como <a href="http://www.polymer-project.org">Polymer</a>.</p></li>
+<li><p><em>Templates</em>: Todos sabemos que a tarefa de definir <em>templates</em> em HTML é um tanto arriscada. Principalmente porque o conteúdo será processado podendo requisitar recursos. Por tal motivo é que encapsulamos <em>templates</em> com <code>&lt;script type=&quot;template&quot;&gt;</code>. A especificação de <em>Template</em> é a solução definitiva.</p></li>
+<li><p><em>ShadowDOM</em>: diz respeito a como os navegadores escondem os detalhes de implementação de um elemento. A especificação nos dá acesso a esta abstração permitindo, por exemplo, que possamos definir estilos próprios para este conteúdo. Adeus a todos os <em>namespaces</em> e dificuldades de organização de <em>CSS</em>.</p></li>
+<li><p><em>imports</em>: permitem incluir recursos externos aos documentos, assim como fazemos no <em>back-end</em> das aplicações.</p></li>
+</ul>
+
+<p>É preciso ter maturidade e conhecimento para entender que, mesmo com todas estas funcionalidades, não devemos criar uma aplicação inteira utilizando uma única <em>tag</em>.</p>
+
+<p>Inspirado em repositórios de código e componentes como NPM e Bower, Zeno juntou uma <em>turma da pesada</em> e lançou o projeto <a href="http://customelements.io">Custom Elements</a>. O que segue é a apresentação de alguns destes componentes.</p>
+
+<hr>
+
+<p>É fantástico como Zeno consegue inspirar a galera e instigar o crescimento de todas as comunidades pelas quais ele passa. A palestra é perfeita em apontar desafios que temos nos tempos atuais e apresentar interessantes evoluções.</p>
+
+<p><em>WebComponents</em> e um conjunto de especificações que ainda precisam amadurecer e fugir do alvo de disputadas como esta da <a href="http://trac.webkit.org/changeset/164131">Apple que removeu o suporte</a> de <em>ShadownDOM</em> do <em>Webkit</em>. Mesmo que não sejam estas as especificações que teremos nos futuro, com certeza estas ideias farão parte de uma evolução eminente do desenvolvimento <em>front-end</em>.</p>
+
+
+    <aside class="post-meta">
+      <time class="date">15/03/2014</time>
+      <span class="author">por <a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></span>
+      <span class="tags">
+        <strong>Tags:</strong>
+        <ul>
+          
+          <li>javascript</li>
+          
+        </ul>
+      </span>
+    </aside>
+
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <p class="wrapper">
+      <span class="brand">Jean Carlo Emer</span>
+      <span class="credits">Layout por <a href="http://curestudio.com.br" class="cure" target="_blank">Cure</a></span>
+    </p>
+  </footer>
+  <script src="/assets/scripts/main.js"></script>
+</body>
+</html>
