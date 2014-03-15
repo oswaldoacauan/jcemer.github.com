@@ -67,6 +67,24 @@
 
 &lt;p&gt;Balter já é um evangelista de testes há muitos anos e seu conhecimento na área só parece amadurecer. A apresentação descomplicou o uso de testes e apontou as vantagens de seu uso. Além disto, respondeu uma das principais dúvidas que tenho ouvido: por onde começar a testar.&lt;/p&gt;
 
+              &lt;h2 id=&quot;Death-to-cookies-long-live-JSON-Web-Tokens-Matias-Woloski-e-Jose-Romaniello&quot;&gt;
+                &lt;a name=&quot;Death-to-cookies-long-live-JSON-Web-Tokens-Matias-Woloski-e-Jose-Romaniello&quot; href=&quot;#Death-to-cookies-long-live-JSON-Web-Tokens-Matias-Woloski-e-Jose-Romaniello&quot;&gt;&lt;/a&gt;Death to cookies, long live JSON Web Tokens - Matias Woloski e Jose Romaniello
+              &lt;/h2&gt;
+            
+&lt;p&gt;Nos anos 90 a vida era muito fácil. Havia cliente fazia autenticação com o servidor e a partir disto esta autenticação era persistida. Em 2000, há o surgimento das &lt;em&gt;intranets&lt;/em&gt; apoiadas em &lt;em&gt;tokens&lt;/em&gt; de autenticação.&lt;/p&gt;
+
+&lt;p&gt;Na atualidade, as aplicações possuem muitos outros componentes e surge então o problema de autenticação nas &lt;em&gt;single pages aplications&lt;/em&gt;. O alvo da palestra passa a ser a discussão de como cuidar da autenticação em uma aplicação AngularJS: Cookies ou Tokens.&lt;/p&gt;
+
+&lt;p&gt;Os problemas dos &lt;em&gt;cookies&lt;/em&gt; são os seguintes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;exclusivos de um domínio e portanto logo enfretamos o problema de CORS.&lt;/li&gt;
+&lt;li&gt;cookies são específicos para cada &lt;em&gt;framework&lt;/em&gt; de &lt;em&gt;back-end&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;sucessíveis a ataques de CSRF.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A proposta é o uso de &lt;a href=&quot;http://jwt.io&quot;&gt;JSON Web Token&lt;/a&gt; (&lt;a href=&quot;http://tools.ietf.org/html/draft-ietf-oauth-json-web-token-18&quot;&gt;rascunho da especificação&lt;/a&gt;). Uma aplicação de exemplo escrita em Express e usando o módulo &lt;a href=&quot;https://github.com/auth0/express-jwt&quot;&gt;Express-JWT&lt;/a&gt; é apresentada.&lt;/p&gt;
+
 &lt;hr&gt;
 
 &lt;p&gt;&lt;em&gt;Esta postagem será editada.&lt;/em&gt;&lt;/p&gt;

@@ -123,6 +123,24 @@
 
 <p>Balter já é um evangelista de testes há muitos anos e seu conhecimento na área só parece amadurecer. A apresentação descomplicou o uso de testes e apontou as vantagens de seu uso. Além disto, respondeu uma das principais dúvidas que tenho ouvido: por onde começar a testar.</p>
 
+              <h2 id="Death-to-cookies-long-live-JSON-Web-Tokens-Matias-Woloski-e-Jose-Romaniello">
+                <a name="Death-to-cookies-long-live-JSON-Web-Tokens-Matias-Woloski-e-Jose-Romaniello" href="#Death-to-cookies-long-live-JSON-Web-Tokens-Matias-Woloski-e-Jose-Romaniello"></a>Death to cookies, long live JSON Web Tokens - Matias Woloski e Jose Romaniello
+              </h2>
+            
+<p>Nos anos 90 a vida era muito fácil. Havia cliente fazia autenticação com o servidor e a partir disto esta autenticação era persistida. Em 2000, há o surgimento das <em>intranets</em> apoiadas em <em>tokens</em> de autenticação.</p>
+
+<p>Na atualidade, as aplicações possuem muitos outros componentes e surge então o problema de autenticação nas <em>single pages aplications</em>. O alvo da palestra passa a ser a discussão de como cuidar da autenticação em uma aplicação AngularJS: Cookies ou Tokens.</p>
+
+<p>Os problemas dos <em>cookies</em> são os seguintes:</p>
+
+<ul>
+<li>exclusivos de um domínio e portanto logo enfretamos o problema de CORS.</li>
+<li>cookies são específicos para cada <em>framework</em> de <em>back-end</em>.</li>
+<li>sucessíveis a ataques de CSRF.</li>
+</ul>
+
+<p>A proposta é o uso de <a href="http://jwt.io">JSON Web Token</a> (<a href="http://tools.ietf.org/html/draft-ietf-oauth-json-web-token-18">rascunho da especificação</a>). Uma aplicação de exemplo escrita em Express e usando o módulo <a href="https://github.com/auth0/express-jwt">Express-JWT</a> é apresentada.</p>
+
 <hr>
 
 <p><em>Esta postagem será editada.</em></p>
