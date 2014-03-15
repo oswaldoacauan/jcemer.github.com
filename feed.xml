@@ -71,9 +71,19 @@
 
 &lt;p&gt;O conteúdo da palestra foi bastante vasto e denso, até o momento, foi a apresentação mais difícil de acompanhar. Todavia, os &lt;em&gt;slides&lt;/em&gt; são (TODO: adicionar o hiperlink) uma fonte de estudo muito boa.&lt;/p&gt;
 
+              &lt;h2 id=&quot;MontageJS-Benoit-Marchant&quot;&gt;
+                &lt;a name=&quot;MontageJS-Benoit-Marchant&quot; href=&quot;#MontageJS-Benoit-Marchant&quot;&gt;&lt;/a&gt;MontageJS - Benoit Marchant
+              &lt;/h2&gt;
+            
+&lt;p&gt;Benoit é criador do &lt;em&gt;framework&lt;/em&gt; HTML5 &lt;a href=&quot;http://montagejs.org&quot;&gt;MontageJS&lt;/a&gt; e trabalhou por dez anos para a Apple. A despeito dos desafios com o DOM e custos de renderização de CSS, Benoit defende a máxima de que a experiência do usuário é a chave.&lt;/p&gt;
+
+&lt;p&gt;O &lt;em&gt;framework&lt;/em&gt; disponibiliza uma estruta &lt;em&gt;MVC&lt;/em&gt; calcada em componentes. O &lt;em&gt;flow&lt;/em&gt; da aplicação é baseado em receber &lt;em&gt;input&lt;/em&gt;, processar a lógica e renderizar. Todo este processo precisa ser rápido o suficiente para não prejudicar a performance. MontageJS consegue mitigar este problema desacoplando a lógica da renderização.&lt;/p&gt;
+
+&lt;p&gt;A apresentação foi recheada de exemplos enfatizando a experiência do usuário e a organização das aplicações em componentes.&lt;/p&gt;
+
 &lt;hr&gt;
 
-&lt;p&gt;&lt;em&gt;Esta postagem será atualizada.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Os conceitos e filosofias apresentados na palestra foram muito bons. Mas nada disto é novidade e se aventurar em um &lt;em&gt;framework&lt;/em&gt; com uma pequena comunidade pode não ser uma boa ideia. Mesmo assim, para quem se interessar &lt;a href=&quot;http://renaun.com/blog/2013/05/my-first-montagejs-application&quot;&gt;My First MontageJS Application&lt;/a&gt; apresenta muito bem o &lt;em&gt;framework&lt;/em&gt; e de quebra rascunha uma aplicação simples.&lt;/p&gt;
 </description>
         <pubDate>Sat, 15 Mar 2014 00:00:00 -0300</pubDate>
         <link>http://jcemer.com/segundo-dia-jsconf-uy-parte-1.html</link>
