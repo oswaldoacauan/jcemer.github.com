@@ -55,7 +55,7 @@
             
 &lt;p&gt;Leo Balter, um dos &lt;em&gt;contributors&lt;/em&gt; da jQuery e criador da &lt;a href=&quot;http://dexterjs.com/&quot;&gt;Dexter&lt;/a&gt;, inicia sua apresentação definindo um dos grandes desafios da programação JavaScript: MEH - &lt;em&gt;Multiple Environment Hell&lt;/em&gt;. São muitos navegadores e dispositivos em que nosso código JavaScript precisa funcionar. Uma das boas citações da palestra é a de que todo código sem testes é um código legado.&lt;/p&gt;
 
-&lt;p&gt;É inerente a programação testar seu próprio código. Precisamos apenas definir como fazer isto de uma maneira que seja pouco monótona e o menos custosa possível. O essencial é que você comece a testar seu código de maneira unitária com base em TDD. A parte mais crítica e mais complexa de seu código deve ser sua porta de entrada.&lt;/p&gt;
+&lt;p&gt;É inerente a programação testar seu próprio código. Precisamos apenas definir como fazer isto de uma maneira que seja pouco monótona e o menos custosa possível. O essencial é que você comece a testar seu código de maneira unitária com base em TDD. A parte mais crítica e menos complexa de seu código deve ser sua porta de entrada.&lt;/p&gt;
 
 &lt;p&gt;O que seguem são exemplos de suítes de testes escritas em &lt;a href=&quot;https://qunitjs.com&quot;&gt;QUnit&lt;/a&gt;. Balter demostrou a evolução de uma implementação juntamente com seus testes.&lt;/p&gt;
 
