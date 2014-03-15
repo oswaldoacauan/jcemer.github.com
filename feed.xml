@@ -49,6 +49,24 @@
 
 &lt;p&gt;Thorsten tem uma série de projetos relacionados com &lt;em&gt;source maps&lt;/em&gt; e sua palestra mostrou como tirar proveito de cada um deles.&lt;/p&gt;
 
+              &lt;h2 id=&quot;Testing-Sucks-Leo-balter&quot;&gt;
+                &lt;a name=&quot;Testing-Sucks-Leo-balter&quot; href=&quot;#Testing-Sucks-Leo-balter&quot;&gt;&lt;/a&gt;Testing Sucks - Leo balter
+              &lt;/h2&gt;
+            
+&lt;p&gt;Leo Balter, um dos &lt;em&gt;contributors&lt;/em&gt; da jQuery e criador da &lt;a href=&quot;http://dexterjs.com/&quot;&gt;Dexter&lt;/a&gt;, inicia sua apresentação definindo um dos grandes desafios da programação JavaScript: MEH - &lt;em&gt;Multiple Environment Hell&lt;/em&gt;. São muitos navegadores e dispositivos em que nosso código JavaScript precisa funcionar. Uma das boas citações da palestra é a de que todo código sem testes é um código legado.&lt;/p&gt;
+
+&lt;p&gt;É inerente a programação testar seu próprio código. Precisamos apenas definir como fazer isto de uma maneira que seja pouco monótona e o menos custosa possível. O essencial é que você comece a testar seu código de maneira unitária com base em TDD. A parte mais crítica e mais complexa de seu código deve ser sua porta de entrada.&lt;/p&gt;
+
+&lt;p&gt;O que seguem são exemplos de suítes de testes escritas em &lt;a href=&quot;https://qunitjs.com&quot;&gt;QUnit&lt;/a&gt;. Balter demostrou a evolução de uma implementação juntamente com seus testes.&lt;/p&gt;
+
+&lt;p&gt;Outro ponto importante na prática de testes é analisar o quanto do seu código está coberto por testes. Ferramentas como  Grunt e &lt;a href=&quot;https://github.com/taichi/grunt-istanbul&quot;&gt;Instanbul&lt;/a&gt; provêm um relatório completo com a porcentagem de instruções, &lt;em&gt;branches&lt;/em&gt;, linhas e funções testadas.&lt;/p&gt;
+
+&lt;p&gt;O fechamento da palestra apresentou o conceito de &lt;em&gt;Continuous Integration&lt;/em&gt; e sua importância de uso em equipes de desenvolvedores. O &lt;a href=&quot;http://travis-ci.com&quot;&gt;Travis-CI&lt;/a&gt; também teve seu espaço na apresentação com a configuração de um projeto JavaScript no serviço.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Balter já é um evangelista de testes há muitos anos e seu conhecimento na área só parece amadurecer. A apresentação descomplicou o uso de testes e apontou as vantagens de seu uso. Além disto, respondeu uma das principais dúvidas que tenho ouvido: por onde começar a testar.&lt;/p&gt;
+
 &lt;hr&gt;
 
 &lt;p&gt;&lt;em&gt;Esta postagem será editada.&lt;/em&gt;&lt;/p&gt;
