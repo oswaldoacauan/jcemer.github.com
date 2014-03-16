@@ -85,6 +85,8 @@
 
 &lt;p&gt;A proposta é o uso de &lt;a href=&quot;http://jwt.io&quot;&gt;JSON Web Token&lt;/a&gt; (&lt;a href=&quot;http://tools.ietf.org/html/draft-ietf-oauth-json-web-token-18&quot;&gt;rascunho da especificação&lt;/a&gt;). Uma aplicação de exemplo escrita em Express e usando o módulo &lt;a href=&quot;https://github.com/auth0/express-jwt&quot;&gt;Express-JWT&lt;/a&gt; é apresentada.&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;https://github.com/auth0/death-to-cookies-jsconfuy&quot;&gt;Slides da palestra&lt;/a&gt;&lt;/p&gt;
+
               &lt;h2 id=&quot;Distributed-Applications-in-Node-js-Angel-quot-Java-quot-Lopez&quot;&gt;
                 &lt;a name=&quot;Distributed-Applications-in-Node-js-Angel-quot-Java-quot-Lopez&quot; href=&quot;#Distributed-Applications-in-Node-js-Angel-quot-Java-quot-Lopez&quot;&gt;&lt;/a&gt;Distributed Applications in Node.js - Angel &amp;quot;Java&amp;quot; Lopez
               &lt;/h2&gt;
