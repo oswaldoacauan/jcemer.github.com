@@ -8,7 +8,7 @@
     
       <item>
         <title>Live posting do segundo dia da JSConfUY - parte 2</title>
-        <description>&lt;p&gt;Cobertura comentada da tarde do segundo dia da JSConfUY 2014.&lt;/p&gt;
+        <description>&lt;p&gt;Cobertura comentada da tarde do segundo dia da JSConfUY 2014. Saiba que também há cobertura do &lt;a href=&quot;primeiro-dia-jsconf-uy.html&quot;&gt;primeiro dia&lt;/a&gt; e da &lt;a href=&quot;segundo-dia-jsconf-uy-parte-1.html&quot;&gt;primeira parte deste mesmo dia de evento&lt;/a&gt;.&lt;/p&gt;
 
               &lt;h2 id=&quot;A-future-called-Web-Components-Zeno-Rocha&quot;&gt;
                 &lt;a name=&quot;A-future-called-Web-Components-Zeno-Rocha&quot; href=&quot;#A-future-called-Web-Components-Zeno-Rocha&quot;&gt;&lt;/a&gt;A future called Web Components - Zeno Rocha
@@ -181,6 +181,10 @@
 &lt;p&gt;Objetos gerados por funções são órfãos. Classes são abstrações extremamente úteis para identificar e organizar código. Pegue como exemplo o padrão MVC: Jeremy fez um trabalho fantástico com Backbone.js e isto justifica completamente a necessidade de classes na linguagem.&lt;/p&gt;
 
 &lt;p&gt;Veja, não precisamos fazer tudo com classes. O mesmo Jeremy não fez uso deste tipo de abstração para manipular coleções de dados na Underscore.js.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Saiba que também há cobertura do &lt;a href=&quot;primeiro-dia-jsconf-uy.html&quot;&gt;primeiro dia&lt;/a&gt; e da &lt;a href=&quot;segundo-dia-jsconf-uy-parte-1.html&quot;&gt;primeira parte deste mesmo dia de evento&lt;/a&gt;.&lt;/p&gt;
 
 &lt;hr&gt;
 
