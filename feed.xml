@@ -148,14 +148,14 @@
 &lt;p&gt;Se uma funcionalidade é útil e ao mesmo tempo perigosa, devemos ficar com a funcionalidade mais útil. Douglas brinca que não somos pagos por usar todas as partes de uma linguagem e que uma boa linguagem tem a capacidade de ensinar algo.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Eu já fiz todos os erros que você pode fazer escrevendo JavaScript. - Douglas Crockford&lt;/p&gt;
+&lt;p&gt;Eu cometi todos os erros que vocês poderão cometer escrevendo JavaScript. - Douglas Crockford&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Esta experiência guiou a criação do JSLint que então passou a lhe ensinar algumas coisas. Surgem então alguns argumentos contra as boas partes, dentre eles, que cada funcionalidade é útil e é um direito poder utiliza-la.&lt;/p&gt;
+&lt;p&gt;Esta experiência foi usada na criação do JSLint que então passou a ensinar algumas coisas a seu próprio criador.&lt;/p&gt;
 
-&lt;p&gt;Muitas das funcionalidades da linguagem estão lá unicamente para induzir ao erro. Apesar disto, é necessário poder escrever bons programas utilizando JavaScript.&lt;/p&gt;
+&lt;p&gt;Os argumentos contra as &amp;quot;boas partes&amp;quot;, incluem, que cada funcionalidade é útil e que é um direito poder utiliza-la. Mas muitas das funcionalidades da linguagem estão lá unicamente para induzir ao erro. Ainda, segundo Douglas, aqueles que não usam ponto e virgula, não passam de iniciantes. É &lt;strong&gt;necessário&lt;/strong&gt; poder escrever bons programas utilizando JavaScript.&lt;/p&gt;
 
-&lt;p&gt;Segundo Douglas, aqueles que não usam ponto e virgula, não passam de iniciantes. Existem dois tempos envolvidos na escrita de código: escrever e fazer o código funcionar de acordo. Sempre se leva tempo para se codificar bem.&lt;/p&gt;
+&lt;p&gt;Existem dois tempos envolvidos na escrita de código: escrever e fazer o código funcionar de acordo. Sempre se leva tempo para se codificar bem.&lt;/p&gt;
 
 &lt;p&gt;A parte mais esperada da apresentação são as melhores partes da ES6:
 - &lt;a href=&quot;http://bbenvie.com/articles/2013-01-06/JavaScript-ES6-Has-Tail-Call-Optimization&quot;&gt;&lt;em&gt;Proper Tail Calls&lt;/em&gt;&lt;/a&gt;
@@ -164,9 +164,9 @@
 
 &lt;p&gt;Douglas explica que há muitos anos deixou de usar &lt;code&gt;new&lt;/code&gt; em favor de &lt;code&gt;Object.create&lt;/code&gt; e que ultimamente abandonou por completo o uso de &lt;code&gt;this&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;A construção de laço &lt;em&gt;for&lt;/em&gt; também foi alvo do abandono em favor do uso dos métodos de &lt;em&gt;array&lt;/em&gt;. Em especial no ES6, graças a &lt;em&gt;Proper Tail Calls&lt;/em&gt;, o &lt;code&gt;while&lt;/code&gt; pode ser deixado de lado.&lt;/p&gt;
+&lt;p&gt;A construção de laço &lt;em&gt;for&lt;/em&gt; também foi alvo do abandono em favor do uso dos métodos de &lt;em&gt;array&lt;/em&gt;. Em especial, no ES6, graças a &lt;em&gt;Proper Tail Calls&lt;/em&gt;, o &lt;code&gt;while&lt;/code&gt; também pode ser deixado de lado.&lt;/p&gt;
 
-&lt;p&gt;Douglas acredita que uma das piores partes da nova especificação do ES6 serão as classes. Os argumetos são baseados em que a herança clássica é dificil de manter e desnecessária em uma linguagem como JavaScript em que objetos podem ser criados seguindo a demanda. A herança por protótipos fazia todo o sentido em 1995, não são necessárias. Objetos literias devem ser criados através de funções.&lt;/p&gt;
+&lt;p&gt;Douglas acredita que uma das piores partes da nova especificação do ES6 são as classes. Os argumetos são baseados em que a herança clássica é difícil de manter. A construção é desnecessária porque objetos literias devem ser criados através de funções de acordo com a demanda. Douglas afirma que herança por protótipos fazia todo o sentido em 1995 e que não é mais necessária.&lt;/p&gt;
 
 &lt;p&gt;O que segue são comparações entre JavaScript e funcionalidades de outras linguagens. Uma ressalva é que alguns dos erros do JavaScript são por culpa de outros padrões adotados que continham erros, como &lt;em&gt;Binary Floating Point&lt;/em&gt;.&lt;/p&gt;
 
@@ -180,7 +180,7 @@
 
 &lt;p&gt;Objetos gerados por funções são órfãos. Classes são abstrações extremamente úteis para identificar e organizar código. Pegue como exemplo o padrão MVC: Jeremy fez um trabalho fantástico com Backbone.js e isto justifica completamente a necessidade de classes na linguagem.&lt;/p&gt;
 
-&lt;p&gt;Veja, não precisamos fazer tudo com classes. O mesmo Jeremy não fez uso deste tipo de abstração para manipular coleções de dados na Underscore.js.&lt;/p&gt;
+&lt;p&gt;Veja, não precisamos fazer tudo com classes. Jeremy não fez uso deste tipo de abstração para manipular coleções de dados na Underscore.js, por exemplo.&lt;/p&gt;
 
 &lt;hr&gt;
 
@@ -188,7 +188,7 @@
 
 &lt;hr&gt;
 
-&lt;p&gt;A minha opinião é que o &lt;em&gt;keynote&lt;/em&gt; do evento esteve ontem, neste mesmo palco, falando sobre Backbone.js. Outros bons palestrantes foram os que abordaram &lt;em&gt;Promises&lt;/em&gt; e o show de simplicidade e habilidade do substack. Por fim, os amigos do Brasil representaram muito bem nossa comunidade. O evento estava impecável e foi um prazer trocar figurinhas por aqui.&lt;/p&gt;
+&lt;p&gt;A minha opinião é que o &lt;em&gt;keynote&lt;/em&gt; do evento ocupou o palco no primeiro dia de evento falando sobre Backbone.js. Outros bons palestrantes foram os que abordaram &lt;em&gt;Promises&lt;/em&gt;. Sem deixar de fora o &lt;em&gt;show&lt;/em&gt; de simplicidade e habilidade do substack e os amigos do Brasil que representaram muito bem nossa comunidade. O evento estava impecável e foi um prazer trocar figurinhas por lá.&lt;/p&gt;
 </description>
         <pubDate>Sat, 15 Mar 2014 00:00:00 -0300</pubDate>
         <link>http://jcemer.com/segundo-dia-jsconf-uy-parte-2.html</link>
